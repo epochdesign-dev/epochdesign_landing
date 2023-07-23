@@ -48,9 +48,11 @@
 }
 
 .navigation{
-    /* Viewport */
+    /* Position */
     position:fixed;
-    z-index: 1;
+
+    /* Interaction */
+    z-index: 2;
 
     /* Inner Shape */
     display: grid;

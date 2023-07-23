@@ -1,13 +1,31 @@
 <template>
     <div class="main">
+        <!--Canvas-->
+        <div class="canvas">
+        </div>
+
         <!--Introduction-->
         <section>
             <h1 class="intro_title">epoch</h1>
             <p class="intro_text">At Epoch Design, we develop eye-catching brands, design beautiful websites, and deliver campaigns that stand out from the norm.</p>
-            <img class="intro_img position_center" src="../assets/donut.png" alt="donut">
+            <img class="intro_img position_center_absolute" src="../assets/donut.png" alt="donut">
         </section>
 
-        
+        <!--Projects-->
+        <section>
+            <h3 class="projects_title">Projects</h3>
+            <Carousel1 class="carousel1"/>
+            <Carousel2 class="carousel2"/>
+        </section>
+
+        <!--Who We Are-->
+
+        <!--Services-->
+
+        <!--Get in Touch-->
+
+        <!--Footer-->
+
     </div>
 </template>
 
@@ -16,6 +34,10 @@
 </script>
 
 <style scoped>
+/* ******************************************************************** */
+/* ****************************General Classes************************* */
+/* ******************************************************************** */
+/* Fonts */
 @font-face {
     font-family: "KronaOne";
     src: local("KronaOne"),
@@ -28,31 +50,43 @@
     url("../assets/Helvetica.ttf") format("truetype");
 }
 
+/* Color Variables */
 .main{
     --onyx-black: #121212;
     --dandelion-yellow: #E8E92B;
     --light-periwinkle-purple: #C0C7FF;
     /* #FFFFFF (white) */
+}
 
+/* Canvas */
+.canvas{
     background-color: var(--onyx-black);
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
 }
 
-.position_center{
+/* Two ways of positioning elements in the center of parent element */
+.position_center_absolute{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* 
-.position_horizontally_center{
-    margin: auto;
-} */
 
+.position_center_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* ******************************************************************** */
+/* ****************************Introduction**************************** */
+/* ******************************************************************** */
 .intro_img{
     /* shape */
     max-width: 100%;
@@ -66,12 +100,11 @@
 .intro_title{
     /* position */
     position:absolute;
-    z-index: 1;
     top: 32%;
     left: 50%;
     transform: translate(-50%, -32%);
 
-    /* shape */
+    /* font */
     color: var(--dandelion-yellow); 
     font-family: KronaOne;
     font-size: 20vw;
@@ -79,54 +112,85 @@
 
     /* interaction */
     user-select: none;
+    z-index: 1;
 }
 
 .intro_text{
-    /* shape */
+    /* font */
     font-family: Helvetica-Neue;
     font-size: 1.6vw;
     color: white;
+
+    /* Inner Shape */
     text-align: center;
     width: 50vw;
 
     /* position */
     position:absolute;
-    z-index: 1;
     top: 85%;
     left: 50%;
     transform: translate(-50%, -85%);
+
+    /* interaction */
+    z-index: 1;
 }
 
 /* Sets specific styles for viewport ~16:9 */
 @media (min-aspect-ratio: 173/100) and (max-aspect-ratio: 183/100){
     .intro_title{
         /* position */
-        position:absolute;
-        z-index: 1;
         top: 34%;
-        left: 50%;
         transform: translate(-50%, -34%);
 
-        /* shape */
-        color: var(--dandelion-yellow); 
-        font-family: KronaOne;
+        /* font */
         font-size: 22vw;
     }
 
     .intro_text{
-        /* position */
-        font-family: Helvetica-Neue;
+        /* font */
         font-size: 1.8vw;
-        color: white;
-        text-align: center;
-        width: 55vw;
+
+        /* position */
+        top: 84%;
+        transform: translate(-50%, -84%);
 
         /* shape */
-        position:absolute;
-        z-index: 1;
-        top: 84%;
-        left: 50%;
-        transform: translate(-50%, -84%);
+        width: 55vw;
     }
+}
+
+
+
+/* ******************************************************************** */
+/* ****************************Projects******************************** */
+/* ******************************************************************** */
+.projects_title{
+    /* position */
+    position:absolute;
+    top: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* font */
+    color: white; 
+    font-family: Helvetica-Neue;
+    font-size: 2.6vw;
+
+    /* interaction */
+    user-select: none;
+
+    /* shape */
+    padding-bottom: 0.4vw;
+    border-bottom: solid 1px;
+}
+
+.carousel1{
+    position: relative;
+    top: 112vh;
+}
+
+.carousel2{
+    position: relative;
+    top: 114vh;
 }
 </style>
