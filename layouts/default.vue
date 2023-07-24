@@ -6,7 +6,7 @@
                 <div class="heading">epoch</div>
                 <div class="central-links">
                     <div class="link border-right"><NuxtLink to="/">About Us</NuxtLink></div>
-                    <div class="link border-right"><NuxtLink to="/">Projects</NuxtLink></div>
+                    <div class="link border-right"><NuxtLink to="/projects">Projects</NuxtLink></div>
                     <div class="link"><NuxtLink to="/">Services</NuxtLink></div>
                 </div>
                 <div class="contact-button">Contact</div>
@@ -52,11 +52,12 @@
     position:fixed;
 
     /* Interaction */
-    z-index: 2;
+    z-index: 4;
 
     /* Inner Shape */
     display: grid;
     grid-template-columns: [line1] 8.85% [line2] auto [line3] 25% [line4] auto [line5] 9.47% [end];
+    background-image: linear-gradient(var(--onyx-black), transparent);
 
     /* Shape */
     width: 100%;

@@ -6,9 +6,9 @@
 
 <script setup>
     useHead({
-        title: 'Epoch Design | About US',
+        title: 'Epoch Design | About Us',
         meta: [
-            {name: 'description', content: 'About us'}
+            {name: 'description', content: 'about us'}
         ]
     })
 </script>

@@ -2,30 +2,28 @@
     <div class="main">
         <!--Canvas-->
         <div class="canvas">
+            <!--Introduction-->
+            <section>
+                <h1 class="intro_title">epoch</h1>
+                <p class="intro_text">At Epoch Design, we develop eye-catching brands, design beautiful websites, and deliver campaigns that stand out from the norm.</p>
+                <img class="intro_img position_center_absolute" src="../assets/donut.png" alt="donut">
+            </section>
+
+            <!--Projects-->
+            <section>
+                <h3 class="projects_title">Projects</h3>
+                <Carousel1 class="carousel1"/>
+                <Carousel2 class="carousel2"/>
+            </section>
+
+            <!--Who We Are-->
+
+            <!--Services-->
+
+            <!--Get in Touch-->
+
+            <!--Footer-->
         </div>
-
-        <!--Introduction-->
-        <section>
-            <h1 class="intro_title">epoch</h1>
-            <p class="intro_text">At Epoch Design, we develop eye-catching brands, design beautiful websites, and deliver campaigns that stand out from the norm.</p>
-            <img class="intro_img position_center_absolute" src="../assets/donut.png" alt="donut">
-        </section>
-
-        <!--Projects-->
-        <section>
-            <h3 class="projects_title">Projects</h3>
-            <Carousel1 class="carousel1"/>
-            <Carousel2 class="carousel2"/>
-        </section>
-
-        <!--Who We Are-->
-
-        <!--Services-->
-
-        <!--Get in Touch-->
-
-        <!--Footer-->
-
     </div>
 </template>
 
@@ -60,12 +58,19 @@
 
 /* Canvas */
 .canvas{
+    /* inner shape */
     background-color: var(--onyx-black);
+
+    /* position */
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+
+    /* interaction */
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /* Two ways of positioning elements in the center of parent element */
@@ -80,6 +85,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* scrollbar Track */
+::-webkit-scrollbar-track {
+  background: var(--onyx-black);
+}
+
+/* scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dandelion-yellow);
 }
 
 
