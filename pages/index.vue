@@ -17,8 +17,18 @@
             </section>
 
             <!--Who We Are-->
+            <section>
+                <h3 class="whoweare_title">Who We Are</h3>
+                <p class="whoweare_text">A full-service design agency comprised of diverse minds who have a passion for creating digital experiences.</p>
+                <div class="oval oval1_pos"></div>
+                <div class="oval oval2_pos"></div>
+                <div class="oval oval3_pos"></div>
+            </section>
 
             <!--Services-->
+            <section>
+                <h3 class="services_title">Services</h3>
+            </section>
 
             <!--Get in Touch-->
 
@@ -212,5 +222,108 @@
 .carousel2{
     position: relative;
     top: 114vh;
+}
+
+
+
+/* ******************************************************************** */
+/* ****************************Who We Are****************************** */
+/* ******************************************************************** */
+.whoweare_title{
+    /* position */
+    position:absolute;
+    top: 275vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* font */
+    color: white; 
+    font-family: Helvetica-Neue;
+    font-size: 2.6vw;
+
+    /* interaction */
+    user-select: none;
+
+    /* shape */
+    padding-bottom: 0.4vw;
+    border-bottom: solid 1px;
+}
+
+.whoweare_text{
+    /* font */
+    font-family: Helvetica-Neue;
+    font-size: 1.6vw;
+    color: white;
+
+    /* Inner Shape */
+    text-align: center;
+    width: 60vw;
+
+    /* position */
+    position:absolute;
+    top: 293vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* interaction */
+    z-index: 1;
+}
+
+.oval{
+    /* shape */
+    width: 64.58vw;
+    height: 17vh;
+    border-radius: 50%;
+    border: solid var(--dandelion-yellow) 1.5px;
+    opacity: 70%;
+}
+
+.oval1_pos{
+    /* position */
+    position:absolute;
+    top: 287vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.oval2_pos{
+    /* position */
+    position:absolute;
+    top: 292vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.oval3_pos{
+    /* position */
+    position:absolute;
+    top: 297vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/* ******************************************************************** */
+/* ****************************Services******************************** */
+/* ******************************************************************** */
+.services_title{
+    /* position */
+    position:absolute;
+    top: 327vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* font */
+    color: white; 
+    font-family: Helvetica-Neue;
+    font-size: 2.6vw;
+
+    /* interaction */
+    user-select: none;
+
+    /* shape */
+    padding-bottom: 0.4vw;
+    border-bottom: solid 1px;
 }
 </style>

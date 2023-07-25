@@ -3,13 +3,13 @@
         <!--navigation bar-->
         <header>
             <nav class="navigation">
-                <div class="heading">epoch</div>
+                <div class="heading"><NuxtLink to="/">epoch</NuxtLink></div>
                 <div class="central-links">
-                    <div class="link border-right"><NuxtLink to="/">About Us</NuxtLink></div>
+                    <div class="link border-right"><NuxtLink to="/aboutus">About Us</NuxtLink></div>
                     <div class="link border-right"><NuxtLink to="/projects">Projects</NuxtLink></div>
-                    <div class="link"><NuxtLink to="/">Services</NuxtLink></div>
+                    <div class="link"><NuxtLink to="/services">Services</NuxtLink></div>
                 </div>
-                <div class="contact-button">Contact</div>
+                <div class="contact-button"><NuxtLink to="/contact">Contact</NuxtLink></div>
             </nav>
 
         </header>
@@ -83,6 +83,8 @@
     justify-content: center;
     align-items: center;
 
+    /* interaction */
+    user-select: none;
 }
 
 .central-links{

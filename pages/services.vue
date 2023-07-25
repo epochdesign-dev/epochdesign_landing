@@ -1,17 +1,16 @@
 <template>
     <div class="main">
         <div class="canvas">
-            <SubpageTitle title="Projects" subtitle="Selected Works"/>
-            <Carousel3 />   
+            <SubpageTitle title="Web Design" subtitle="Designing & Developing standout websites and branding using sound strategic thinking. See our full range of agency services below."/>
         </div>
     </div>
 </template>
 
 <script setup>
     useHead({
-        title: 'Epoch Design | Projects',
+        title: 'Epoch Design | Services',
         meta: [
-            {name: 'description', content: 'projects'}
+            {name: 'description', content: 'services'}
         ]
     })
 </script>
@@ -43,24 +42,5 @@
     bottom: 0;
     left: 0;
     right: 0;
-
-    /* interaction */
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-/* scrollbar width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* scrollbar Track */
-::-webkit-scrollbar-track {
-  background: var(--onyx-black);
-}
-
-/* scrollbar Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--dandelion-yellow);
 }
 </style>

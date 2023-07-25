@@ -1,6 +1,8 @@
 <template>
-    <div>
-
+    <div class="main">
+        <div class="canvas">
+            <SubpageTitle title="About Us" subtitle="A full-service design agency comprised of diverse minds who have a passion for creating digital experiences."/>
+        </div>
     </div>
 </template>
 
@@ -14,5 +16,31 @@
 </script>
 
 <style scoped>
+/* Fonts */
+@font-face {
+    font-family: "Helvetica-Neue";
+    src: local("Helvetica-Neue"),
+    url("../assets/Helvetica.ttf") format("truetype");
+}
 
+/* Color Variables */
+.main{
+    --onyx-black: #121212;
+    --dandelion-yellow: #E8E92B;
+    --light-periwinkle-purple: #C0C7FF;
+    /* #FFFFFF (white) */
+}
+
+/* Canvas */
+.canvas{
+    /* inner shape */
+    background-color: var(--onyx-black);
+
+    /* position */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 </style>
