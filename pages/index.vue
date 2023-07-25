@@ -28,6 +28,19 @@
             <!--Services-->
             <section>
                 <h3 class="services_title">Services</h3>
+                <div class="services">
+                    <ServiceCard title="Small Business" 
+                    description="We specialize in developing interactive, scalable, brand-oriented, and business-ready customized web design." 
+                    :tags="['UI/UX', 'Redesigns', 'Landing Page']"/> 
+
+                    <ServiceCard title="Artist Profile" 
+                    description="We specialize in developing interactive, scalable, brand-oriented, and business-ready customized web design." 
+                    :tags="['UI/UX', 'Redesigns', 'Landing Page']"/> 
+
+                    <ServiceCard title="Moving Online" 
+                    description="We specialize in developing interactive, scalable, brand-oriented, and business-ready customized web design." 
+                    :tags="['UI/UX', 'Redesigns', 'Landing Page']"/> 
+                </div>
             </section>
 
             <!--Get in Touch-->
@@ -325,5 +338,22 @@
     /* shape */
     padding-bottom: 0.4vw;
     border-bottom: solid 1px;
+}
+
+.services{
+    /* inner shape */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+
+    /* shape */
+    height: 37.4vh;
+    width: 89.84vw;
+
+    /* position */
+    position: absolute;
+    top: 339vh;
+    left: 50%;
+    transform: translateX(-50%);
 }
 </style>

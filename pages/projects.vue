@@ -1,7 +1,10 @@
 <template>
     <div class="main">
         <div class="canvas">
+            <!-- title -->
             <SubpageTitle title="Projects" subtitle="Selected Works"/>
+
+            <!-- projects carousel -->
             <Carousel3 />   
         </div>
     </div>
