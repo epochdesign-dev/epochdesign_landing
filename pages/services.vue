@@ -82,6 +82,7 @@
   background: var(--dandelion-yellow);
 }
 
+/* service cards positioning */
 .services{
     /* inner shape */
     display: grid;
