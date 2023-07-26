@@ -28,13 +28,26 @@
 <script setup>
 import { onMounted } from 'vue';
 
+var oldScrollLeft;
+
 onMounted(() => {
     // Allows horizontal scrolling on carousel
     const scrollContainer = document.querySelector("#carousel2");
 
     scrollContainer.addEventListener("wheel", (evt) => {
-        evt.preventDefault();
-        scrollContainer.scrollLeft += evt.deltaY;
+        var oldScrollLeft = scrollContainer.scrollLeft
+
+        // if user scrolled to the furthest left, allow them to scroll up
+        if(!(evt.deltaY < 0 && scrollContainer.scrollLeft === 0)){
+            // allow user to scroll horizontally
+            scrollContainer.scrollLeft += evt.deltaY;
+
+            // if user scrolled to the furthest right, allow them to scroll down
+            if(oldScrollLeft != scrollContainer.scrollLeft){
+                evt.preventDefault();
+            }
+
+        }
     });
 
     scrollContainer.scrollLeft = 4000;

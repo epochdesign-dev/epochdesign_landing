@@ -1,5 +1,5 @@
 <template>
-    <div id="carousel1">
+    <div id="carousel1" @mouseover="handlerIn()" @mouseleave="handlerOut()">
         <!-- Project Cards -->
         <div class="project_card">
             <img class="project_pic" src="../assets/project_card.png" alt="project_card">
@@ -26,6 +26,20 @@
 </template>
 
 <script setup>
+// for calculating the time the mouse hovers on the carousel
+var startTime, endTime, seconds;
+
+function handlerIn() {
+    if(startTime == null){
+        startTime = new Date();
+    }
+}
+
+function handlerOut() {
+    startTime = null;
+}
+
+
 import { onMounted } from 'vue';
 
 onMounted(() => {
@@ -33,8 +47,17 @@ onMounted(() => {
     const scrollContainer = document.querySelector("#carousel1");
 
     scrollContainer.addEventListener("wheel", (evt) => {
-        evt.preventDefault();
-        scrollContainer.scrollLeft += evt.deltaY;
+        // calculating the time the mouse hovers on the carousel
+        endTime = new Date();
+        var timeDiff = endTime - startTime; // in ms
+        timeDiff /= 1000; // strip the ms
+        seconds = timeDiff % 60; // get seconds
+
+        // if mouse hovered >= 1s, now allow horizontal scrolling
+        if(seconds >= 0.5){
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        }
     });
 
     // horizontal scrolling
@@ -56,11 +79,7 @@ onMounted(() => {
     // }
 
     // pageScroll();
-
 })
-
-
-
 </script>
 
 <style scoped>
@@ -68,6 +87,35 @@ onMounted(() => {
     /* inner shape */
     overflow-x: hidden;
     display: flex;
+
+    /* animation */
+    animation: noBorder 0.5s forwards;
+}
+
+#carousel1:hover{
+    animation: seeBorder 0.5s forwards;
+}
+
+@keyframes seeBorder {
+    from {    
+        border-top: solid transparent 1px;
+        border-bottom: solid transparent 1px;
+    }
+    to {
+        border-top: solid white 1px;
+        border-bottom: solid white 1px;
+    }
+}
+
+@keyframes noBorder {
+    from {    
+        border-top: solid white 1px;
+        border-bottom: solid white 1px;
+    }
+    to {
+        border-top: solid transparent 1px;
+        border-bottom: solid transparent 1px;
+    }
 }
 
 .project_card {
