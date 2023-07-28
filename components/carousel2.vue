@@ -1,5 +1,5 @@
 <template>
-    <div id="carousel2">
+    <div id="carousel2" @mouseover="handlerIn()" @mouseleave="handlerOut()">
         <!-- Project Cards -->
         <div class="project_card">
             <img class="project_pic" src="../assets/project_card.png" alt="project_card">
@@ -26,27 +26,47 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+// for calculating the time the mouse hovers on the carousel
+var startTime, endTime, seconds;
 
-var oldScrollLeft;
+function handlerIn() {
+    if(startTime == null){
+        startTime = new Date();
+    }
+}
+
+function handlerOut() {
+    startTime = null;
+}
+
+import { onMounted } from 'vue';
 
 onMounted(() => {
     // Allows horizontal scrolling on carousel
     const scrollContainer = document.querySelector("#carousel2");
 
     scrollContainer.addEventListener("wheel", (evt) => {
-        var oldScrollLeft = scrollContainer.scrollLeft
+        // calculating the time the mouse hovers on the carousel
+        endTime = new Date();
+        var timeDiff = endTime - startTime; // in ms
+        timeDiff /= 1000; // strip the ms
+        seconds = timeDiff % 60; // get seconds
 
-        // if user scrolled to the furthest left, allow them to scroll up
-        if(!(evt.deltaY < 0 && scrollContainer.scrollLeft === 0)){
-            // allow user to scroll horizontally
-            scrollContainer.scrollLeft += evt.deltaY;
+        // if mouse hovered >= 0.5s, now allow horizontal scrolling
+        if(seconds >= 0.5){
+            var oldScrollLeft = scrollContainer.scrollLeft
 
-            // if user scrolled to the furthest right, allow them to scroll down
-            if(oldScrollLeft != scrollContainer.scrollLeft){
-                evt.preventDefault();
+            // if user scrolled to the furthest left, allow them to scroll up
+            if(!(evt.deltaY < 0 && scrollContainer.scrollLeft === 0)){
+                // allow user to scroll horizontally
+                scrollContainer.scrollLeft += evt.deltaY;
+
+                // if user scrolled to the furthest right, allow them to scroll down
+                if(oldScrollLeft != scrollContainer.scrollLeft){
+                    evt.preventDefault();
+                }
+
             }
-
         }
     });
 
@@ -162,4 +182,10 @@ onMounted(() => {
     margin-top: 0.5vw;
 }
 
+/* for mobile */
+@media screen and (max-width: 640px) {
+    #carousel2{
+        display: none;
+    }
+}
 </style>

@@ -53,10 +53,21 @@ onMounted(() => {
         timeDiff /= 1000; // strip the ms
         seconds = timeDiff % 60; // get seconds
 
-        // if mouse hovered >= 1s, now allow horizontal scrolling
+        // if mouse hovered >= 0.5s, now allow horizontal scrolling
         if(seconds >= 0.5){
-            evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
+            var oldScrollLeft = scrollContainer.scrollLeft
+
+            // if user scrolled to the furthest left, allow them to scroll up
+            if(!(evt.deltaY < 0 && scrollContainer.scrollLeft === 0)){
+                // allow user to scroll horizontally
+                scrollContainer.scrollLeft += evt.deltaY;
+
+                // if user scrolled to the furthest right, allow them to scroll down
+                if(oldScrollLeft != scrollContainer.scrollLeft){
+                    evt.preventDefault();
+                }
+
+            }
         }
     });
 
@@ -87,35 +98,6 @@ onMounted(() => {
     /* inner shape */
     overflow-x: hidden;
     display: flex;
-
-    /* animation */
-    animation: noBorder 0.5s forwards;
-}
-
-#carousel1:hover{
-    animation: seeBorder 0.5s forwards;
-}
-
-@keyframes seeBorder {
-    from {    
-        border-top: solid transparent 1px;
-        border-bottom: solid transparent 1px;
-    }
-    to {
-        border-top: solid white 1px;
-        border-bottom: solid white 1px;
-    }
-}
-
-@keyframes noBorder {
-    from {    
-        border-top: solid white 1px;
-        border-bottom: solid white 1px;
-    }
-    to {
-        border-top: solid transparent 1px;
-        border-bottom: solid transparent 1px;
-    }
 }
 
 .project_card {
@@ -195,4 +177,10 @@ onMounted(() => {
     margin-top: 0.5vw;
 }
 
+/* for mobile */
+@media screen and (max-width: 640px) {
+    #carousel1{
+        display: none;
+    }
+}
 </style>

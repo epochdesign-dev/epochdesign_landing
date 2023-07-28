@@ -12,13 +12,26 @@
             <!--Projects-->
             <section>
                 <h3 class="projects_title">Projects</h3>
+
+                <!--Computer Only-->
                 <Carousel1 class="carousel1"/>
                 <Carousel2 class="carousel2"/>
+
+                <!--Mobile Only-->
+                <MobileProjectCard class="mobile_project_card"/>
+                <MobileProjectCard class="mobile_project_card"/>
+                <MobileProjectCard class="mobile_project_card"/>
             </section>
 
             <!--Who We Are-->
             <section>
+                <!-- computer only -->
                 <h3 class="whoweare_title">Who We Are</h3>
+
+                <!-- mobile only -->
+                <h3 class="mobile_whoweare_title">W<div class="mobile_whoweare_underline">ho We A</div>re</h3>
+
+                <!--mobile and computer-->
                 <p class="whoweare_text">A full-service design agency comprised of diverse minds who have a passion for creating digital experiences.</p>
                 <div class="oval oval1_pos"></div>
                 <div class="oval oval2_pos"></div>
@@ -28,18 +41,19 @@
             <!--Services-->
             <section>
                 <h3 class="services_title">Services</h3>
+
                 <div class="services">
                     <ServiceCard title="Small Business" 
-                    description="We specialize in developing interactive, scalable, brand-oriented, and business-ready customized web design." 
-                    :tags="['UI/UX', 'Redesigns', 'Landing Page']"/> 
+                    description="Elevate your business with our tailored website design service. We craft visually stunning, responsive websites that leave a lasting impact." 
+                    :tags="['Online Presence', 'Digital Marketing']"/> 
 
                     <ServiceCard title="Artist Profile" 
-                    description="We specialize in developing interactive, scalable, brand-oriented, and business-ready customized web design." 
-                    :tags="['UI/UX', 'Redesigns', 'Landing Page']"/> 
+                    description="Transform your artistic vision into a compelling online showcase of your creativity." 
+                    :tags="['Artistic Expression', 'Creative Design']"/> 
 
                     <ServiceCard title="Moving Online" 
-                    description="We specialize in developing interactive, scalable, brand-oriented, and business-ready customized web design." 
-                    :tags="['UI/UX', 'Redesigns', 'Landing Page']"/> 
+                    description="Embrace the digital revolution with our specialized service, guiding businesses smoothly into the online realm." 
+                    :tags="['Digital Shift', 'Landing Page', 'Cloud Database']"/> 
                 </div>
             </section>
 
@@ -53,9 +67,18 @@
             </section>
 
             <!--Footer-->
-            <footer>
+            <section>
+                <footer class="main_footer">
 
-            </footer>
+                </footer>
+            </section>
+
+            <!--Mobile: Contact Button-->
+            <section>
+                <div class="contact_button">
+                    contact
+                </div>
+            </section>
         </div>
     </div>
 </template>
@@ -135,7 +158,13 @@
   background: var(--dandelion-yellow);
 }
 
-
+/* for mobile */
+@media screen and (max-width: 640px) {
+    /* scrollbar*/
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
 
 /* ******************************************************************** */
 /* ****************************Introduction**************************** */
@@ -212,6 +241,50 @@
     }
 }
 
+/* for mobile */
+@media screen and (max-width: 640px) {
+    .intro_img{
+        /* shape */
+        width: 164.62vw;
+        height: 50.1vh;
+        object-fit:cover;
+        max-width: none;
+        max-height: none;
+
+        /* position */
+        position: absolute;
+        top:8.02%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .intro_title{
+        /* position */
+        position:absolute;
+        top: 25.4%;
+
+        /* font */
+        font-size: 22.5vw;
+    }
+
+    .intro_text{
+        /* font */
+        font-family: Helvetica-Neue;
+        font-size: 4vw;
+        color: white;
+
+        /* Inner Shape */
+        text-align: center;
+        width: 93.47vw;
+
+        /* position */
+        position:absolute;
+        top: 39.86%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 
 
 /* ******************************************************************** */
@@ -247,6 +320,26 @@
     top: 114vh;
 }
 
+/* for mobile */
+@media screen and (max-width: 640px) {
+    .projects_title{
+        /* position */
+        top: 60vh;
+
+        /* font */
+        font-size: 7vw;
+
+        /* shape */
+        padding-bottom: 0.4vw;
+        border-bottom: solid 1px;
+    }
+
+    .mobile_project_card{
+        position: relative;
+        top: 69vh;
+    }
+}
+
 
 
 /* ******************************************************************** */
@@ -270,6 +363,10 @@
     /* shape */
     padding-bottom: 0.4vw;
     border-bottom: solid 1px;
+}
+
+.mobile_whoweare_title{
+    display: none;
 }
 
 .whoweare_text{
@@ -325,6 +422,80 @@
     transform: translateX(-50%);
 }
 
+/* for mobile */
+@media screen and (max-width: 640px) {    
+    .whoweare_title{
+        /* interaction */
+        display: none;
+    }
+
+    .mobile_whoweare_title{
+        /* position */
+        position:absolute;
+        top: 184.72vh;
+        left: 50%;
+        transform: translateX(-50%);
+
+        /* font */
+        color: white; 
+        font-family: Helvetica-Neue;
+        font-size: 7vw;
+
+        /* interaction */
+        user-select: none;
+        display: block;
+
+        /* shape */
+        padding-bottom: 0.4vw;
+    }
+
+    .mobile_whoweare_underline{
+        border-bottom: solid 1px;
+        display: inline-block;
+    }
+
+    .whoweare_text{
+        /* font */
+        font-family: Helvetica-Neue;
+        font-size: 4vw;
+        color: white;
+
+        /* Inner Shape */
+        text-align: center;
+        width: 63vw;
+
+        /* position */
+        position:absolute;
+        top: 195.56vh;
+        left: 50%;
+        transform: translateX(-50%);
+
+        /* interaction */
+        z-index: 1;
+    }
+
+    .oval{
+        /* shape */
+        width: 95.09vw;
+        height: 7.89vh;
+    }
+
+    .oval1_pos{
+        /* position */
+        top: 197.78vh;
+    }
+
+    .oval2_pos{
+        /* position */
+        top: 200.78vh;
+    }
+
+    .oval3_pos{
+        /* position */
+        top: 203.78vh;
+    }
+}
+
 
 
 /* ******************************************************************** */
@@ -366,6 +537,34 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+@media screen and (max-width: 640px) {
+    .services_title{
+        /* position */
+        top: 223.89vh;
+
+        /* font */
+        font-size: 7vw;
+    }
+
+    .services{
+        /* inner shape */
+        display: block;
+
+        /* shape */
+        height: auto;
+        width: 87.69vw;
+
+        /* position */
+        position: relative;
+        top: 125vh;
+        left: auto;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}   
 
 
 
@@ -435,9 +634,71 @@
 
 }
 
+@media screen and (max-width: 640px) {
+    .get_in_touch{
+        display: none;
+    }
+}
+
 
 
 /* ******************************************************************** */
 /* ****************************Footer********************************** */
 /* ******************************************************************** */
+.main_footer{
+    position: absolute;
+    top: 425vh;
+
+    width: 100vw;
+    height: 28.89vh;
+    border-top: solid 3px white;
+}
+
+@media screen and (max-width: 640px) {
+    .main_footer{
+        position: absolute;
+        top: 400vh;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 95.9vw;
+        height: 43.33vh;
+        border-top: solid 3px white;
+    }
+}
+
+
+
+/* ******************************************************************** */
+/* **********************Contact Button Mobile************************* */
+/* ******************************************************************** */
+/* for mobile */
+@media screen and (max-width: 640px) {
+    .contact_button{
+        /* position */
+        position: fixed;
+        right: 8px;
+        bottom: 8px;
+
+        /* shape */
+        height: 15.38vw;
+        width: 15.38vw;
+        border-radius: 50%;
+
+        /* inside shape */
+        background-color: var(--dandelion-yellow);
+        display: flex;
+        align-items: center; /* vertically center */
+        justify-content: center; /* horizontally center */
+        
+        /* font */
+        font-family: Helvetica-Neue;
+        font-size: 1vw;
+
+        /* interaction */
+        z-index: 1;
+        cursor: pointer;
+        user-select: none;
+    }
+}
 </style>

@@ -2,6 +2,7 @@
     <div class="main">
         <!--navigation bar-->
         <header>
+            <!-- for computer -->
             <nav class="navigation">
                 <div class="heading"><NuxtLink to="/">epoch</NuxtLink></div>
                 <div class="central-links">
@@ -12,6 +13,11 @@
                 <div class="contact-button"><NuxtLink to="/contact">Contact</NuxtLink></div>
             </nav>
 
+            <!-- For Mobile -->
+            <nav class="mobile_navigation">
+                <div class="mobile_heading">epoch</div>
+                <img class="mobile_button" src="../assets/plus-circle.png" alt="plus circle">
+            </nav>
         </header>
 
         <!--slot displays the rest of the page-->
@@ -26,6 +32,9 @@
 </script>
 
 <style scoped>
+/* ******************************************************************** */
+/* ****************************General Classes************************* */
+/* ******************************************************************** */
 /* Fonts */
 @font-face {
     font-family: "KronaOne";
@@ -47,6 +56,11 @@
     /* #FFFFFF (white) */
 }
 
+
+
+/* ******************************************************************** */
+/* ****************************Computer Screen************************* */
+/* ******************************************************************** */
 .navigation{
     /* Position */
     position:fixed;
@@ -146,5 +160,57 @@
     /* Interaction */
     cursor: pointer;
     user-select: none;
+}
+
+
+
+/* ******************************************************************** */
+/* ****************************Mobile Screen*************************** */
+/* ******************************************************************** */
+/* for mobile */
+@media screen and (max-width: 640px) {
+    .navigation{
+        /* Interaction */
+        display: none;
+    }
+
+    .mobile_navigation{
+        /* Position */
+        position:fixed;
+
+        /* Interaction */
+        z-index: 4;
+
+        /* Inner Shape */
+        background-image: linear-gradient(var(--onyx-black), transparent);
+
+        /* Shape */
+        width: 100%;
+        height: 60px;
+    }
+
+    .mobile_heading{
+        /* Position */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* Font */
+        color: white;
+        font-family: KronaOne;
+        font-size: 5vw;
+
+        /* interaction */
+        user-select: none;
+    }
+
+    .mobile_button{
+        /* Position */
+        position: absolute;
+        top: 50%;
+        right: 4.1vw;
+        transform: translateY(-50%);
+    }
 }
 </style>
