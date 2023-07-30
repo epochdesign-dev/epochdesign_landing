@@ -53,7 +53,7 @@ onMounted(() => {
         timeDiff /= 1000; // strip the ms
         seconds = timeDiff % 60; // get seconds
 
-        // if mouse hovered >= 0.5s, now allow horizontal scrolling
+        // if mouse hovered >= 0.5s, allow horizontal scrolling
         if(seconds >= 0.5){
             var oldScrollLeft = scrollContainer.scrollLeft
 

@@ -646,9 +646,11 @@
 /* ****************************Footer********************************** */
 /* ******************************************************************** */
 .main_footer{
+    /* position */
     position: absolute;
     top: 425vh;
 
+    /* shape */
     width: 100vw;
     height: 28.89vh;
     border-top: solid 3px white;
@@ -656,11 +658,13 @@
 
 @media screen and (max-width: 640px) {
     .main_footer{
+        /* position */
         position: absolute;
         top: 400vh;
         left: 50%;
         transform: translateX(-50%);
 
+        /* shape */
         width: 95.9vw;
         height: 43.33vh;
         border-top: solid 3px white;
