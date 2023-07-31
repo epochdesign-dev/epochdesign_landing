@@ -65,8 +65,8 @@
 
     /* inner shape */
     width: 41.6vw; 
-    height: 60pt; 
-    border-radius: 50pt;
+    height: 60px; 
+    border-radius: 50px;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     margin-bottom: 2rem;
@@ -81,8 +81,8 @@
 .message-input{
     /* inner shape */
     width: 41.6vw; 
-    height: 192pt; 
-    border-radius: 50pt;
+    height: 192px; 
+    border-radius: 50px;
     padding: 2.5rem;
     margin-bottom: 3rem;
     
@@ -108,12 +108,12 @@ input[type="checkbox"] {
     /* inner shape */
     display: inline-block;
     width: 41.6vw;
-    height: 60pt;
-    border-radius: 50pt;
+    height: 60px;
+    border-radius: 50px;
 
     background-color: white;
     padding-left: 2.5rem;
-    padding-top: 1.5rem;
+    padding-top: 0.8rem;
 
 
     /* interaction */
@@ -135,8 +135,8 @@ input[type="checkbox"]:checked + .checkbox_label {
 
     /* inner shape */
     width: 41.6vw; 
-    height: 60pt; 
-    border-radius: 50pt;
+    height: 60px; 
+    border-radius: 50px;
     padding-left: 2.5rem;
     padding-right: 2.5rem; 
     margin-bottom: 2rem;
