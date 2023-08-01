@@ -1,24 +1,24 @@
 <template>
-    <div id="carousel2" @mouseover="handlerIn()" @mouseleave="handlerOut()">
+    <div id="carousel2"> <!--@mouseover="handlerIn()" @mouseleave="handlerOut()"-->
         <!-- Project Cards -->
-        <div class="project_card">
+        <div class="project_card" id="project4">
             <img class="project_pic" src="../assets/project_card.png" alt="project_card">
             <div class="project_footer">
-                <p class="project_name">PROJECT NAME</p>
+                <p class="project_name">PROJECT NAME1</p>
                 <img class="arrow" src="../assets/arrow.png" alt="arrow">
             </div>
         </div>
-        <div class="project_card">
+        <div class="project_card" id="project5">
             <img class="project_pic" src="../assets/project_card.png" alt="project_card">
             <div class="project_footer">
-                <p class="project_name">PROJECT NAME</p>
+                <p class="project_name">PROJECT NAME2</p>
                 <img class="arrow" src="../assets/arrow.png" alt="arrow">
             </div>
         </div>
-        <div class="project_card" id="last_card">
+        <div class="project_card" id="project6">
             <img class="project_pic" src="../assets/project_card.png" alt="project_card">
             <div class="project_footer">
-                <p class="project_name">PROJECT NAME</p>
+                <p class="project_name">PROJECT NAME3</p>
                 <img class="arrow" src="../assets/arrow.png" alt="arrow">
             </div>
         </div>
@@ -27,17 +27,17 @@
 
 <script setup>
 // for calculating the time the mouse hovers on the carousel
-var startTime, endTime, seconds;
+// var startTime, endTime, seconds;
 
-function handlerIn() {
-    if(startTime == null){
-        startTime = new Date();
-    }
-}
+// function handlerIn() {
+//     if(startTime == null){
+//         startTime = new Date();
+//     }
+// }
 
-function handlerOut() {
-    startTime = null;
-}
+// function handlerOut() {
+//     startTime = null;
+// }
 
 import { onMounted } from 'vue';
 
@@ -45,6 +45,7 @@ onMounted(() => {
     // Allows horizontal scrolling on carousel
     const scrollContainer = document.querySelector("#carousel2");
 
+    /*
     scrollContainer.addEventListener("wheel", (evt) => {
         // calculating the time the mouse hovers on the carousel
         endTime = new Date();
@@ -68,7 +69,7 @@ onMounted(() => {
 
             }
         }
-    });
+    });*/
 
     scrollContainer.scrollLeft = 4000;
 
@@ -80,18 +81,34 @@ onMounted(() => {
 
     // moving elements around in DOM
     // https://gomakethings.com/how-to-move-elements-around-in-the-dom-with-vanilla-javascript/
+    // https://developer.mozilla.org/en-US/docs/Web/API/Element/after
 
     // scroll into view
     // https://stackoverflow.com/questions/17722497/scroll-smoothly-to-specific-element-on-page
 
     // auto scroll code
-    // function pageScroll() {
-    //     scrollContainer.scrollLeft += 1;
-    //     setTimeout(pageScroll,10);
-    // }
+    var projects = ["#project4", "#project5", "#project6"]
+    let firstElem = document.querySelector(projects[0]);
+    let lastElem = document.querySelector(projects[projects.length - 1]);
+    let tempElem;
 
-    // pageScroll();
+    function pageScroll() {
+        scrollContainer.scrollLeft -= 1;
+        if (scrollContainer.scrollLeft === 0) {
+            firstElem.before(lastElem);
 
+            tempElem = projects.pop();
+            projects.unshift(tempElem);
+
+            firstElem = document.querySelector(projects[0]);
+            lastElem = document.querySelector(projects[projects.length - 1]);
+
+            scrollContainer.scrollLeft += lastElem.offsetWidth;
+        }
+        setTimeout(pageScroll, 10);
+    }
+
+    pageScroll();
 })
 
 
