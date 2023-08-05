@@ -128,7 +128,7 @@ onMounted(() => {
     z-index: 1;
 
     /* shape */
-    height: 75.3vh;
+    height: 42.34vw;
 }
 
 .project_card:nth-child(n+2) {
@@ -139,7 +139,7 @@ onMounted(() => {
 .project_pic{
     /* shape */
     max-width: 70.98vw;
-    max-height: 69.7vh;
+    max-height: 39.22vw;
     object-fit: contain;
 
     /* inner shape */
@@ -186,13 +186,14 @@ onMounted(() => {
     /* font */
     font-family: Helvetica;
     color: white;
-    font-size: 1.5vw;
+    font-weight: normal;
+    font-size: 2vw;
 }
 
 .arrow{
     /* shape */
-    height: 1.25vw;
-    width: 1.25vw;
+    height: 1.7vw;
+    width: 1.7vw;
 
     /* position */
     margin-left: auto;
