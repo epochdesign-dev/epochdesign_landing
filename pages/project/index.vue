@@ -1,7 +1,6 @@
 <template>
     <div class="main">
         <div class="canvas">
-            <t1 class="title">Project</t1>
         </div>
     </div>
 </template>
@@ -57,19 +56,5 @@
   ::-webkit-scrollbar-thumb {
     background: var(--dandelion-yellow);
   }
-
-/* Title */
-.title{
-    /* font */
-    font-family: "Helvetica-Neue";
-    font-size: 400pt;
-    color: white;
-
-    /* position */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 </style>
