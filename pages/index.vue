@@ -4,7 +4,7 @@
         <div class="canvas">
             <!--Introduction-->
             <section>
-                <h1 class="intro_title">epoch</h1>
+                <div class="intro_title">epoch</div>
                 <p class="intro_text">At Epoch Design, we develop eye-catching brands, design beautiful websites, and deliver campaigns that stand out from the norm.</p>
                 <img class="intro_img position_center_absolute" src="../assets/donut.png" alt="donut">
             </section>
@@ -40,7 +40,7 @@
 
             <!--Services-->
             <section>
-                <h3 class="services_title">Services</h3>
+                <h3 class="services_title" id="services">Services</h3>
 
                 <div class="services">
                     <ServiceCard title="Small Business" 
@@ -190,7 +190,6 @@
     color: var(--dandelion-yellow); 
     font-family: KronaOne;
     font-size: 20vw;
-    font-weight: 400;
 
     /* interaction */
     user-select: none;
@@ -348,7 +347,7 @@
 .whoweare_title{
     /* position */
     position:absolute;
-    top: 275vh;
+    top: 290vh;
     left: 50%;
     transform: translateX(-50%);
 
@@ -381,7 +380,7 @@
 
     /* position */
     position:absolute;
-    top: 293vh;
+    top: 308vh;
     left: 50%;
     transform: translateX(-50%);
 
@@ -401,7 +400,7 @@
 .oval1_pos{
     /* position */
     position:absolute;
-    top: 287vh;
+    top: 302vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -409,7 +408,7 @@
 .oval2_pos{
     /* position */
     position:absolute;
-    top: 292vh;
+    top: 307vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -417,7 +416,7 @@
 .oval3_pos{
     /* position */
     position:absolute;
-    top: 297vh;
+    top: 312vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -504,7 +503,7 @@
 .services_title{
     /* position */
     position:absolute;
-    top: 327vh;
+    top: 342vh;
     left: 50%;
     transform: translateX(-50%);
 
@@ -533,7 +532,7 @@
 
     /* position */
     position: absolute;
-    top: 339vh;
+    top: 354vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -574,7 +573,7 @@
 .get_in_touch{
     /* position */
     position: absolute;
-    top: 390vh;
+    top: 405vh;
     left: 50%;
     transform: translateX(-50%);
 
@@ -648,7 +647,7 @@
 .main_footer{
     /* position */
     position: absolute;
-    top: 425vh;
+    top: 440vh;
 
     /* shape */
     width: 100vw;
