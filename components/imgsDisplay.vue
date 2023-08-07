@@ -82,7 +82,7 @@
 
 </script>
 
-
+<!-- 
 <style scoped>
 .hidden {
   opacity: 0;
@@ -104,7 +104,7 @@
     transition: none;
   }
 }
-</style>
+</style> -->
 
 
 <style>
