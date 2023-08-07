@@ -56,13 +56,12 @@ if (typeof process !== "undefined" && process.browser) {
   console.log("process Browser works");
   require("IntersectionObserver");
 }
+else {
+  console.log("process Browser does not work");
+}
 
 onMounted(() => {
   console.log("mounted");
-
-  if (typeof process !== "undefined" && process.client) {
-    console.log("process client works");
-
     const canvasElement = document.querySelector(".canvas");
     const hiddenElements = document.querySelectorAll(".hidden");
 
@@ -81,15 +80,10 @@ onMounted(() => {
       observer.observe(element);
     });
   }
-  
-else {
-  console.log("process client does not work");
-}
-}
 );
 </script>
 
-<!-- 
+
 <style scoped>
 .hidden {
   opacity: 0;
@@ -111,7 +105,7 @@ else {
     transition: none;
   }
 }
-</style> -->
+</style>
 
 
 <style>
