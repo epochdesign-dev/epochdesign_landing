@@ -1,42 +1,42 @@
 <template>
     <div class="img-tray">
         <img
-        :src="getImgSrc(imgFileName0)" 
+        :src="`../assets/demo-imgs/${imgFileName0}`"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        :src="getImgSrc(imgFileName1)"
+        :src="`../assets/demo-imgs/${imgFileName1}`"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        :src="getImgSrc(imgFileName2)"
+        :src="`../assets/demo-imgs/${imgFileName2}`"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        :src="getImgSrc(imgFileName3)"
+        :src="`../assets/demo-imgs/${imgFileName3}`"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        :src="getImgSrc(imgFileName4)"
+        :src="`../assets/demo-imgs/${imgFileName4}`"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        :src="getImgSrc(imgFileName5)"
+        :src="`../assets/demo-imgs/${imgFileName5}`"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        :src="getImgSrc(imgFileName6)"
+        :src="`../assets/demo-imgs/${imgFileName6}`"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        :src="getImgSrc(imgFileName7)"
+        :src="`../assets/demo-imgs/${imgFileName7}`"
         alt="demo-img"
         class="img hidden"
         >
@@ -81,10 +81,10 @@ const props = defineProps({
 })
 
 // get an array of image srcs
-function getImgSrc(imgFileName) {
-  if(!imgFileName) return;
-  return new URL(`../assets/demo-imgs/${imgFileName}`, import.meta.url);
-}
+// function getImgSrc(imgFileName) {
+//   if(!imgFileName) return;
+//   return new URL(`../assets/demo-imgs/${imgFileName}`, import.meta.url);
+// }
 
 
 if (process.browser) {
