@@ -5,7 +5,14 @@
             <SubpageTitle title="Projects" subtitle="Selected Works"/>
 
             <!-- projects carousel -->
-            <Carousel3 />   
+            <Carousel3 class="carousel" />  
+            
+            <!--subtitle-->
+            <div class="sub-title">Our Process</div>
+
+            <div class="sub-title-line">
+                <p class="process"> to be implement...</p>
+            </div>
         </div>
     </div>
 </template>
@@ -65,5 +72,37 @@
 /* scrollbar Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--dandelion-yellow);
+}
+
+
+/* subtitle */
+.sub-title{
+    /* font */
+    font-family: "Helvetica-Neue";
+    font-size: 64pt;
+    color: var(--dandelion-yellow);
+
+    /* position */
+    position: absolute;
+    top: 150vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sub-title-line{
+
+    /* font */
+    font-family: "Helvetica-Neue";
+    font-size: 20pt;
+    color: white;
+
+    /* position */
+    position: absolute;
+    top: 180vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* inner shape */
+    padding-bottom: 500px;
 }
 </style>

@@ -69,7 +69,6 @@
             <!--Footer-->
             <section>
                 <footer class="main_footer">
-
                 </footer>
             </section>
 
