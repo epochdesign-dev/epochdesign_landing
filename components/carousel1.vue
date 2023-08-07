@@ -89,10 +89,10 @@ onMounted(() => {
 
     // auto scroll code
 
-    var projects = ["project1", "project2", "project3"]
-    var nextElem = document.getElementById(projects[0]);
-    var lastElem = document.getElementById(projects[projects.length - 1]);
-    var oldScrollLeft;
+    let projects = ["project1", "project2", "project3"]
+    let nextElem = document.getElementById(projects[0]);
+    let lastElem = document.getElementById(projects[projects.length - 1]);
+    let oldScrollLeft;
 
     function pageScroll() {
         oldScrollLeft = scrollContainer.scrollLeft;
@@ -202,7 +202,7 @@ onMounted(() => {
 }
 
 /* for mobile */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     #carousel1{
         display: none;
     }

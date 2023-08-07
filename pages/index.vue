@@ -159,7 +159,7 @@
 }
 
 /* for mobile */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     /* scrollbar*/
     ::-webkit-scrollbar {
         display: none;
@@ -241,7 +241,7 @@
 }
 
 /* for mobile */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     .intro_img{
         /* shape */
         width: 164.62vw;
@@ -320,7 +320,7 @@
 }
 
 /* for mobile */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     .projects_title{
         /* position */
         top: 60vh;
@@ -336,6 +336,7 @@
     .mobile_project_card{
         position: relative;
         top: 69vh;
+        margin-bottom: 5px;
     }
 }
 
@@ -347,7 +348,7 @@
 .whoweare_title{
     /* position */
     position:absolute;
-    top: 290vh;
+    top: 305vh;
     left: 50%;
     transform: translateX(-50%);
 
@@ -380,7 +381,7 @@
 
     /* position */
     position:absolute;
-    top: 308vh;
+    top: 323vh;
     left: 50%;
     transform: translateX(-50%);
 
@@ -391,7 +392,7 @@
 .oval{
     /* shape */
     width: 64.58vw;
-    height: 17vh;
+    height: 9.56vw;
     border-radius: 50%;
     border: solid var(--dandelion-yellow) 1.5px;
     opacity: 70%;
@@ -400,7 +401,7 @@
 .oval1_pos{
     /* position */
     position:absolute;
-    top: 302vh;
+    top: 317vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -408,7 +409,7 @@
 .oval2_pos{
     /* position */
     position:absolute;
-    top: 307vh;
+    top: 323vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -416,13 +417,13 @@
 .oval3_pos{
     /* position */
     position:absolute;
-    top: 312vh;
+    top: 327vh;
     left: 50%;
     transform: translateX(-50%);
 }
 
 /* for mobile */
-@media screen and (max-width: 640px) {    
+@media screen and (max-width: 740px) {    
     .whoweare_title{
         /* interaction */
         display: none;
@@ -503,7 +504,7 @@
 .services_title{
     /* position */
     position:absolute;
-    top: 342vh;
+    top: 357vh;
     left: 50%;
     transform: translateX(-50%);
 
@@ -532,12 +533,12 @@
 
     /* position */
     position: absolute;
-    top: 354vh;
+    top: 369vh;
     left: 50%;
     transform: translateX(-50%);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     .services_title{
         /* position */
         top: 223.89vh;
@@ -573,7 +574,7 @@
 .get_in_touch{
     /* position */
     position: absolute;
-    top: 405vh;
+    top: 420vh;
     left: 50%;
     transform: translateX(-50%);
 
@@ -633,7 +634,7 @@
 
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     .get_in_touch{
         display: none;
     }
@@ -647,7 +648,7 @@
 .main_footer{
     /* position */
     position: absolute;
-    top: 440vh;
+    top: 455vh;
 
     /* shape */
     width: 100vw;
@@ -655,7 +656,7 @@
     border-top: solid 3px white;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     .main_footer{
         /* position */
         position: absolute;
@@ -676,7 +677,7 @@
 /* **********************Contact Button Mobile************************* */
 /* ******************************************************************** */
 /* for mobile */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     .contact_button{
         /* position */
         position: fixed;

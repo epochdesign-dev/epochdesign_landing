@@ -26,7 +26,6 @@
 .project_pic{
     /* shape */
     max-width: 100vw;
-    max-height: 30vh;
     object-fit: contain;
 }
 
@@ -64,7 +63,7 @@
     margin-bottom: auto;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 740px) {
     .project_card{
         display: none;
     }

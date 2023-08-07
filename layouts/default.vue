@@ -8,7 +8,7 @@
                 <div class="central-links">
                     <div class="link border-right"><NuxtLink to="/aboutus">About Us</NuxtLink></div>
                     <div class="link border-right"><NuxtLink to="/projects">Projects</NuxtLink></div>
-                    <div class="link"><a href="#services">Services</a></div>
+                    <div class="link"><a href="/#services">Services</a></div>
                 </div>
                 <div class="contact-button"><NuxtLink to="/contact">Contact</NuxtLink></div>
             </nav>

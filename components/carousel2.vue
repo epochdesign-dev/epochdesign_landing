@@ -43,7 +43,7 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
     // Allows horizontal scrolling on carousel
-    const scrollContainer = document.querySelector("#carousel2");
+    const scrollContainer2 = document.querySelector("#carousel2");
 
     /*
     scrollContainer.addEventListener("wheel", (evt) => {
@@ -71,7 +71,7 @@ onMounted(() => {
         }
     });*/
 
-    scrollContainer.scrollLeft = 4000;
+    scrollContainer2.scrollLeft = 4000;
 
     // horizontal scrolling
     // https://codepen.io/alvarotrigo/pen/gOmgRzL
@@ -87,14 +87,14 @@ onMounted(() => {
     // https://stackoverflow.com/questions/17722497/scroll-smoothly-to-specific-element-on-page
 
     // auto scroll code
-    var projects = ["#project4", "#project5", "#project6"]
+    let projects = ["#project4", "#project5", "#project6"]
     let firstElem = document.querySelector(projects[0]);
     let lastElem = document.querySelector(projects[projects.length - 1]);
     let tempElem;
 
-    function pageScroll() {
-        scrollContainer.scrollLeft -= 1;
-        if (scrollContainer.scrollLeft === 0) {
+    function pageScroll2() {
+        scrollContainer2.scrollLeft -= 1;
+        if (scrollContainer2.scrollLeft === 0) {
             firstElem.before(lastElem);
 
             tempElem = projects.pop();
@@ -103,12 +103,12 @@ onMounted(() => {
             firstElem = document.querySelector(projects[0]);
             lastElem = document.querySelector(projects[projects.length - 1]);
 
-            scrollContainer.scrollLeft += lastElem.offsetWidth;
+            scrollContainer2.scrollLeft += lastElem.offsetWidth;
         }
-        setTimeout(pageScroll, 10);
+        setTimeout(pageScroll2, 22);
     }
 
-    pageScroll();
+    pageScroll2();
 })
 
 
@@ -201,8 +201,8 @@ onMounted(() => {
 }
 
 /* for mobile */
-@media screen and (max-width: 640px) {
-    #carousel1{
+@media screen and (max-width: 740px) {
+    #carousel2{
         display: none;
     }
 }
