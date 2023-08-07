@@ -104,7 +104,6 @@ useHead({
   meta: [{ name: "description", content: "web design" }],
 });
 
-console.log("web design page");
 
 </script>
 
@@ -178,7 +177,6 @@ console.log("web design page");
 .demos {
   position: relative;
   top: auto;
-
 }
 
 /*The typeface might be a different one ?? the font size is not match the design*/

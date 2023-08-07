@@ -44,6 +44,7 @@
 </template>
 
 <script setup>
+console.log("imgsDisplay.vue is running");
 
 const props = defineProps({
   imgFileName0: {
