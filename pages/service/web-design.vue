@@ -104,7 +104,7 @@ useHead({
   meta: [{ name: "description", content: "web design" }],
 });
 
-
+console.log("web design page");
 
 </script>
 
