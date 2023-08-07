@@ -50,40 +50,38 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
 
-if (process.browser) {
-    console.log("process Browser works");
+if (typeof process !== "undefined" && process.browser) {
+  console.log("process Browser works");
   require("IntersectionObserver");
 }
 
-  onMounted(() => {
-    console.log("mounted");
-    
-    if (process.client) {
-      console.log("process client works");
+onMounted(() => {
+  console.log("mounted");
 
-      const canvasElement = document.querySelector(".canvas");
-  
-      const hiddenElements = document.querySelectorAll(".hidden");
-  
-  
-      const observer = new IntersectionObserver((entries) => {
-        console.log("IntersectionObserver is working");
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      });
-  
-      hiddenElements.forEach((element) => {
-        observer.observe(element);
-      });
-    }
-  });
+  if (typeof process !== "undefined" && process.client) {
+    console.log("process client works");
 
+    const canvasElement = document.querySelector(".canvas");
+    const hiddenElements = document.querySelectorAll(".hidden");
+
+    const observer = new IntersectionObserver((entries) => {
+      console.log("IntersectionObserver is working");
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    hiddenElements.forEach((element) => {
+      observer.observe(element);
+    });
+  }
+});
 </script>
 
 <!-- 
