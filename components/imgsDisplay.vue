@@ -1,42 +1,42 @@
 <template>
     <div class="img-tray">
         <img
-        src="../assets/demo-imgs/Group-demo-img.png" 
+        :src="getImgSrc(imgFileName0)" 
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group-demo-img-1.png"
+        :src="getImgSrc(imgFileName1)"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group-demo-img-2.png"
+        :src="getImgSrc(imgFileName2)"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group-demo-img-3.png"
+        :src="getImgSrc(imgFileName3)"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group-demo-img-4.png"
+        :src="getImgSrc(imgFileName4)"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group-demo-img-5.png"
+        :src="getImgSrc(imgFileName5)"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group-demo-img-6.png"
+        :src="getImgSrc(imgFileName6)"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group-demo-img-7.png"
+        :src="getImgSrc(imgFileName7)"
         alt="demo-img"
         class="img hidden"
         >
@@ -44,6 +44,48 @@
 </template>
 
 <script setup>
+
+const props = defineProps({
+  imgFileName0: {
+    type: String,
+    required: true,
+  },
+  imgFileName1: {
+    type: String,
+    required: true,
+  },
+  imgFileName2: {
+    type: String,
+    required: true,
+  },
+  imgFileName3: {
+    type: String,
+    required: true,
+  },
+  imgFileName4: {
+    type: String,
+    required: true,
+  },
+  imgFileName5: {
+    type: String,
+    required: true,
+  },
+  imgFileName6: {
+    type: String,
+    required: true,
+  },
+  imgFileName7: {
+    type: String,
+    required: true,
+  },
+})
+
+// get an array of image srcs
+function getImgSrc(imgFileName) {
+  if(!imgFileName) return;
+  return new URL(`../assets/demo-imgs/${imgFileName}`, import.meta.url);
+}
+
 
 if (process.browser) {
   require("IntersectionObserver");

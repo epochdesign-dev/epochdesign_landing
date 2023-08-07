@@ -9,7 +9,16 @@
         />
       </div>
       <div class="demos">
-        <ImgsDisplay class="demos-content"/>
+        <ImgsDisplay class="demos-content"
+        imgFileName0="Group-demo-img-0.png"
+        imgFileName1="Group-demo-img-1.png"
+        imgFileName2="Group-demo-img-2.png"
+        imgFileName3="Group-demo-img-3.png"
+        imgFileName4="Group-demo-img-4.png"
+        imgFileName5="Group-demo-img-5.png"
+        imgFileName6="Group-demo-img-6.png"
+        imgFileName7="Group-demo-img-7.png"
+        />
       </div>
 
       <div class="content">
@@ -95,7 +104,7 @@ useHead({
   meta: [{ name: "description", content: "web design" }],
 });
 
-
+console.log("web design page");
 
 </script>
 
@@ -305,9 +314,6 @@ useHead({
   max-width: 1920px;
 }
 
-.scroll-swiper {
-  /* position */
-}
 
 .contact {
   /* position */
