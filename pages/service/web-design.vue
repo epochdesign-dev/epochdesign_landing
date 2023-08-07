@@ -427,47 +427,12 @@ useHead({
   meta: [{ name: "description", content: "web design" }],
 });
 
-if (process.browser) {
-  require("IntersectionObserver");
-}
-
-  onMounted(() => {
-    
-    if (process.client) {
-      
-      const canvasElement = document.querySelector(".canvas");
-  
-      const hiddenElements = document.querySelectorAll(".hidden");
-  
-  
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      });
-  
-      hiddenElements.forEach((element) => {
-        observer.observe(element);
-      });
-    }
-  });
-
 
 </script>
 
 
 
 <style scoped>
-.hidden {
-  opacity: 0;
-  filter: blur(10px);
-  transform: translateY(80%);
-  transition: all 1s;
-}
 
 .show {
   opacity: 1;
