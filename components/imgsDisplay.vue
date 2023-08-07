@@ -1,45 +1,51 @@
 <template>
     <div class="img-tray">
         <img
-        :src="imgSrcs[0]"
+        src="../assets/demo-imgs/Group-demo-img-0.png"
         alt="demo-img0"
         class="img hidden"
-        >
+        />
         <img
-        :src="imgSrcs[1]"
+        src="../assets/demo-imgs/Group-demo-img-1.png"
         alt="demo-img1"
         class="img hidden"
-        >
+        />
+
         <img
-        :src="imgSrcs[2]"
+        src="../assets/demo-imgs/Group-demo-img-2.png"
         alt="demo-img2"
         class="img hidden"
-        >
+        />
+
         <img
-        :src="imgSrcs[3]"
+        src="../assets/demo-imgs/Group-demo-img-3.png"
         alt="demo-img3"
         class="img hidden"
-        >
+        />
+
         <img
-        :src="imgSrcs[4]"
+        src="../assets/demo-imgs/Group-demo-img-4.png"
         alt="demo-img4"
         class="img hidden"
-        >
+        />
+
         <img
-        :src="imgSrcs[5]"
+        src="../assets/demo-imgs/Group-demo-img-5.png"
         alt="demo-img5"
         class="img hidden"
-        >
+        />
+
         <img
-        :src="imgSrcs[6]"
+        src="../assets/demo-imgs/Group-demo-img-6.png"
         alt="demo-img6"
         class="img hidden"
-        >
+        />
+
         <img
-        :src="imgSrcs[7]"
+        src="../assets/demo-imgs/Group-demo-img-7.png"
         alt="demo-img7"
         class="img hidden"
-        >
+        />
     </div>
 </template>
 
@@ -81,19 +87,20 @@ const props = defineProps({
   },
 })
 
-// get an array of image srcs
-function getImgSrcs() {
-  const ImgSrcs = [];
-  for (let i = 0; i < 8; i++) {
-    const imgFileName = props[`imgFileName${i}`];
-    const ImgSrc = new URL(`../assets/demo-imgs/${imgFileName}`, import.meta.url);
-    ImgSrcs.push(ImgSrc);
-  }
-  return ImgSrcs;
-}
+// // get an array of image srcs
+// function getImgSrcs() {
+//   const ImgSrcs = [];
+//   for (let i = 0; i < 8; i++) {
+//     const imgFileName = props[`imgFileName${i}`];
+//     const ImgSrc = new URL(`../assets/demo-imgs/${imgFileName}`, import.meta.url);
+//     ImgSrcs.push(ImgSrc);
+//   }
+//   return ImgSrcs;
+// }
 
-const imgSrcs = getImgSrcs();
+// const imgSrcs = getImgSrcs();
 
+// console.log(imgSrcs);
 
 if (process.browser) {
   require("IntersectionObserver");
