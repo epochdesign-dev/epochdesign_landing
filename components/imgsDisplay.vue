@@ -50,87 +50,37 @@
 </template>
 
 <script setup>
-console.log("imgsDisplay.vue is running");
+import { onMounted } from "vue";
 
-const props = defineProps({
-  imgFileName0: {
-    type: String,
-    required: true,
-  },
-  imgFileName1: {
-    type: String,
-    required: true,
-  },
-  imgFileName2: {
-    type: String,
-    required: true,
-  },
-  imgFileName3: {
-    type: String,
-    required: true,
-  },
-  imgFileName4: {
-    type: String,
-    required: true,
-  },
-  imgFileName5: {
-    type: String,
-    required: true,
-  },
-  imgFileName6: {
-    type: String,
-    required: true,
-  },
-  imgFileName7: {
-    type: String,
-    required: true,
-  },
-})
-
-// // get an array of image srcs
-// function getImgSrcs() {
-//   const ImgSrcs = [];
-//   for (let i = 0; i < 8; i++) {
-//     const imgFileName = props[`imgFileName${i}`];
-//     const ImgSrc = new URL(`../assets/demo-imgs/${imgFileName}`, import.meta.url);
-//     ImgSrcs.push(ImgSrc);
-//   }
-//   return ImgSrcs;
-// }
-
-// const imgSrcs = getImgSrcs();
-
-// console.log(imgSrcs);
-
-if (process.browser) {
+if (typeof process !== "undefined" && process.browser) {
+  console.log("process Browser works");
   require("IntersectionObserver");
 }
+else {
+  console.log("process Browser does not work");
+}
 
-  onMounted(() => {
-    
-    if (process.client) {
-      
-      const canvasElement = document.querySelector(".canvas");
-  
-      const hiddenElements = document.querySelectorAll(".hidden");
-  
-  
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      });
-  
-      hiddenElements.forEach((element) => {
-        observer.observe(element);
-      });
-    }
-  });
+onMounted(() => {
+  console.log("mounted");
+    const canvasElement = document.querySelector(".canvas");
+    const hiddenElements = document.querySelectorAll(".hidden");
 
+    const observer = new IntersectionObserver((entries) => {
+      console.log("IntersectionObserver is working");
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    hiddenElements.forEach((element) => {
+      observer.observe(element);
+    });
+  }
+);
 </script>
 
 
