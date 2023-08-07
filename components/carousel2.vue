@@ -142,8 +142,8 @@ onMounted(() => {
 
 .project_pic{
     /* shape */
-    max-width: 70.98vw;
-    max-height: 39.22vw;
+    min-width: 70.98vw;
+    min-height: 39.22vw;
     object-fit: contain;
 
     /* inner shape */

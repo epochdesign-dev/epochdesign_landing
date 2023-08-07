@@ -1,42 +1,42 @@
 <template>
     <div class="img-tray">
         <img
-        src="../assets/demo-imgs/Group demo-img.png" 
+        src="../assets/demo-imgs/Group-demo-img.png" 
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group demo-img-1.png"
+        src="../assets/demo-imgs/Group-demo-img-1.png"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group demo-img-2.png"
+        src="../assets/demo-imgs/Group-demo-img-2.png"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group demo-img-3.png"
+        src="../assets/demo-imgs/Group-demo-img-3.png"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group demo-img-4.png"
+        src="../assets/demo-imgs/Group-demo-img-4.png"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group demo-img-5.png"
+        src="../assets/demo-imgs/Group-demo-img-5.png"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group demo-img-6.png"
+        src="../assets/demo-imgs/Group-demo-img-6.png"
         alt="demo-img"
         class="img hidden"
         >
         <img
-        src="../assets/demo-imgs/Group demo-img-7.png"
+        src="../assets/demo-imgs/Group-demo-img-7.png"
         alt="demo-img"
         class="img hidden"
         >

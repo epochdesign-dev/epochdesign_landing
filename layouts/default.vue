@@ -146,6 +146,7 @@
     /* Shape */
     border-radius: 25px;
     height: 37.7%;
+    min-width: 8vw;
 
     /* Position */
     margin-top: 32px;
