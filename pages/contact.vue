@@ -2,9 +2,7 @@
     <div class="main">
         <div class="canvas">
             <SubpageTitle title="Contact" subtitle="If you'd like to learn more about<br>how we can help evolve your brand, get in touch."/>
-            <div class="contact_form">
-                <ContactUsForm/>
-            </div>
+            <ContactUsForm class="contact_form"/>
         </div>
     </div>
 </template>

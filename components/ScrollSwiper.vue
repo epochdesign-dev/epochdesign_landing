@@ -12,41 +12,38 @@
         draggable: true,
       }"
       :spaceBetween="20"
-      
     >
-    <SwiperSlide v-for="slide in 10" :key="slide">
-        <div class="wrapper">
-          <img src="../assets/defult-fearture-card.png" alt="defult-fearture-card">
-        </div>
+      <SwiperSlide v-for="slide in 10" :key="slide">
+      <SwiperCard class="card"
+        image="../assets/defult-fearture-card.png"
+        projectName="Project Name"
+        projectLink="http://localhost:3000/"
+      />
       </SwiperSlide>
     </Swiper>
   </div>
 </template>
 
-
-
 <style>
 .main {
-   /* Colour Variables */
-   --onyx-black: #121212;
-   --dandelion-yellow: #E8E92B;
-   --light-periwinkle-purple: #C0C7FF;
-   /* #FFFFFF (white) */
+  /* Colour Variables */
+  --onyx-black: #121212;
+  --dandelion-yellow: #e8e92b;
+  --light-periwinkle-purple: #c0c7ff;
+  /* #FFFFFF (white) */
 
+  /* text */
+  color: var(--onyx-black);
+  width: 100%;
 
-   /* text */
-   color: var(--onyx-black);
-
-   /* shape */
-   height: 100%;
 }
 
-
-
 .swiper {
-    height: 50vw;
-    max-height: 1000px;
-    overflow: visible;
+  width: 100vw;
+  max-width: 1920px;
+  height: 50vw;
+  max-height: 1000px;
+  overflow: visible;
 }
 
 .swiper-slide {
@@ -56,18 +53,13 @@
   align-items: center;
 }
 
-.wrapper {
-  background-color: white;
-  border-radius: 50px;
-}
-
-.swiper-slide img {
+.card {
   display: block;
   object-fit: cover;
 }
 
-.swiper-horizontal>.swiper-scrollbar {
-	position: relative;
+.swiper-horizontal > .swiper-scrollbar {
+  position: relative;
   width: 100%;
   height: 2em;
   left: 0px;
@@ -76,11 +68,14 @@
 }
 
 .swiper-scrollbar-drag {
-	cursor: pointer;
+  cursor: pointer;
   border-radius: 100vw;
   background-color: var(--dandelion-yellow);
 }
 
-
-
+@media screen and (max-width: 700px){
+  .swiper-horizontal > .swiper-scrollbar-horizontal{
+    height: 0.5em;
+  }
+}
 </style>
