@@ -14,7 +14,7 @@
 @font-face {
     font-family: "Helvetica-Neue";
     src: local("Helvetica-Neue"),
-    url("../assets/Helvetica.ttf") format("truetype");
+    url("../../assets/Helvetica.ttf") format("truetype");
 }
 
 /* Color Variables */
