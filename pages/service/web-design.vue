@@ -2,23 +2,20 @@
   <div class="main">
     <div class="canvas">
       <div class="title selected">
-        <SubpageTitle2
-          class="subpagetite"
-          title="Web Design"
-          subtitle="We pride ourselves on designing sites with a high level of design quality without compromising on user experience. We craft exceptional results that will make other brands want to model themselves after you."
-        />
+        <SubpageTitle2 class="subpagetite" title="Web Design"
+          subtitle="We pride ourselves on designing sites with a high level of design quality without compromising on user experience. We craft exceptional results that will make other brands want to model themselves after you." />
       </div>
       <div class="demos">
-        <ImgsDisplay class="demos-content"
-        imgFileName0="Group-demo-img-0.png"
-        imgFileName1="Group-demo-img-1.png"
-        imgFileName2="Group-demo-img-2.png"
-        imgFileName3="Group-demo-img-3.png"
-        imgFileName4="Group-demo-img-4.png"
-        imgFileName5="Group-demo-img-5.png"
-        imgFileName6="Group-demo-img-6.png"
-        imgFileName7="Group-demo-img-7.png"
-        />
+        <div class="img-tray">
+          <img src="../../assets/demo-imgs/Group-demo-img-0.png" alt="demo-img0" class="img hidden" />
+          <img src="../../assets/demo-imgs/Group-demo-img-1.png" alt="demo-img1" class="img hidden" />
+          <img src="../../assets/demo-imgs/Group-demo-img-2.png" alt="demo-img2" class="img hidden" />
+          <img src="../../assets/demo-imgs/Group-demo-img-3.png" alt="demo-img3" class="img hidden" />
+          <img src="../../assets/demo-imgs/Group-demo-img-4.png" alt="demo-img4" class="img hidden" />
+          <img src="../../assets/demo-imgs/Group-demo-img-5.png" alt="demo-img5" class="img hidden" />
+          <img src="../../assets/demo-imgs/Group-demo-img-6.png" alt="demo-img6" class="img hidden" />
+          <img src="../../assets/demo-imgs/Group-demo-img-7.png" alt="demo-img7" class="img hidden" />
+        </div>
       </div>
 
       <div class="content">
@@ -52,12 +49,8 @@
 
       <div class="why-epoch">
         <div class="why-epoch-grid">
-          <div class="sub-title why-epoch-grid-left ">WHY EPOCH</div>
-          <img
-            src="../../assets/Q-line.png"
-            alt="Q"
-            class="why-epoch-grid-mid"
-          />
+          <div class="sub-title why-epoch-grid-left">WHY EPOCH</div>
+          <img src="../../assets/Q-line.png" alt="Q" class="why-epoch-grid-mid" />
           <div class="why-epoch-grid-right">
             <div class="why-title">Originality</div>
             <div class="why-description">
@@ -98,14 +91,6 @@
   </div>
 </template>
 
-<script setup>
-useHead({
-  title: "Epoch Design | Web Design",
-  meta: [{ name: "description", content: "web design" }],
-});
-
-
-</script>
 
 <style scoped>
 /* Fonts */
@@ -148,7 +133,7 @@ useHead({
   align-items: center;
 }
 
-.canvas > *:not(.footer) {
+.canvas>*:not(.footer) {
   margin-bottom: 20vw;
 }
 
@@ -171,7 +156,8 @@ useHead({
   min-width: min-content;
   position: relative;
   margin-top: 400px;
-  display: block; /* Ensures that the element takes the full width of its parent */
+  display: block;
+  /* Ensures that the element takes the full width of its parent */
 }
 
 .demos {
@@ -258,8 +244,10 @@ useHead({
 .why-epoch-grid {
   /* grid */
   display: grid;
-  grid-template-columns: 1fr auto 1fr; /* Define three columns with equal width */
-  grid-gap: 40px; /* Add a gap between grid items */
+  grid-template-columns: 1fr auto 1fr;
+  /* Define three columns with equal width */
+  grid-gap: 40px;
+  /* Add a gap between grid items */
 }
 
 .sub-title {
@@ -291,18 +279,21 @@ useHead({
 }
 
 .why-epoch-grid-left {
-  grid-column: 1; /* Place the element in the first column (left) */
+  grid-column: 1;
+  /* Place the element in the first column (left) */
   text-align: end;
 }
 
 .why-epoch-grid-mid {
-  grid-column: 2; /* Place the image in the second column (middle) */
+  grid-column: 2;
+  /* Place the image in the second column (middle) */
   min-width: min-content;
 }
 
 .why-epoch-grid-right {
   padding-top: 3rem;
-  grid-column: 3; /* Place the element in the third column (right) */
+  grid-column: 3;
+  /* Place the element in the third column (right) */
   text-align: start;
 }
 
@@ -312,7 +303,6 @@ useHead({
   top: auto;
   max-width: 1920px;
 }
-
 
 .contact {
   /* position */
@@ -329,25 +319,32 @@ useHead({
 }
 
 @media screen and (max-width: 1500px) {
+
   /*why epoch*/
   .why-epoch-grid {
     gap: 20px;
   }
+
   .sub-title {
     font-size: calc(70pt * var(--large));
   }
+
   .why-title {
     font-size: calc(38pt * var(--large));
   }
+
   .why-description {
     font-size: calc(25pt * var(--large));
   }
 }
+
 @media screen and (max-width: 1200px) {
+
   /*content*/
   .content-title {
     font-size: calc(48pt * var(--medium));
   }
+
   .content-description {
     font-size: calc(18pt * var(--large));
   }
@@ -356,6 +353,7 @@ useHead({
     font-size: calc(21pt * var(--large));
     padding: 0.1rem 1rem;
   }
+
   .skill-row {
     min-width: 400px;
   }
@@ -364,17 +362,21 @@ useHead({
   .why-epoch-grid {
     gap: 20px;
   }
+
   .sub-title {
-    font-size: calc(70pt * var(--medium)*1.5);
+    font-size: calc(70pt * var(--medium) * 1.5);
     white-space: inherit;
   }
+
   .why-title {
-    font-size: calc(38pt * var(--medium)*1.5);
+    font-size: calc(38pt * var(--medium) * 1.5);
   }
+
   .why-description {
     font-size: calc(25pt * var(--medium));
   }
-  .why-epoch-grid-mid > img {
+
+  .why-epoch-grid-mid>img {
     width: 100%;
     height: 50%;
   }
@@ -384,6 +386,7 @@ useHead({
   .content-title {
     font-size: calc(48pt * var(--small));
   }
+
   .content-description {
     font-size: calc(19pt * var(--large));
   }
@@ -392,6 +395,7 @@ useHead({
     font-size: calc(21pt * var(--large));
     padding: 0.1rem 1rem;
   }
+
   .skill-row {
     min-width: 400px;
   }
@@ -401,11 +405,14 @@ useHead({
   }
 
   .why-epoch-grid {
-    grid-gap: 0px; /* Add a gap between grid items */
+    grid-gap: 0px;
+    /* Add a gap between grid items */
   }
+
   .why-epoch-grid-mid {
     text-align: center;
   }
+
   .why-epoch-grid-mid {
     display: none;
   }
@@ -414,10 +421,133 @@ useHead({
 
 
 
+<script setup>
+useHead({
+  title: "Epoch Design | Web Design",
+  meta: [{ name: "description", content: "web design" }],
+});
+
+if (process.browser) {
+  require("IntersectionObserver");
+}
+
+  onMounted(() => {
+    
+    if (process.client) {
+      
+      const canvasElement = document.querySelector(".canvas");
+  
+      const hiddenElements = document.querySelectorAll(".hidden");
+  
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
+  
+      hiddenElements.forEach((element) => {
+        observer.observe(element);
+      });
+    }
+  });
+
+
+</script>
+
+
+
 <style scoped>
-/*  */
+.hidden {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(80%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 1s;
+}
+
+/* polite way to write code */
+@media (prefers-reduced-motion: reduce) {
+  .hidden {
+    transition: none;
+  }
+}
 </style>
 
 
+<style scope>
 
+.img-tray {
+    position: relative;
+    width: 100vw; /* Adjust this to your needs */
+    aspect-ratio: 16 / 9; /* Adjust this to your needs */
+    max-width: 1920px;
+    overflow: hidden;
+    padding-top: 56.25%
+  }
 
+.img-tray> *{
+    position: absolute;
+    height: auto;
+    display: inline-block;
+}
+
+.img:nth-child(1){
+    top: 0;
+    right: 45%;
+    width: 45%;
+}
+
+.img:nth-child(2){
+    top: 13%;
+    right: 25%;
+    width: 45%;
+}
+
+.img:nth-child(3){
+    top: 30%;
+    right: 3%;
+    width: 45%;
+}
+
+.img:nth-child(4){
+    top: 42%;
+    left: 4%;
+    width: 50%;
+}
+
+.img:nth-child(5){
+    top:60%;
+    left: 30%;
+    width: 40%;
+}
+
+.img:nth-child(6){
+    top: 10%;
+    left: 0%;
+    width: 10%;
+}
+
+.img:nth-child(7){
+    top: 25%;
+    left: 0%;
+    width: 30%;
+}
+
+.img:nth-child(8){
+    top: 50%;
+    right: 0%;
+    width: 25%;
+}
+
+</style>
