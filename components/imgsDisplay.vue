@@ -81,7 +81,12 @@ onMounted(() => {
       observer.observe(element);
     });
   }
-});
+  
+else {
+  console.log("process client does not work");
+}
+}
+);
 </script>
 
 <!-- 
