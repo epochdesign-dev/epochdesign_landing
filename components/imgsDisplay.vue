@@ -51,34 +51,38 @@
 
 <script setup>
 
-// if (process.browser) {
-//   require("IntersectionObserver");
-// }
+if (process.browser) {
+    console.log("process Browser works");
+  require("IntersectionObserver");
+}
 
-//   onMounted(() => {
+  onMounted(() => {
+    console.log("mounted");
     
-//     if (process.client) {
-      
-//       const canvasElement = document.querySelector(".canvas");
+    if (process.client) {
+      console.log("process client works");
+
+      const canvasElement = document.querySelector(".canvas");
   
-//       const hiddenElements = document.querySelectorAll(".hidden");
+      const hiddenElements = document.querySelectorAll(".hidden");
   
   
-//       const observer = new IntersectionObserver((entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             entry.target.classList.add("show");
-//           } else {
-//             entry.target.classList.remove("show");
-//           }
-//         });
-//       });
+      const observer = new IntersectionObserver((entries) => {
+        console.log("IntersectionObserver is working");
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
   
-//       hiddenElements.forEach((element) => {
-//         observer.observe(element);
-//       });
-//     }
-//   });
+      hiddenElements.forEach((element) => {
+        observer.observe(element);
+      });
+    }
+  });
 
 </script>
 
