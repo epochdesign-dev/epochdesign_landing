@@ -1,9 +1,10 @@
 <template>
     <div class="main">
         <div class="oval-container">    
-            <div class="oval"></div>
+            <div class="oval">
+                <h1 class="title">{{title}}</h1>
+            </div>
         </div>
-        <h1 class="title">{{title}}</h1>
         <div class="text-box">   
             <p class="subtitle" v-html="subtitle"></p>
         </div>
@@ -26,12 +27,6 @@
     --onyx-black: #121212;
     --dandelion-yellow: #E8E92B;
     --light-periwinkle-purple: #C0C7FF;
-    
-    
-
-    --large: 0.8;
-    --medium: 0.4;
-    --small: 0.25;
 }
 
 .main{
@@ -48,6 +43,7 @@
 .oval-container{
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .oval {
@@ -59,16 +55,20 @@
 }
 .title {
     /* position */
-    top: -2%;
-    left: 50%;
-    transform: translateX(-50%);
-    
+    margin: 0; /* This ensures no margin */
+    padding: 0; /* This ensures no padding */
+
+    text-align: center;
+
     /* font */
     white-space: nowrap;
     color: var(--dandelion-yellow); 
     font-family: Helvetica-Neue;
     font-size: 6vw;
+
+    /* Your other styles */
 }
+
 
 .text-box{
     display: flex;
@@ -130,7 +130,7 @@
         min-width: calc(1317px * var(--small));
     }
     .subtitle{
-        font-size: calc(32pt * var(--small));
+        font-size: calc(32pt * var(--small*1.5));
     }
 
     
