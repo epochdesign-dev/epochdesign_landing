@@ -1,88 +1,83 @@
 <template>
   <div class="main">
     <div class="canvas">
-      <div class="title">
+      <div class="title selected">
         <SubpageTitle2
           class="subpagetite"
           title="Web Design"
           subtitle="We pride ourselves on designing sites with a high level of design quality without compromising on user experience. We craft exceptional results that will make other brands want to model themselves after you."
         />
       </div>
-        <div class="demos">
-            <img
-            src="../../assets/services_demos.png"
-            alt="services-demos"
-            class="demos-content"
-            />
-        </div>
+      <div class="demos">
+        <ImgsDisplay class="demos-content"/>
+      </div>
 
-        <div class="content">
-            <div class="content-title">
-            Aesthetically pleasing websites that evoke that wow reaction
-            </div>
-            <div class="content-description">
-            A brand's website, no matter big or small, is an opportunity for them
-            to stand out. So why settle for something boring and unoriginal? At
-            Epoch, our clients benefit from beautifully designed websites that are
-            carefully crafted and custom-made.Our main goal is for our client's
-            site is to resonate with its customers and create a smooth user
-            experience. As your dedicated web design agency, you can depend on our
-            highly educated and experienced team to create a digital experience
-            that evokes that wow factor.
-            </div>
-            <div class="skill-sets">
-            <div class="skill-row">
-                <div class="skill-tag">Figma</div>
-                <div class="skill-tag">Adobe XD</div>
-                <div class="skill-tag">Graphics</div>
-            </div>
-            <div class="skill-row">
-                <div class="skill-tag">UI/UX</div>
-                <div class="skill-tag">Landing pages</div>
-                <div class="skill-tag">Wireframes</div>
-                <div class="skill-tag">Redesign</div>
-            </div>
-            </div>
+      <div class="content">
+        <div class="content-title">
+          Aesthetically pleasing websites that evoke that wow reaction
         </div>
-
-        <div class="why-epoch">
-            <div class="why-epoch-grid">
-            <div class="sub-title why-epoch-grid-left">WHY EPOCH</div>
-            <img
-                src="../../assets/Q-line.png"
-                alt="Q"
-                class="why-epoch-grid-mid"
-            />
-            <div class="why-epoch-grid-right">
-                <div class="why-title">Originality</div>
-                <div class="why-description">
-                Your new website will be hand-crafted and unique to your brand and
-                its target audience. We pride ourselves in designing one-of-a-kind
-                websites.
-                </div>
-                <div class="why-title">Creativity</div>
-                <div class="why-description">
-                Each design we create combines our creativity and deep
-                understanding of your brand's user needs to deliver a meaningful
-                digital experience.
-                </div>
-                <div class="why-title">Impactful</div>
-                <div class="why-description">
-                Your website’s the centrepiece of your visual identity. We make
-                every click count through creative design and UX that converts.
-                </div>
-            </div>
-            </div>
+        <div class="content-description">
+          A brand's website, no matter big or small, is an opportunity for them
+          to stand out. So why settle for something boring and unoriginal? At
+          Epoch, our clients benefit from beautifully designed websites that are
+          carefully crafted and custom-made.Our main goal is for our client's
+          site is to resonate with its customers and create a smooth user
+          experience. As your dedicated web design agency, you can depend on our
+          highly educated and experienced team to create a digital experience
+          that evokes that wow factor.
         </div>
+        <div class="skill-sets">
+          <div class="skill-row">
+            <div class="skill-tag">Figma</div>
+            <div class="skill-tag">Adobe XD</div>
+            <div class="skill-tag">Graphics</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-tag">UI/UX</div>
+            <div class="skill-tag">Landing pages</div>
+            <div class="skill-tag">Wireframes</div>
+            <div class="skill-tag">Redesign</div>
+          </div>
+        </div>
+      </div>
 
-    
-     <div class="featured-projects">
+      <div class="why-epoch">
+        <div class="why-epoch-grid">
+          <div class="sub-title why-epoch-grid-left ">WHY EPOCH</div>
+          <img
+            src="../../assets/Q-line.png"
+            alt="Q"
+            class="why-epoch-grid-mid"
+          />
+          <div class="why-epoch-grid-right">
+            <div class="why-title">Originality</div>
+            <div class="why-description">
+              Your new website will be hand-crafted and unique to your brand and
+              its target audience. We pride ourselves in designing one-of-a-kind
+              websites.
+            </div>
+            <div class="why-title">Creativity</div>
+            <div class="why-description">
+              Each design we create combines our creativity and deep
+              understanding of your brand's user needs to deliver a meaningful
+              digital experience.
+            </div>
+            <div class="why-title">Impactful</div>
+            <div class="why-description">
+              Your website’s the centrepiece of your visual identity. We make
+              every click count through creative design and UX that converts.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-projects">
         <div class="sub-title">FEATURED PROJECTS</div>
         <div class="scroll-swiper">
-        <ScrollSwiper class="swiper" />
+          <ScrollSwiper class="swiper" />
         </div>
-    </div>
-         
+      </div>
+
       <div class="contact">
         <GetInTouch />
       </div>
@@ -99,14 +94,17 @@ useHead({
   title: "Epoch Design | Web Design",
   meta: [{ name: "description", content: "web design" }],
 });
+
+
+
 </script>
 
 <style scoped>
 /* Fonts */
 @font-face {
-    font-family: "Helvetica-Neue";
-    src: local("Helvetica-Neue"),
-        url("../../assets/Helvetica.ttf") format("truetype");
+  font-family: "Helvetica-Neue";
+  src: local("Helvetica-Neue"),
+    url("../../assets/Helvetica.ttf") format("truetype");
 }
 
 /* Color Variables */
@@ -114,9 +112,8 @@ useHead({
   --onyx-black: #121212;
   --dandelion-yellow: #e8e92b;
   --light-periwinkle-purple: #c0c7ff;
-  /* #FFFFFF (white) */ 
+  /* #FFFFFF (white) */
 
-  
   --large: 0.8;
   --medium: 0.4;
   --small: 0.25;
@@ -137,14 +134,14 @@ useHead({
   /* interaction */
   overflow-y: scroll;
   overflow-x: hidden;
- 
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.canvas>*:not(.footer) {
-  margin-bottom: 200px;
+.canvas > *:not(.footer) {
+  margin-bottom: 20vw;
 }
 
 /* scrollbar width */
@@ -165,15 +162,14 @@ useHead({
 .title {
   min-width: min-content;
   position: relative;
-  margin-top: 200px;
+  margin-top: 400px;
   display: block; /* Ensures that the element takes the full width of its parent */
 }
 
 .demos {
   position: relative;
   top: auto;
-  display: flex; /* Ensures that the element takes the full width of its parent */
-  justify-content: center;
+
 }
 
 /*The typeface might be a different one ?? the font size is not match the design*/
@@ -194,9 +190,6 @@ useHead({
   flex-direction: column;
   align-items: center;
   max-width: 1920px;
-
-
-  
 }
 
 .content-title {
@@ -209,14 +202,13 @@ useHead({
 
 .content-description {
   /* font */
-  font-size: 12pt;
+  font-size: 18pt;
   font-weight: 300;
   letter-spacing: 0.5%;
   line-height: 2;
 
   padding-bottom: 50px;
 }
-
 
 .skill-sets {
   width: 50%;
@@ -234,7 +226,7 @@ useHead({
 
 .skill-tag {
   /* font */
-  font-size: 14pt;
+  font-size: 21pt;
 
   /* inner shape */
   border-radius: 5rem;
@@ -247,23 +239,20 @@ useHead({
   margin: 0.3rem;
 }
 
+.why-epoch {
+  position: relative;
+  top: auto;
+  padding: 0 2rem;
+  max-width: 1920px;
+  min-width: min-content;
+}
 
-
- .why-epoch{
-    position: relative;
-    top: auto;
-    padding: 0 2rem;
-    max-width: 1920px;
-    min-width: min-content;
- }
-
- 
 .why-epoch-grid {
-    /* grid */
-    display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Define three columns with equal width */
-    grid-gap: 40px; /* Add a gap between grid items */ 
-  }
+  /* grid */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Define three columns with equal width */
+  grid-gap: 40px; /* Add a gap between grid items */
+}
 
 .sub-title {
   /* font */
@@ -271,7 +260,6 @@ useHead({
   font-size: 70pt;
   color: white;
   white-space: nowrap;
-
 }
 
 .why-title {
@@ -294,7 +282,6 @@ useHead({
   margin-bottom: 20px;
 }
 
-
 .why-epoch-grid-left {
   grid-column: 1; /* Place the element in the first column (left) */
   text-align: end;
@@ -311,7 +298,6 @@ useHead({
   text-align: start;
 }
 
-
 .featured-projects {
   /* position */
   position: relative;
@@ -321,17 +307,15 @@ useHead({
 
 .scroll-swiper {
   /* position */
-  
 }
 
 .contact {
   /* position */
   position: relative;
   top: auto;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
-
 
 .footer {
   /* position */
@@ -339,93 +323,96 @@ useHead({
   top: auto;
 }
 
-
-
-@media screen and (max-width: 1500px){
-    
-    /*why epoch*/
-    .why-epoch-grid{
-        gap:20px
-    }
-    .sub-title {
-        font-size: calc(70pt * var(--large));
-    }
-    .why-title {
-        font-size: calc(38pt * var(--large));
-    }
-    .why-description {
-        font-size: calc(25pt * var(--large));
-    }
+@media screen and (max-width: 1500px) {
+  /*why epoch*/
+  .why-epoch-grid {
+    gap: 20px;
+  }
+  .sub-title {
+    font-size: calc(70pt * var(--large));
+  }
+  .why-title {
+    font-size: calc(38pt * var(--large));
+  }
+  .why-description {
+    font-size: calc(25pt * var(--large));
+  }
 }
-@media screen and (max-width: 1200px){
-    /*content*/
-    .content-title {
-        font-size: calc(48pt * var(--medium));
-    }
-    .content-description {
-        font-size: calc(12pt * var(--large));
-    }
+@media screen and (max-width: 1200px) {
+  /*content*/
+  .content-title {
+    font-size: calc(48pt * var(--medium));
+  }
+  .content-description {
+    font-size: calc(18pt * var(--large));
+  }
 
-    .skill-tag {
-        font-size: calc(14pt * var(--large));
-        padding: 0.1rem 1.0rem;
-    }
-    .skill-row {
-        min-width: 400px;
-    }
+  .skill-tag {
+    font-size: calc(21pt * var(--large));
+    padding: 0.1rem 1rem;
+  }
+  .skill-row {
+    min-width: 400px;
+  }
 
-    
-    /*why epoch*/
-    .why-epoch-grid{
-        gap:20px
-    }
-    .sub-title {
-        font-size: calc(70pt * var(--medium));
-    }
-    .why-title {
-        font-size: calc(38pt * var(--medium));
-    }
-    .why-description {
-        font-size: calc(25pt * var(--medium));
-    }
-    .why-epoch-grid-mid > img{
-        width: 100%;
-        height: 50%;
-    }
-        
+  /*why epoch*/
+  .why-epoch-grid {
+    gap: 20px;
+  }
+  .sub-title {
+    font-size: calc(70pt * var(--medium)*1.5);
+    white-space: inherit;
+  }
+  .why-title {
+    font-size: calc(38pt * var(--medium)*1.5);
+  }
+  .why-description {
+    font-size: calc(25pt * var(--medium));
+  }
+  .why-epoch-grid-mid > img {
+    width: 100%;
+    height: 50%;
+  }
 }
 
+@media screen and (max-width: 700px) {
+  .content-title {
+    font-size: calc(48pt * var(--small));
+  }
+  .content-description {
+    font-size: calc(19pt * var(--large));
+  }
 
-@media screen and (max-width: 700px){
-    .content-title {
-        font-size: calc(48pt * var(--small));
-    }
-    .content-description {
-        font-size: calc(12pt * var(--large));
-    }
+  .skill-tag {
+    font-size: calc(21pt * var(--large));
+    padding: 0.1rem 1rem;
+  }
+  .skill-row {
+    min-width: 400px;
+  }
 
-    .skill-tag {
-        font-size: calc(14pt * var(--large));
-        padding: 0.1rem 1.0rem;
-    }
-    .skill-row {
-        min-width: 400px;
-    }
+  .sub-title {
+    font-size: calc(70pt * var(--small));
+  }
 
-    .sub-title {
-        font-size: calc(70pt * var(--small));
-    }
-
-    .why-epoch-grid{
-        grid-gap: 0px; /* Add a gap between grid items */ 
-    }
-    .why-epoch-grid-mid{  
-       text-align: center;
-    }
-    .why-epoch-grid-mid{   
-        display: none;
-    }
-    
+  .why-epoch-grid {
+    grid-gap: 0px; /* Add a gap between grid items */
+  }
+  .why-epoch-grid-mid {
+    text-align: center;
+  }
+  .why-epoch-grid-mid {
+    display: none;
+  }
 }
-
 </style>
+
+
+
+<style scoped>
+/*  */
+</style>
+
+
+
+
