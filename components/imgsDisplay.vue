@@ -1,43 +1,43 @@
 <template>
     <div class="img-tray">
         <img
-        :src="`../assets/demo-imgs/${imgFileName0}`"
-        alt="demo-img"
+        :src="imgSrcs[0]"
+        alt="demo-img0"
         class="img hidden"
         >
         <img
-        :src="`../assets/demo-imgs/${imgFileName1}`"
-        alt="demo-img"
+        :src="imgSrcs[1]"
+        alt="demo-img1"
         class="img hidden"
         >
         <img
-        :src="`../assets/demo-imgs/${imgFileName2}`"
-        alt="demo-img"
+        :src="imgSrcs[2]"
+        alt="demo-img2"
         class="img hidden"
         >
         <img
-        :src="`../assets/demo-imgs/${imgFileName3}`"
-        alt="demo-img"
+        :src="imgSrcs[3]"
+        alt="demo-img3"
         class="img hidden"
         >
         <img
-        :src="`../assets/demo-imgs/${imgFileName4}`"
-        alt="demo-img"
+        :src="imgSrcs[4]"
+        alt="demo-img4"
         class="img hidden"
         >
         <img
-        :src="`../assets/demo-imgs/${imgFileName5}`"
-        alt="demo-img"
+        :src="imgSrcs[5]"
+        alt="demo-img5"
         class="img hidden"
         >
         <img
-        :src="`../assets/demo-imgs/${imgFileName6}`"
-        alt="demo-img"
+        :src="imgSrcs[6]"
+        alt="demo-img6"
         class="img hidden"
         >
         <img
-        :src="`../assets/demo-imgs/${imgFileName7}`"
-        alt="demo-img"
+        :src="imgSrcs[7]"
+        alt="demo-img7"
         class="img hidden"
         >
     </div>
@@ -82,10 +82,17 @@ const props = defineProps({
 })
 
 // get an array of image srcs
-// function getImgSrc(imgFileName) {
-//   if(!imgFileName) return;
-//   return new URL(`../assets/demo-imgs/${imgFileName}`, import.meta.url);
-// }
+function getImgSrcs() {
+  const ImgSrcs = [];
+  for (let i = 0; i < 8; i++) {
+    const imgFileName = props[`imgFileName${i}`];
+    const ImgSrc = new URL(`../assets/demo-imgs/${imgFileName}`, import.meta.url);
+    ImgSrcs.push(ImgSrc);
+  }
+  return ImgSrcs;
+}
+
+const imgSrcs = getImgSrcs();
 
 
 if (process.browser) {
