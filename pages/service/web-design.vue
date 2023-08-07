@@ -177,6 +177,7 @@ useHead({
 .demos {
   position: relative;
   top: auto;
+  border-top: solid 1px var(--dandelion-yellow);
 }
 
 /*The typeface might be a different one ?? the font size is not match the design*/
