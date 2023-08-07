@@ -1,7 +1,7 @@
 <template>
     <div class="card-wrapper">
       <img
-        :src="image"
+        src="../assets/defult-fearture-card.png"
         alt="feature-card"
         class="base"
       />
@@ -15,8 +15,7 @@
   <script setup>
   
   // Define props you want to use in your component
-  const { image, projectName, projectLink } = defineProps({
-    image: String,
+  const {projectName, projectLink } = defineProps({
     projectName: String,
     projectLink: String
   });

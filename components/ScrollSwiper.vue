@@ -15,7 +15,6 @@
     >
       <SwiperSlide v-for="slide in 10" :key="slide">
       <SwiperCard class="card"
-        image="../assets/defult-fearture-card.png"
         projectName="Project Name"
         projectLink="http://localhost:3000/"
       />
