@@ -245,7 +245,7 @@
     .intro_img{
         /* shape */
         width: 164.62vw;
-        height: 50.1vh;
+        height: 90vw;
         object-fit:cover;
         max-width: none;
         max-height: none;
@@ -323,7 +323,7 @@
 @media screen and (max-width: 740px) {
     .projects_title{
         /* position */
-        top: 60vh;
+        top: 108vw;
 
         /* font */
         font-size: 7vw;
@@ -335,7 +335,7 @@
 
     .mobile_project_card{
         position: relative;
-        top: 69vh;
+        top: 122vw;
         margin-bottom: 5px;
     }
 }
@@ -432,7 +432,7 @@
     .mobile_whoweare_title{
         /* position */
         position:absolute;
-        top: 184.72vh;
+        top: 330vw;
         left: 50%;
         transform: translateX(-50%);
 
@@ -466,7 +466,7 @@
 
         /* position */
         position:absolute;
-        top: 195.56vh;
+        top: 348vw;
         left: 50%;
         transform: translateX(-50%);
 
@@ -482,17 +482,17 @@
 
     .oval1_pos{
         /* position */
-        top: 197.78vh;
+        top: 352vw;
     }
 
     .oval2_pos{
         /* position */
-        top: 200.78vh;
+        top: 357vw;
     }
 
     .oval3_pos{
         /* position */
-        top: 203.78vh;
+        top: 362vw;
     }
 }
 
@@ -541,7 +541,7 @@
 @media screen and (max-width: 740px) {
     .services_title{
         /* position */
-        top: 223.89vh;
+        top: 395vw;
 
         /* font */
         font-size: 7vw;
@@ -557,7 +557,7 @@
 
         /* position */
         position: relative;
-        top: 125vh;
+        top: 215vw;
         left: auto;
         transform: none;
         margin-left: auto;
@@ -660,7 +660,7 @@
     .main_footer{
         /* position */
         position: absolute;
-        top: 400vh;
+        top: 700vw;
         left: 50%;
         transform: translateX(-50%);
 

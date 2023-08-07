@@ -20,12 +20,13 @@
     z-index: 1;
 
     /* shape */
-    height: 35.8vh;
+    min-height: 35.8vh;
 }
 
 .project_pic{
     /* shape */
     max-width: 100vw;
+    /* max-height: 32vh; */
     object-fit: contain;
 }
 

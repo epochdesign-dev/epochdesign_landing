@@ -168,7 +168,7 @@
 /* ****************************Mobile Screen*************************** */
 /* ******************************************************************** */
 /* for mobile */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     .navigation{
         /* Interaction */
         display: none;

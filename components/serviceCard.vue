@@ -166,10 +166,10 @@
 /* ****************************Mobile Screen*************************** */
 /* ******************************************************************** */
 /* for mobile */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 740px) {
     .main{
         /* shape */
-        height: 48.33vh;
+        height: 89.23vw;
         width: 87.69vw;
         border-radius: 5vw;
 
@@ -178,7 +178,7 @@
         padding-left: 4.1vw;
         padding-right: 4.1vw;
 
-        margin-bottom: 4vw
+        margin-bottom: 4vw;
     }
 
     .main_content{
@@ -188,7 +188,7 @@
         margin-right: auto;
 
         /* shape */
-        height: 38.38vh;
+        height: 71vw;
     }
 
     .tags{
@@ -239,7 +239,7 @@
 
     .learn_more{
         /* position */
-        margin-bottom: 2.43vh;
+        margin-bottom: 0;
         margin-left: 0;
         margin-right: auto;
 

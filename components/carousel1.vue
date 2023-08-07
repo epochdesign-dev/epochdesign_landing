@@ -109,10 +109,14 @@ onMounted(() => {
             scrollContainer.scrollLeft -= lastElem.offsetWidth;
         }
 
-        setTimeout(pageScroll, 10);
+        if (window.innerWidth > 740) {
+            setTimeout(pageScroll, 10);
+        }
     }
 
-    pageScroll();
+    if (window.innerWidth > 740) {
+        pageScroll();   
+    }
 })
 </script>
 
