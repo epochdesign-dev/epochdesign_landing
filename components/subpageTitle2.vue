@@ -13,6 +13,10 @@
 
 <script setup>
     const { title, subtitle } = defineProps(['title','subtitle']);
+
+
+    
+
 </script>
 
 <style scoped>
@@ -34,6 +38,13 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+
+    /*unselectable*/
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .main> *:not(.oval-container,.text-box){

@@ -110,7 +110,17 @@ onMounted(() => {
   aspect-ratio: 16 / 9; /* Adjust this to your needs */
   max-width: 1920px;
   overflow: hidden;
-  padding-top: 56.25%
+  padding-top: 56.25%;
+
+  
+
+    /*unselectable*/
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 .img-tray> *{

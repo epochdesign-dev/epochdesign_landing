@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <Swiper
-      :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperScrollbar]"
+      :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperScrollbar, SwiperParallax]"
       :slides-per-view="3"
       :autoplay="{
         delay: 8000,
@@ -12,6 +12,7 @@
         draggable: true,
       }"
       :spaceBetween="20"
+      :parallax="true"
     >
       <SwiperSlide v-for="slide in 10" :key="slide">
       <SwiperCard class="card"
