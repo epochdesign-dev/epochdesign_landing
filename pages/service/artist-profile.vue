@@ -7,7 +7,6 @@
             " />
         </div>
         <div class="demos">
-          <ImgsDisplay class="demos-content"/>
         </div>
   
         <div class="content">
