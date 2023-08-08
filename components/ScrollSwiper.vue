@@ -33,12 +33,14 @@
 
   /* text */
   color: var(--onyx-black);
+  width: 100%;
+
 }
 
 .swiper {
   width: 100vw;
   max-width: 1920px;
-  height: 40vw;
+  height: 50vw;
   max-height: 1000px;
   overflow: visible;
 }
@@ -56,11 +58,10 @@
 }
 
 .swiper-horizontal > .swiper-scrollbar {
-  margin-top: 20px;
   position: relative;
-  width: 50%;
-  height: 1.5em;
-  left: 25%;
+  width: 100%;
+  height: 2em;
+  left: 0px;
   bottom: 0px;
   background-color: rgba(255, 255, 255, 0.5);
 }
