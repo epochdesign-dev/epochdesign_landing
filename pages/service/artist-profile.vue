@@ -67,7 +67,6 @@
         <div class="featured-projects">
           <div class="sub-title">FEATURED PROJECTS</div>
           <div class="scroll-swiper">
-            <ScrollSwiper class="swiper" />
           </div>
         </div>
   

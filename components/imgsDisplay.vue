@@ -56,12 +56,8 @@ if (typeof process !== "undefined" && process.browser) {
 console.log("process Browser works");
 require("IntersectionObserver");
 }
-else {
-console.log("process Browser does not work");
-}
 
 onMounted(() => {
-console.log("mounted");
   const canvasElement = document.querySelector(".canvas");
   const hiddenElements = document.querySelectorAll(".hidden");
 

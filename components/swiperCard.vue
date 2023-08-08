@@ -42,6 +42,7 @@ max-width: 608px;
 max-height: 773px;
 width: 31.7vw;
 position: relative;
+display: block;
 }
 .card-wrapper > *:not(.base) {
 position: absolute;
@@ -49,12 +50,12 @@ position: absolute;
 
 .project-name {
 z-index: 1;
-bottom: 10%;
-left: 10%;
+bottom: 8%;
+left: 6%;
 
 /* font */
 color: white;
-font-size: 1.40625vw;
+font-size: 20pt;
 font-family: Helvetica-Neue;
 }
 
@@ -69,14 +70,14 @@ max-height: 40px;
 min-height: 10px;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (max-width: 1500px) {
 .project-name {
   /* font */
-  font-size: 36pt;
+  font-size: 15pt;
 }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 900px) {
 .project-name {
   /* font */
   font-size: 8pt;
