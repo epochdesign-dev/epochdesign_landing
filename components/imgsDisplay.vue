@@ -51,15 +51,17 @@
 
 <script setup>
 import { onMounted } from "vue";
+console.log("imgsDisplay.vue is working");
 
 if (typeof process !== "undefined" && process.browser) {
-console.log("process Browser works");
 require("IntersectionObserver");
 }
 
 onMounted(() => {
   const canvasElement = document.querySelector(".canvas");
   const hiddenElements = document.querySelectorAll(".hidden");
+  console.log("hiddenElements: ", hiddenElements);
+
 
   const observer = new IntersectionObserver((entries) => {
     console.log("IntersectionObserver is working");
@@ -73,6 +75,7 @@ onMounted(() => {
   });
 
   hiddenElements.forEach((element) => {
+    console.log("element to interact: ", element);
     observer.observe(element);
   });
 }
@@ -80,7 +83,7 @@ onMounted(() => {
 </script>
 
 
-<style scoped>
+<!-- <style scoped>
 .hidden {
 opacity: 0;
 filter: blur(10px);
@@ -101,11 +104,10 @@ transition: all 1s;
   transition: none;
 }
 }
-</style>
+</style> -->
 
 
-<style>
-
+<style scoped>
 .img-tray {
   position: relative;
   width: 100vw; /* Adjust this to your needs */
