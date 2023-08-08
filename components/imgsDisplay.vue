@@ -83,31 +83,30 @@ onMounted(() => {
 </script>
 
 
-<!-- <style scoped>
-.hidden {
-opacity: 0;
-filter: blur(10px);
-transform: translateY(80%);
-transition: all 1s;
-}
-
-.show {
-opacity: 1;
-filter: blur(0);
-transform: translateY(0);
-transition: all 1s;
-}
-
-/* polite way to write code */
-@media (prefers-reduced-motion: reduce) {
-.hidden {
-  transition: none;
-}
-}
-</style> -->
-
-
 <style scoped>
+
+
+.hidden {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(80%);
+  transition: all 1s;
+  }
+  
+  .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 1s;
+  }
+  
+  /* polite way to write code */
+  @media (prefers-reduced-motion: reduce) {
+  .hidden {
+    transition: none;
+  }
+  }
+
 .img-tray {
   position: relative;
   width: 100vw; /* Adjust this to your needs */
