@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="canvas">
-      <div class="title">
+      <div class="title selected">
         <SubpageTitle2 class="subpagetite" title="Web Design"
           subtitle="We pride ourselves on designing sites with a high level of design quality without compromising on user experience. We craft exceptional results that will make other brands want to model themselves after you." />
       </div>
@@ -89,48 +89,59 @@
   src: local("Helvetica-Neue"),
     url("../../assets/Helvetica.ttf") format("truetype");
 }
+
 /* Color Variables */
 .main {
   --onyx-black: #121212;
   --dandelion-yellow: #e8e92b;
   --light-periwinkle-purple: #c0c7ff;
   /* #FFFFFF (white) */
+
   --large: 0.8;
   --medium: 0.4;
   --small: 0.25;
 }
+
 /* Canvas */
 .canvas {
   /* inner shape */
   background-color: var(--onyx-black);
+
   /* position */
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+
   /* interaction */
   overflow-y: scroll;
   overflow-x: hidden;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .canvas>*:not(.footer) {
   margin-bottom: 20vw;
 }
+
 /* scrollbar width */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 /* scrollbar Track */
 ::-webkit-scrollbar-track {
   background: var(--onyx-black);
 }
+
 /* scrollbar Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--dandelion-yellow);
 }
+
 .title {
   min-width: min-content;
   position: relative;
@@ -138,27 +149,32 @@
   display: block;
   /* Ensures that the element takes the full width of its parent */
 }
+
 .demos {
   position: relative;
   top: auto;
 }
+
 /*The typeface might be a different one ?? the font size is not match the design*/
 .content {
   /* position */
   position: relative;
   top: auto;
   margin: 0 auto;
+
   /* font global */
   font-family: "Helvetica-Neue";
   color: white;
   /*centering*/
   text-align: center;
+
   /*inner shape*/
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 1920px;
 }
+
 .content-title {
   /* font */
   font-size: 48pt;
@@ -166,36 +182,46 @@
   letter-spacing: -1.5%;
   padding-bottom: 50px;
 }
+
 .content-description {
   /* font */
   font-size: 18pt;
   font-weight: 300;
   letter-spacing: 0.5%;
   line-height: 2;
+
   padding-bottom: 50px;
 }
+
 .skill-sets {
   width: 50%;
+
   /* inner shape */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .skill-row {
   /* Set the minimum width of the row to fit its contents */
   min-width: 450px;
 }
+
 .skill-tag {
   /* font */
   font-size: 21pt;
+
   /* inner shape */
   border-radius: 5rem;
   border: solid 1px var(--dandelion-yellow);
   padding: 0.5rem 1.5rem;
+
   display: inline-block;
   width: fit-content;
+
   margin: 0.3rem;
 }
+
 .why-epoch {
   position: relative;
   top: auto;
@@ -203,6 +229,7 @@
   max-width: 1920px;
   min-width: min-content;
 }
+
 .why-epoch-grid {
   /* grid */
   display: grid;
@@ -211,6 +238,7 @@
   grid-gap: 40px;
   /* Add a gap between grid items */
 }
+
 .sub-title {
   /* font */
   font-family: "Helvetica-Neue";
@@ -218,6 +246,7 @@
   color: white;
   white-space: nowrap;
 }
+
 .why-title {
   /* font */
   font-size: 38pt;
@@ -226,6 +255,7 @@
   font-family: "Helvetica-Neue";
   color: var(--dandelion-yellow);
 }
+
 .why-description {
   /* font */
   font-size: 25pt;
@@ -236,28 +266,33 @@
   color: white;
   margin-bottom: 20px;
 }
+
 .why-epoch-grid-left {
   grid-column: 1;
   /* Place the element in the first column (left) */
   text-align: end;
 }
+
 .why-epoch-grid-mid {
   grid-column: 2;
   /* Place the image in the second column (middle) */
   min-width: min-content;
 }
+
 .why-epoch-grid-right {
   padding-top: 3rem;
   grid-column: 3;
   /* Place the element in the third column (right) */
   text-align: start;
 }
+
 .featured-projects {
   /* position */
   position: relative;
   top: auto;
   max-width: 1920px;
 }
+
 .contact {
   /* position */
   position: relative;
@@ -265,84 +300,108 @@
   display: flex;
   justify-content: center;
 }
+
 .footer {
   /* position */
   position: relative;
   top: auto;
 }
+
 @media screen and (max-width: 1500px) {
+
   /*why epoch*/
   .why-epoch-grid {
     gap: 20px;
   }
+
   .sub-title {
     font-size: calc(70pt * var(--large));
   }
+
   .why-title {
     font-size: calc(38pt * var(--large));
   }
+
   .why-description {
     font-size: calc(25pt * var(--large));
   }
 }
+
 @media screen and (max-width: 1200px) {
+
   /*content*/
   .content-title {
     font-size: calc(48pt * var(--medium));
   }
+
   .content-description {
     font-size: calc(18pt * var(--large));
   }
+
   .skill-tag {
     font-size: calc(21pt * var(--large));
     padding: 0.1rem 1rem;
   }
+
   .skill-row {
     min-width: 400px;
   }
+
   /*why epoch*/
   .why-epoch-grid {
     gap: 20px;
   }
+
   .sub-title {
     font-size: calc(70pt * var(--medium) * 1.5);
     white-space: inherit;
   }
+
   .why-title {
     font-size: calc(38pt * var(--medium) * 1.5);
   }
+
   .why-description {
     font-size: calc(25pt * var(--medium));
   }
+
   .why-epoch-grid-mid>img {
     width: 100%;
     height: 50%;
   }
 }
+
 @media screen and (max-width: 700px) {
   .content-title {
     font-size: calc(48pt * var(--small));
   }
+
   .content-description {
     font-size: calc(19pt * var(--large));
   }
+
   .skill-tag {
     font-size: calc(21pt * var(--large));
     padding: 0.1rem 1rem;
   }
+
   .skill-row {
     min-width: 400px;
   }
+
   .sub-title {
     font-size: calc(70pt * var(--small));
   }
+
   .why-epoch-grid {
     grid-gap: 0px;
     /* Add a gap between grid items */
   }
+
   .why-epoch-grid-mid {
     text-align: center;
   }
+
   .why-epoch-grid-mid {
     display: none;
   }
@@ -352,11 +411,9 @@
 
 
 <script setup>
-
 useHead({
   title: "Epoch Design | Web Design",
   meta: [{ name: "description", content: "web design" }],
 });
-
 
 </script>
