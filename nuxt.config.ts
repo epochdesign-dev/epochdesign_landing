@@ -9,5 +9,5 @@ export default defineNuxtConfig({
         {name: 'description', content: 'The Epoch Design landing page'}
       ],
     },
-  }
+  },
 })
