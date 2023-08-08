@@ -51,7 +51,6 @@
 
 <script setup>
 import { onMounted } from "vue";
-console.log("imgsDisplay.vue is working");
 
 if (typeof process !== "undefined" && process.browser) {
 require("IntersectionObserver");
@@ -64,7 +63,6 @@ onMounted(() => {
 
 
   const observer = new IntersectionObserver((entries) => {
-    console.log("IntersectionObserver is working");
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
@@ -75,7 +73,6 @@ onMounted(() => {
   });
 
   hiddenElements.forEach((element) => {
-    console.log("element to interact: ", element);
     observer.observe(element);
   });
 }

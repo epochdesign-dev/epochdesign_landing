@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .main {
   /* Colour Variables */
   --onyx-black: #121212;
@@ -35,6 +35,7 @@
   color: var(--onyx-black);
 }
 
+
 .swiper {
   width: 100vw;
   max-width: 1920px;
@@ -42,6 +43,7 @@
   max-height: 1000px;
   overflow: visible;
 }
+
 
 .swiper-slide {
   /* Center slide text vertically */
@@ -55,25 +57,34 @@
   object-fit: cover;
 }
 
+
+</style>>
+
+<style>
+
+
 .swiper-horizontal > .swiper-scrollbar {
-  margin-top: 20px;
-  position: relative;
-  width: 50%;
-  height: 1.5em;
-  left: 25%;
-  bottom: 0px;
-  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 20px !important;
+  position: relative !important;
+  width: 50% !important;
+  height: 1.5em !important;
+  left: 25% !important;
+  bottom: 0px !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
+
+
+
 .swiper-scrollbar-drag {
-  cursor: pointer;
-  border-radius: 100vw;
-  background-color: var(--dandelion-yellow);
+  cursor: pointer !important;
+  border-radius: 100vw !important; 
+  background-color: var(--dandelion-yellow) !important;
 }
 
 @media screen and (max-width: 700px){
   .swiper-horizontal > .swiper-scrollbar-horizontal{
-    height: 0.5em;
+    height: 0.5em !important;
   }
 }
 </style>
