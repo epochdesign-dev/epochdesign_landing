@@ -103,6 +103,18 @@
     url("../assets/Helvetica.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Helvetica-Neue-LT-Pro-Medium";
+    src: local("Helvetica-Neue-LT-Pro-Medium"),
+    url("../assets/Helvetica-Neue-LT-Pro-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Helvetica-Light-Medium";
+    src: local("Helvetica-Light-Medium"),
+    url("../assets/Helvetica-Light-Medium.otf") format("opentype");
+}
+
 /* Color Variables */
 .main{
     --onyx-black: #121212;

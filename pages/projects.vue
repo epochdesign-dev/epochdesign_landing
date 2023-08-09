@@ -5,13 +5,13 @@
             <SubpageTitle title="Projects" subtitle="Selected Works"/>
 
             <!-- projects carousel -->
-            <Carousel3 class="carousel" />  
+            <Carousel3 />  
             
             <!--subtitle-->
             <div class="sub-title">Our Process</div>
 
             <div class="sub-title-line">
-                <p class="process"> to be implement...</p>
+                <p class="process"> to be implemented...</p>
             </div>
         </div>
     </div>
@@ -79,12 +79,12 @@
 .sub-title{
     /* font */
     font-family: "Helvetica-Neue";
-    font-size: 64pt;
+    font-size: 2vw;
     color: var(--dandelion-yellow);
 
     /* position */
     position: absolute;
-    top: 150vh;
+    top: 80vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -93,12 +93,12 @@
 
     /* font */
     font-family: "Helvetica-Neue";
-    font-size: 20pt;
+    font-size: 1vw;
     color: white;
 
     /* position */
     position: absolute;
-    top: 180vh;
+    top: 85vw;
     left: 50%;
     transform: translateX(-50%);
 

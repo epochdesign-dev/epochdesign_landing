@@ -507,7 +507,7 @@ export default {
 
     /* shape */
     width: 100vw;
-    height: 28.89vh;
+    height: 16.25vw;
     border-top: solid 3px white;
 }
 </style>

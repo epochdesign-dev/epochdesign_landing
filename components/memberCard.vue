@@ -30,7 +30,7 @@ export default {
     },
     data() {
         return { 
-            images: ["../assets/aboutus/member_logos/finn_logo.png", "../assets/aboutus/member_logos/jinny_logo.png", "../assets/aboutus/member_logos/robby_logo.png", "../assets/aboutus/member_logos/daniel_logo.png"],
+            images: ["../../assets/aboutus/member_logos/finn_logo.png", "../../assets/aboutus/member_logos/jinny_logo.png", "../../assets/aboutus/member_logos/robby_logo.png", "../../assets/aboutus/member_logos/daniel_logo.png"],
             names: ["Finn<br>Williams", "Jinny<br>Byeon", "Robby<br>Chen", "Daniel<br>Liu"],
             positions: ["Team Lead", "Designer", "Web Developer", "Full Stack Developer"],
             ind: Number(this.img_index),
@@ -114,8 +114,8 @@ export default {
                     {width: "80%"},
                     {width: "80%", offset: 0.25},
                     {width: "100%", offset: 0.251},
-                    {width: "100%", content: "url('../assets/aboutus/member_photos/finn_photo.png')", offset: 0.5},
-                    {width: "100%", content: "url('../assets/aboutus/member_photos/finn_photo.png')"},
+                    {width: "100%", content: "url('../../assets/aboutus/member_photos/finn_photo.png')", offset: 0.5},
+                    {width: "100%", content: "url('../../assets/aboutus/member_photos/finn_photo.png')"},
                 ];
 
                 const card1ImgChangeOptions = {
@@ -127,7 +127,7 @@ export default {
                 const card1Img = document.querySelector("#card1 img");
                 setTimeout(() => {
                     card1Img.style.width = "100%";
-                    card1Img.style.content = "url('../assets/aboutus/member_photos/finn_photo.png')";
+                    card1Img.style.content = "url('../../assets/aboutus/member_photos/finn_photo.png')";
                 }, 500)
                 card1Img.animate(card1ImgChange, card1ImgChangeOptions);
 
@@ -171,8 +171,8 @@ export default {
                     {width: "100%"},
                     {width: "100%", offset: 0.25},
                     {width: "80%", offset: 0.251},
-                    {width: "80%", content: "url('../assets/aboutus/member_logos/finn_logo.png')", offset: 0.5},
-                    {width: "80%", content: "url('../assets/aboutus/member_logos/finn_logo.png')"}
+                    {width: "80%", content: "url('../../assets/aboutus/member_logos/finn_logo.png')", offset: 0.5},
+                    {width: "80%", content: "url('../../assets/aboutus/member_logos/finn_logo.png')"}
                 ];
 
                 const card1ImgChangeOptions = {
@@ -184,7 +184,7 @@ export default {
                 const card1Img = document.querySelector("#card1 img");
                 setTimeout(() => {
                     card1Img.style.width = "80%";
-                    card1Img.style.content = "url('../assets/aboutus/member_logos/finn_logo.png')";
+                    card1Img.style.content = "url('../../assets/aboutus/member_logos/finn_logo.png')";
                 }, 500)
                 card1Img.animate(card1ImgChange, card1ImgChangeOptions);
 
@@ -225,8 +225,8 @@ export default {
                 // change card image
                 const card2ImgChange = [
                     {},
-                    {content: "url('../assets/aboutus/member_photos/jinny_photo.png')"},
-                    {content: "url('../assets/aboutus/member_photos/jinny_photo.png')"},
+                    {content: "url('../../assets/aboutus/member_photos/jinny_photo.png')"},
+                    {content: "url('../../assets/aboutus/member_photos/jinny_photo.png')"},
                 ];
 
                 const card2ImgChangeOptions = {
@@ -237,7 +237,7 @@ export default {
 
                 const card2Img = document.querySelector("#card2 img");
                 setTimeout(() => {
-                    card2Img.style.content = "url('../assets/aboutus/member_photos/jinny_photo.png')";
+                    card2Img.style.content = "url('../../assets/aboutus/member_photos/jinny_photo.png')";
                 }, 500)
                 card2Img.animate(card2ImgChange, card2ImgChangeOptions);
 
@@ -281,8 +281,8 @@ export default {
                 // change card image2
                 const card2ImgChange = [
                     {},
-                    {content: "url('../assets/aboutus/member_logos/jinny_logo.png')"},
-                    {content: "url('../assets/aboutus/member_logos/jinny_logo.png')"},
+                    {content: "url('../../assets/aboutus/member_logos/jinny_logo.png')"},
+                    {content: "url('../../assets/aboutus/member_logos/jinny_logo.png')"},
                 ];
 
                 const card2ImgChangeOptions = {
@@ -293,7 +293,7 @@ export default {
 
                 const card2Img = document.querySelector("#card2 img");
                 setTimeout(() => {
-                    card2Img.style.content = "url('../assets/aboutus/member_logos/jinny_logo.png')";
+                    card2Img.style.content = "url('../../assets/aboutus/member_logos/jinny_logo.png')";
                 }, 500)
                 card2Img.animate(card2ImgChange, card2ImgChangeOptions);
 
@@ -334,8 +334,8 @@ export default {
                 // change card image
                 const card3ImgChange = [
                     {},
-                    {content: "url('../assets/aboutus/member_photos/robby_photo.png')"},
-                    {content: "url('../assets/aboutus/member_photos/robby_photo.png')"},
+                    {content: "url('../../assets/aboutus/member_photos/robby_photo.png')"},
+                    {content: "url('../../assets/aboutus/member_photos/robby_photo.png')"},
                 ];
 
                 const card3ImgChangeOptions = {
@@ -346,7 +346,7 @@ export default {
 
                 const card3Img = document.querySelector("#card3 img");
                 setTimeout(() => {
-                    card3Img.style.content = "url('../assets/aboutus/member_photos/robby_photo.png')";
+                    card3Img.style.content = "url('../../assets/aboutus/member_photos/robby_photo.png')";
                 }, 500)
                 card3Img.animate(card3ImgChange, card3ImgChangeOptions);
 
@@ -390,8 +390,8 @@ export default {
                 // change card image3
                 const card3ImgChange = [
                     {},
-                    {content: "url('../assets/aboutus/member_logos/robby_logo.png')"},
-                    {content: "url('../assets/aboutus/member_logos/robby_logo.png')"},
+                    {content: "url('../../assets/aboutus/member_logos/robby_logo.png')"},
+                    {content: "url('../../assets/aboutus/member_logos/robby_logo.png')"},
                 ];
 
                 const card3ImgChangeOptions = {
@@ -402,7 +402,7 @@ export default {
 
                 const card3Img = document.querySelector("#card3 img");
                 setTimeout(() => {
-                    card3Img.style.content = "url('../assets/aboutus/member_logos/robby_logo.png')";
+                    card3Img.style.content = "url('../../assets/aboutus/member_logos/robby_logo.png')";
                 }, 500)
                 card3Img.animate(card3ImgChange, card3ImgChangeOptions);
 
@@ -445,8 +445,8 @@ export default {
                     {width: "80%"},
                     {width: "80%", offset: 0.25},
                     {width: "100%", offset: 0.251},
-                    {width: "100%", content: "url('../assets/aboutus/member_photos/daniel_photo.png')", offset: 0.5},
-                    {width: "100%", content: "url('../assets/aboutus/member_photos/daniel_photo.png')"},
+                    {width: "100%", content: "url('../../assets/aboutus/member_photos/daniel_photo.png')", offset: 0.5},
+                    {width: "100%", content: "url('../../assets/aboutus/member_photos/daniel_photo.png')"},
                 ];
 
                 const card4ImgChangeOptions = {
@@ -458,7 +458,7 @@ export default {
                 const card4Img = document.querySelector("#card4 img");
                 setTimeout(() => {
                     card4Img.style.width = "100%";
-                    card4Img.style.content = "url('../assets/aboutus/member_photos/daniel_photo.png')";
+                    card4Img.style.content = "url('../../assets/aboutus/member_photos/daniel_photo.png')";
                 }, 500)
                 card4Img.animate(card4ImgChange, card4ImgChangeOptions);
 
@@ -502,8 +502,8 @@ export default {
                     {width: "100%"},
                     {width: "100%", offset: 0.25},
                     {width: "80%", offset: 0.251},
-                    {width: "80%", content: "url('../assets/aboutus/member_logos/daniel_logo.png')", offset: 0.5},
-                    {width: "80%", content: "url('../assets/aboutus/member_logos/daniel_logo.png')"}
+                    {width: "80%", content: "url('../../assets/aboutus/member_logos/daniel_logo.png')", offset: 0.5},
+                    {width: "80%", content: "url('../../assets/aboutus/member_logos/daniel_logo.png')"}
                 ];
 
                 const card4ImgChangeOptions = {
@@ -515,7 +515,7 @@ export default {
                 const card4Img = document.querySelector("#card4 img");
                 setTimeout(() => {
                     card4Img.style.width = "80%";
-                    card4Img.style.content = "url('../assets/aboutus/member_logos/daniel_logo.png')";
+                    card4Img.style.content = "url('../../assets/aboutus/member_logos/daniel_logo.png')";
                 }, 500)
                 card4Img.animate(card4ImgChange, card4ImgChangeOptions);
 
@@ -549,13 +549,13 @@ export default {
 @font-face {
     font-family: "Helvetica-Neue";
     src: local("Helvetica-Neue"),
-    url("../assets/Helvetica.ttf") format("truetype");
+    url("../../assets/Helvetica.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Helvetica-Neue-LT-Pro-Medium";
     src: local("Helvetica-Neue-LT-Pro-Medium"),
-    url("../assets/Helvetica-Neue-LT-Pro-Medium.otf") format("opentype");
+    url("../../assets/Helvetica-Neue-LT-Pro-Medium.otf") format("opentype");
 }
 
 /* ******************************************************************** */
