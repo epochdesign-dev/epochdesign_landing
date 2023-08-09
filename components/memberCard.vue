@@ -4,7 +4,7 @@
             <div class="card_logo_section">
                 <img v-if="smallLogo()" class="card_logo_smaller" :src="images[ind]" alt="logo">
                 <img v-if="!smallLogo()" class="card_logo_larger" :src="images[ind]" alt="logo">
-                <!-- <img class="card_logo_larger mem_photo hidden" src="" alt="member_photo"> -->
+                <img class="hidden" src="../assets/aboutus/member_photos/finn_photo.png" alt="member_photo">
             </div>
             <div class="card_description">
                 <div class="card_name" v-html="names[ind]"></div>
