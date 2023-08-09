@@ -28,13 +28,13 @@
 .oval{
     /* shape */
     width: 68.59vw;
-    height: 10.78vw;
+    height: 19.17vh;
     border-radius: 50%;
     border: solid white 2px;
 
     /* position */
     position:absolute;
-    top: 10.5vw;
+    top: 21.94vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -42,7 +42,7 @@
 .title{
     /* position */
     position:absolute;
-    top: 11vw;
+    top: 22.5vh;
     left: 50%;
     transform: translateX(-50%);
 
@@ -60,7 +60,7 @@
 .subtitle{
     /* position */
     position:absolute;
-    top: 24vw;
+    top: 48.15vh;
     left: 50%;
     transform: translateX(-50%);
 

@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <Swiper
-      :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperScrollbar]"
+      :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperScrollbar, SwiperParallax]"
       :slides-per-view="3"
       :autoplay="{
         delay: 8000,
@@ -12,6 +12,7 @@
         draggable: true,
       }"
       :spaceBetween="20"
+      :parallax="true"
     >
       <SwiperSlide v-for="slide in 10" :key="slide">
       <SwiperCard class="card"
@@ -23,7 +24,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .main {
   /* Colour Variables */
   --onyx-black: #121212;
@@ -33,17 +34,17 @@
 
   /* text */
   color: var(--onyx-black);
-  width: 100%;
-
 }
+
 
 .swiper {
   width: 100vw;
   max-width: 1920px;
-  height: 50vw;
+  height: 40vw;
   max-height: 1000px;
   overflow: visible;
 }
+
 
 .swiper-slide {
   /* Center slide text vertically */
@@ -57,24 +58,34 @@
   object-fit: cover;
 }
 
+
+</style>>
+
+<style>
+
+
 .swiper-horizontal > .swiper-scrollbar {
-  position: relative;
-  width: 100%;
-  height: 2em;
-  left: 0px;
-  bottom: 0px;
-  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 20px !important;
+  position: relative !important;
+  width: 50% !important;
+  height: 1.5em !important;
+  left: 25% !important;
+  bottom: 0px !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
+
+
+
 .swiper-scrollbar-drag {
-  cursor: pointer;
-  border-radius: 100vw;
-  background-color: var(--dandelion-yellow);
+  cursor: pointer !important;
+  border-radius: 100vw !important; 
+  background-color: var(--dandelion-yellow) !important;
 }
 
 @media screen and (max-width: 700px){
   .swiper-horizontal > .swiper-scrollbar-horizontal{
-    height: 0.5em;
+    height: 0.5em !important;
   }
 }
 </style>

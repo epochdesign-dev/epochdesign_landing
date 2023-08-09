@@ -14,13 +14,6 @@
             <footer class="main_footer">
             </footer>
         </section>
-
-        <!--Mobile: Contact Button-->
-        <section>
-            <div class="contact_button">
-                contact
-            </div>
-        </section>
     </div>
 </template>
 
@@ -85,6 +78,15 @@
 
     /* position */
     display: inline;
+
+
+
+    /*unselectable*/
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 
 }
 

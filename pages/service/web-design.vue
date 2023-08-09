@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="canvas">
-      <div class="title selected">
+      <div class="title">
         <SubpageTitle2 class="subpagetite" title="Web Design"
           subtitle="We pride ourselves on designing sites with a high level of design quality without compromising on user experience. We craft exceptional results that will make other brands want to model themselves after you." />
       </div>
@@ -123,7 +123,7 @@
   align-items: center;
 }
 
-.canvas>*:not(.footer) {
+.canvas > *:not(.footer) {
   margin-bottom: 20vw;
 }
 
@@ -146,7 +146,6 @@
   min-width: min-content;
   position: relative;
   margin-top: 400px;
-  display: block;
   /* Ensures that the element takes the full width of its parent */
 }
 
@@ -177,7 +176,7 @@
 
 .content-title {
   /* font */
-  font-size: 48pt;
+  font-size: 38pt;
   font-weight: bold;
   letter-spacing: -1.5%;
   padding-bottom: 50px;
@@ -185,11 +184,11 @@
 
 .content-description {
   /* font */
-  font-size: 18pt;
+  font-size: 15pt;
   font-weight: 300;
   letter-spacing: 0.5%;
   line-height: 2;
-
+  padding: 0 1em;
   padding-bottom: 50px;
 }
 
@@ -209,7 +208,7 @@
 
 .skill-tag {
   /* font */
-  font-size: 21pt;
+  font-size: 15pt;
 
   /* inner shape */
   border-radius: 5rem;
@@ -308,7 +307,6 @@
 }
 
 @media screen and (max-width: 1500px) {
-
   /*why epoch*/
   .why-epoch-grid {
     gap: 20px;
@@ -328,7 +326,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-
   /*content*/
   .content-title {
     font-size: calc(48pt * var(--medium));
@@ -365,7 +362,7 @@
     font-size: calc(25pt * var(--medium));
   }
 
-  .why-epoch-grid-mid>img {
+  .why-epoch-grid-mid > img {
     width: 100%;
     height: 50%;
   }
@@ -373,7 +370,7 @@
 
 @media screen and (max-width: 700px) {
   .content-title {
-    font-size: calc(48pt * var(--small));
+    font-size: calc(48pt * var(--medium));
   }
 
   .content-description {
@@ -381,7 +378,7 @@
   }
 
   .skill-tag {
-    font-size: calc(21pt * var(--large));
+    font-size: calc(21pt * var(--medium)* 1.5);
     padding: 0.1rem 1rem;
   }
 
@@ -390,7 +387,7 @@
   }
 
   .sub-title {
-    font-size: calc(70pt * var(--small));
+    font-size: calc(70pt * var(--small)* 1.5);
   }
 
   .why-epoch-grid {
@@ -406,14 +403,17 @@
     display: none;
   }
 }
+
 </style>
 
 
 
 <script setup>
+
 useHead({
   title: "Epoch Design | Web Design",
   meta: [{ name: "description", content: "web design" }],
 });
+
 
 </script>
