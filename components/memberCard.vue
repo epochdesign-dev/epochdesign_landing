@@ -23,6 +23,9 @@ import logo3 from "../assets/aboutus/member_logos/robby_logo.png";
 import logo4 from "../assets/aboutus/member_logos/daniel_logo.png";
 
 import finn_photo from "../assets/aboutus/member_photos/finn_photo.png";
+import jinny_photo from "../assets/aboutus/member_photos/jinny_photo.png";
+import robby_photo from "../assets/aboutus/member_photos/robby_photo.png";
+import daniel_photo from "../assets/aboutus/member_photos/daniel_photo.png";
 
 export default {
     props: {
@@ -33,7 +36,7 @@ export default {
         setTimeout(()=>{
             this.card1Rotate1();
             this.card1_click_counter += 1;
-        }, 500)
+        }, 1000)
     },
     data() {
         return { 
@@ -200,24 +203,12 @@ export default {
                 const card2 = document.getElementById("card2");
                 card2.animate(card2Rotate, card2RotateOptions);
 
+
                 // change card image
-                const card2ImgChange = [
-                    {},
-                    {content: "url('../assets/aboutus/member_photos/jinny_photo.png')"},
-                    {content: "url('../assets/aboutus/member_photos/jinny_photo.png')"},
-                ];
-
-                const card2ImgChangeOptions = {
-                    duration: 1000,
-                    iterations: 1,
-                    fill: 'forwards',
-                };
-
                 const card2Img = document.querySelector("#card2 img");
                 setTimeout(() => {
-                    card2Img.style.content = "url('../assets/aboutus/member_photos/jinny_photo.png')";
-                }, 500)
-                card2Img.animate(card2ImgChange, card2ImgChangeOptions);
+                    card2Img.src = jinny_photo;
+                }, 240)
 
 
 
@@ -256,24 +247,11 @@ export default {
                 const card2 = document.getElementById("card2");
                 card2.animate(card2Rotate, card2RotateOptions);
 
-                // change card image2
-                const card2ImgChange = [
-                    {},
-                    {content: "url('../assets/aboutus/member_logos/jinny_logo.png')"},
-                    {content: "url('../assets/aboutus/member_logos/jinny_logo.png')"},
-                ];
-
-                const card2ImgChangeOptions = {
-                    duration: 1000,
-                    iterations: 1,
-                    fill: 'forwards',
-                };
-
+                // change card image
                 const card2Img = document.querySelector("#card2 img");
                 setTimeout(() => {
-                    card2Img.style.content = "url('../assets/aboutus/member_logos/jinny_logo.png')";
-                }, 500)
-                card2Img.animate(card2ImgChange, card2ImgChangeOptions);
+                    card2Img.src = logo2;
+                }, 240)
 
                 // rotate card description
                 const card2RotateDescription = [
@@ -310,23 +288,10 @@ export default {
                 card3.animate(card3Rotate, card3RotateOptions);
 
                 // change card image
-                const card3ImgChange = [
-                    {},
-                    {content: "url('../assets/aboutus/member_photos/robby_photo.png')"},
-                    {content: "url('../assets/aboutus/member_photos/robby_photo.png')"},
-                ];
-
-                const card3ImgChangeOptions = {
-                    duration: 1000,
-                    iterations: 1,
-                    fill: 'forwards',
-                };
-
                 const card3Img = document.querySelector("#card3 img");
                 setTimeout(() => {
-                    card3Img.style.content = "url('../assets/aboutus/member_photos/robby_photo.png')";
-                }, 500)
-                card3Img.animate(card3ImgChange, card3ImgChangeOptions);
+                    card3Img.src = robby_photo;
+                }, 240)
 
 
 
@@ -365,24 +330,11 @@ export default {
                 const card3 = document.getElementById("card3");
                 card3.animate(card3Rotate, card3RotateOptions);
 
-                // change card image3
-                const card3ImgChange = [
-                    {},
-                    {content: "url('../assets/aboutus/member_logos/robby_logo.png')"},
-                    {content: "url('../assets/aboutus/member_logos/robby_logo.png')"},
-                ];
-
-                const card3ImgChangeOptions = {
-                    duration: 1000,
-                    iterations: 1,
-                    fill: 'forwards',
-                };
-
+                // change card image
                 const card3Img = document.querySelector("#card3 img");
                 setTimeout(() => {
-                    card3Img.style.content = "url('../assets/aboutus/member_logos/robby_logo.png')";
-                }, 500)
-                card3Img.animate(card3ImgChange, card3ImgChangeOptions);
+                    card3Img.src = logo3;
+                }, 240)
 
                 // rotate card description
                 const card3RotateDescription = [
@@ -419,26 +371,11 @@ export default {
                 card4.animate(card4Rotate, card4RotateOptions);
 
                 // change card image
-                const card4ImgChange = [
-                    {width: "80%"},
-                    {width: "80%", offset: 0.25},
-                    {width: "100%", offset: 0.251},
-                    {width: "100%", content: "url('../assets/aboutus/member_photos/daniel_photo.png')", offset: 0.5},
-                    {width: "100%", content: "url('../assets/aboutus/member_photos/daniel_photo.png')"},
-                ];
-
-                const card4ImgChangeOptions = {
-                    duration: 1000,
-                    iterations: 1,
-                    fill: 'forwards',
-                };
-
                 const card4Img = document.querySelector("#card4 img");
                 setTimeout(() => {
                     card4Img.style.width = "100%";
-                    card4Img.style.content = "url('../assets/aboutus/member_photos/daniel_photo.png')";
-                }, 500)
-                card4Img.animate(card4ImgChange, card4ImgChangeOptions);
+                    card4Img.src = daniel_photo;
+                }, 240)
 
                 // rotate card description
                 const card4RotateDescription = [
@@ -476,26 +413,31 @@ export default {
                 card4.animate(card4Rotate, card4RotateOptions);
 
                 // change card image
-                const card4ImgChange = [
-                    {width: "100%"},
-                    {width: "100%", offset: 0.25},
-                    {width: "80%", offset: 0.251},
-                    {width: "80%", content: "url('../assets/aboutus/member_logos/daniel_logo.png')", offset: 0.5},
-                    {width: "80%", content: "url('../assets/aboutus/member_logos/daniel_logo.png')"}
-                ];
+                // const card4ImgChange = [
+                //     {width: "100%"},
+                //     {width: "100%", offset: 0.25},
+                //     {width: "80%", offset: 0.251},
+                //     {width: "80%", content: "url('../assets/aboutus/member_logos/daniel_logo.png')", offset: 0.5},
+                //     {width: "80%", content: "url('../assets/aboutus/member_logos/daniel_logo.png')"}
+                // ];
 
-                const card4ImgChangeOptions = {
-                    duration: 1000,
-                    iterations: 1,
-                    fill: 'forwards',
-                };
+                // const card4ImgChangeOptions = {
+                //     duration: 1000,
+                //     iterations: 1,
+                //     fill: 'forwards',
+                // };
 
+                // const card4Img = document.querySelector("#card4 img");
+                // setTimeout(() => {
+                //     card4Img.style.width = "80%";
+                //     card4Img.style.content = "url('../assets/aboutus/member_logos/daniel_logo.png')";
+                // }, 500)
+                // card4Img.animate(card4ImgChange, card4ImgChangeOptions);
                 const card4Img = document.querySelector("#card4 img");
                 setTimeout(() => {
                     card4Img.style.width = "80%";
-                    card4Img.style.content = "url('../assets/aboutus/member_logos/daniel_logo.png')";
-                }, 500)
-                card4Img.animate(card4ImgChange, card4ImgChangeOptions);
+                    card4Img.src = logo4;
+                }, 240)
 
                 // rotate card description
                 const card4RotateDescription = [
