@@ -22,6 +22,8 @@ import logo2 from "../assets/aboutus/member_logos/jinny_logo.png";
 import logo3 from "../assets/aboutus/member_logos/robby_logo.png";
 import logo4 from "../assets/aboutus/member_logos/daniel_logo.png";
 
+import finn_photo from "../assets/aboutus/member_photos/finn_photo.png";
+
 export default {
     props: {
         img_index: String,
