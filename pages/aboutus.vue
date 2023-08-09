@@ -38,7 +38,7 @@
                 <div class="values">
                     <!-- evolve -->
                     <div class="value1 value">
-                        <img class="value1_title" src="../assets/values_svg/evolve.svg" alt="evolve">
+                        <img class="value1_title" src="../assets/aboutus/values_svg/evolve.svg" alt="evolve">
                         <div class="value1_description value_description">
                             At Epoch, we believe in constant growth and evolution. We stay at the forefront of design trends, technologies, and strategies to ensure our clients receive cutting-edge solutions that keep their businesses ahead of the competition.
                         </div>
@@ -46,7 +46,7 @@
 
                     <!-- purpose -->
                     <div class="value2 value">
-                        <img class="value2_title" src="../assets/values_svg/purpose.svg" alt="purpose">
+                        <img class="value2_title" src="../assets/aboutus/values_svg/purpose.svg" alt="purpose">
                         <div class="value2_description value_description">
                             Every design we create at Epoch serves a clear purpose. Whether it's enhancing brand identity, driving conversions, or improving user experiences, our designs are always guided by the specific goals and visions of our clients.
                         </div>
@@ -54,21 +54,21 @@
 
                     <!-- outsanding -->
                     <div class="value3 value">
-                        <img class="value3_title" src="../assets/values_svg/outstanding.svg" alt="outstanding">
+                        <img class="value3_title" src="../assets/aboutus/values_svg/outstanding.svg" alt="outstanding">
                         <div class="value3_description value_description">
                             Epoch is committed to delivering outstanding results. Our designs stand out for their creativity, attention to detail, and ability to achieve measurable success, leaving a lasting impact on our clients and their target audience.                        </div>
                     </div>
 
                     <!-- creativity -->
                     <div class="value4 value">
-                        <img class="value4_title" src="../assets/values_svg/creativity.svg" alt="creativity">
+                        <img class="value4_title" src="../assets/aboutus/values_svg/creativity.svg" alt="creativity">
                         <div class="value4_description value_description">
                             Creativity is the heart of our agency. We pride ourselves on unleashing innovative ideas and crafting unique designs that tell captivating stories, sparking emotions, and effectively communicating our clients' brand messages.                        </div>
                     </div>
 
                     <!-- human centric -->
                     <div class="value5 value">
-                        <img class="value5_title" src="../assets/values_svg/human-centric.svg" alt="human-centric">
+                        <img class="value5_title" src="../assets/aboutus/values_svg/human-centric.svg" alt="human-centric">
                         <div class="value5_description value_description">
                             People are at the core of what we do. Epoch's human-centric approach places the needs and preferences of our clients and their audience at the forefront, resulting in designs that resonate, connect, and leave a positive, lasting impression.                        </div>
                     </div>
