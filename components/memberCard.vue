@@ -117,26 +117,11 @@ export default {
                 card1.animate(card1Rotate, card1RotateOptions);
 
                 // change card image
-                const card1ImgChange = [
-                    {width: "80%"},
-                    {width: "80%", offset: 0.25},
-                    {width: "100%", offset: 0.251},
-                    {width: "100%", content: "url('../assets/aboutus/member_photos/finn_photo.png')", offset: 0.5},
-                    {width: "100%", content: "url('../assets/aboutus/member_photos/finn_photo.png')"},
-                ];
-
-                const card1ImgChangeOptions = {
-                    duration: 1000,
-                    iterations: 1,
-                    fill: 'forwards',
-                };
-
                 const card1Img = document.querySelector("#card1 img");
                 setTimeout(() => {
                     card1Img.style.width = "100%";
-                    card1Img.style.content = "url('../assets/aboutus/member_photos/finn_photo.png')";
-                }, 500)
-                card1Img.animate(card1ImgChange, card1ImgChangeOptions);
+                    card1Img.src = finn_photo;
+                }, 240)
 
                 // rotate card description
                 const card1RotateDescription = [
@@ -174,26 +159,12 @@ export default {
                 card1.animate(card1Rotate, card1RotateOptions);
 
                 // change card image
-                const card1ImgChange = [
-                    {width: "100%"},
-                    {width: "100%", offset: 0.25},
-                    {width: "80%", offset: 0.251},
-                    {width: "80%", content: "url('../assets/aboutus/member_logos/finn_logo.png')", offset: 0.5},
-                    {width: "80%", content: "url('../assets/aboutus/member_logos/finn_logo.png')"}
-                ];
-
-                const card1ImgChangeOptions = {
-                    duration: 1000,
-                    iterations: 1,
-                    fill: 'forwards',
-                };
-
                 const card1Img = document.querySelector("#card1 img");
+
                 setTimeout(() => {
                     card1Img.style.width = "80%";
-                    card1Img.style.content = "url('../assets/aboutus/member_logos/finn_logo.png')";
-                }, 500)
-                card1Img.animate(card1ImgChange, card1ImgChangeOptions);
+                    card1Img.src = logo1;
+                }, 240)
 
                 // rotate card description
                 const card1RotateDescription = [
