@@ -326,31 +326,26 @@ onMounted(() => {
 .float_col1_card1{
   margin-left: -30.5vw;
   margin-top: 28vw;
-  /* animation: reverse-float 1s forwards; */
 }
 
 .float_col2_card1{
   margin-left: 3vw;
   margin-top: -16vw;
-  /* animation: float 1s forwards; */
 }
 
 .float_col2_card2{
   margin-left: 20.3vw;
   margin-top: -60.2vw;
-  /* animation: float 1s forwards; */
 }
 
 .float_col2_card3{
   margin-left: 37.6vw;
   margin-top: -1vw;
-  /* animation: float 1s forwards; */
 }
 
 .float_col3_card1{
   margin-left: 71vw;
   margin-top: -90vw;
-  /* animation: reverse-float 1s forwards; */
 }
 
 .col2hide {
@@ -410,13 +405,7 @@ onMounted(() => {
 
 
 /* ******************************************************************** */
-/* ***********************Before & After Presentation****************** */
-/* ******************************************************************** */
-
-
-
-/* ******************************************************************** */
-/* ***********************Before & After Presentation****************** */
+/* *******************************Client Review************************ */
 /* ******************************************************************** */
 .client_review_demo1{
   width: 55.03vw;
@@ -474,12 +463,13 @@ onMounted(() => {
     /* shape */
     width: 81.7vw;
     height: 11.46vw;
+    border-top: 1px solid #FFF;
 
+    /* inner shape */
     display: inline-flex;
     padding: 1.25vw;
     align-items: center;
     gap: 10.52vw;
-    border-top: 1px solid #FFF;
 }
 
 .get_in_touch_text{
