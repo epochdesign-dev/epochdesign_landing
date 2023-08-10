@@ -148,10 +148,14 @@ export default {
 
     /* interaction */
     z-index: 1;
+    opacity: 40%;
 
     /* inner shape */
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+
+    /* animation */
+    transition: all 1s;
 }
 
 .position2{
@@ -167,10 +171,14 @@ export default {
 
     /* interaction */
     z-index: 2;
+    opacity: 70%;
 
     /* inner shape */
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+
+    /* animation */
+    transition: all 1s;
 }
 
 .position3{
@@ -187,6 +195,9 @@ export default {
 
     /* interaction */
     z-index: 3;
+
+    /* animation */
+    transition: all 1s;
 }
 
 .position4{
@@ -202,10 +213,14 @@ export default {
 
     /* interaction */
     z-index: 2;
+    opacity: 70%;
 
     /* inner shape */
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+
+    /* animation */
+    transition: all 1s;
 }
 
 .position5{
@@ -225,6 +240,10 @@ export default {
 
     /* interaction */
     z-index: 1;
+    opacity: 40%;
+
+    /* animation */
+    transition: all 1s;
 }
 
 .right_arrow{

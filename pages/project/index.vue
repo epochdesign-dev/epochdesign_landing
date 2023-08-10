@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <div class="canvas">
+        <div class="canvas" id="project_index">
           <!--Intro-->
           <section>
             <!-- cube -->
@@ -75,7 +75,7 @@
 
           <!-- Project Before & After Presentation -->
           <section>
-            <div class="before_after_container"></div>
+            <BeforeAfter />
           </section>
 
           <!-- Client Review -->
@@ -113,7 +113,6 @@ if (typeof process !== "undefined" && process.browser) {
   require("IntersectionObserver");
 }
 
-// floating presentation animation
 onMounted(() => {
   const hiddenCol2Elements = document.querySelectorAll(".col2hide");
 
@@ -413,14 +412,6 @@ onMounted(() => {
 /* ******************************************************************** */
 /* ***********************Before & After Presentation****************** */
 /* ******************************************************************** */
-.before_after_container{
-  margin-top: 371px;
-  width: 100vw;
-  height: 56.25vw;
-  /* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
-
-  border: solid white 1px;
-}
 
 
 
