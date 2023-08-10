@@ -19,7 +19,7 @@
 
 <script setup>
     useHead({
-        title: 'Epoch Design | Projects',
+        title: 'Epoch | Projects',
         meta: [
             {name: 'description', content: 'projects'}
         ]

@@ -92,7 +92,7 @@ export default {
     setup() {
         // page head
         useHead({
-            title: 'Epoch Design | About Us',
+            title: 'Epoch | About Us',
             meta: [
                 {name: 'description', content: 'about us'}
             ]

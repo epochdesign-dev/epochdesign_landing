@@ -4,9 +4,9 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss','nuxt-swiper'],
   app: {
     head: {
-      title: 'Epoch Design',
+      title: 'Epoch Design & Development',
       meta: [
-        {name: 'description', content: 'The Epoch Design landing page'}
+        {name: 'description', content: 'The Epoch landing page'}
       ],
     },
   }

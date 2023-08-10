@@ -27,7 +27,7 @@
 
 <script setup>
     useHead({
-        title: 'Epoch Design | Services',
+        title: 'Epoch | Services',
         meta: [
             {name: 'description', content: 'services'}
         ]

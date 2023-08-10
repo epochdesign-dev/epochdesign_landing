@@ -10,7 +10,7 @@
                     <div class="link border-right"><a href="/projects">Projects</a></div>
                     <div class="link"><a href="/#services">Services</a></div>
                 </div>
-                <div class="contact-button"><NuxtLink to="/contact">Contact</NuxtLink></div>
+                <div class="contact-button"><NuxtLink to="/startYourProject">Get Started</NuxtLink></div>
             </nav>
 
             <!-- For Mobile -->
@@ -157,6 +157,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--dandelion-yellow);
+    text-align: center;
 
     /* Interaction */
     cursor: pointer;
