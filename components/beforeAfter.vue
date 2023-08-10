@@ -53,6 +53,7 @@
     width: 100vw;
     height: 56.25vw;
     overflow: clip;
+    border-top: solid white 1px;
 
     /* inner shape */
     background: var(--onyx-black);
