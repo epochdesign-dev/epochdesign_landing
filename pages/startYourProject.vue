@@ -2,10 +2,84 @@
     <div class="main">
         <div class="canvas">
             <div class="form">
+                <!-- astronaut section -->
                 <div class="form_left">
                     <img class="astronaut" src="../assets/start_your_project/astronaut1.png" alt="">
                 </div>
-                <div class="form_right"></div>
+
+                <!-- form -->
+                <div class="form_right">
+                    <!-- form col1: client info -->
+                    <div class="form_col1">
+                        <div class="who_are_you">
+                            <select @change="showDescription($event)" v-model="user_input.who_are_you" class="who_are_you_selection"> 
+                                <option value="default">Who Are You?</option> 
+                                <option value="individual">Individual</option> 
+                                <option value="small_business">Small Business</option> 
+                                <option value="large_business">Large Business</option> 
+                            </select>
+                        </div>
+
+                        <div class="who_are_you_description">
+                            {{who_are_you_description}}
+                        </div>
+
+                        <div class="form_input_container">
+                            <input type="text" class="form_input" placeholder="Business Name" v-model="user_input.business_name">
+                        </div>
+
+                        <div class="form_input_container">
+                            <input type="text" class="form_input" placeholder="Full Name" v-model="user_input.full_name">
+                        </div>
+
+                        <div class="form_input_container">
+                            <input type="text" class="form_input" placeholder="Email" v-model="user_input.email">
+                        </div>
+
+                        <div class="form_input_container">
+                            <input type="text" class="form_input" placeholder="Phone Number" v-model="user_input.phone_num">
+                        </div>
+                    </div>
+
+                    <!-- form col2: project info -->
+                    <div class="form_col2">
+                        <div class="project_breadth">
+                            Project Breadth
+                        </div>
+                        <div class="project_breadth_tags">
+                            <div class="tag" @mouseover="getTagDescription" @click="selectTag">
+                                Landing Page
+                            </div>
+                            <div class="tag" @mouseover="getTagDescription" @click="selectTag">
+                                Online Store
+                            </div>
+                            <div class="tag" @mouseover="getTagDescription" @click="selectTag">
+                                Management Page
+                            </div>
+                            <div class="tag" @mouseover="getTagDescription" @click="selectTag">
+                                Internal Software
+                            </div>
+                            <div class="tag" @mouseover="getTagDescription" @click="selectTag">
+                                User Profiles
+                            </div>
+                            <div class="tag" @mouseover="getTagDescription" @click="selectTag">
+                                Intake Page
+                            </div>
+                            <div class="tag_description">
+                                {{ tag_description }}
+                            </div>
+                        </div>
+                        <div class="project_description">
+                            Project Description
+                        </div>
+                        <div class="project_description_textbox">
+                            <textarea name="project_description_input" id="project_description_input" 
+                            placeholder="A website about my astronaut experience in the deep space!"
+                            v-model="user_input.project_description"></textarea>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <!-- <SubpageTitle title="Contact" subtitle="If you'd like to learn more about<br>how we can help evolve your brand, get in touch."/> -->
             
@@ -14,13 +88,99 @@
     </div>
 </template>
 
-<script setup>
-    useHead({
-        title: 'Epoch | Start Your Project',
-        meta: [
-            {name: 'description', content: 'start your project'}
-        ]
-    })
+<script>
+    export default {
+        props: {
+        },
+        setup(){
+            useHead({
+                title: 'Epoch | Start Your Project',
+                meta: [
+                    {name: 'description', content: 'start your project'}
+                ]
+            })
+        },
+        data() {
+            return {
+                who_are_you_description: "An astronaut.",
+                tag_description: "From the depth of black hole to Earth.",
+                user_input: {
+                    who_are_you: "default",
+                    business_name: "",
+                    full_name: "",
+                    email: "",
+                    phone_num: "",
+                    landing_page: false,
+                    online_store: false,
+                    management_page: false,
+                    internal_software: false,
+                    user_profiles: false,
+                    intake_page: false,
+                    project_description: "",
+                },
+            }
+        },
+        methods: {
+            showDescription(event){
+                if(event.target.value === "default"){
+                    this.who_are_you_description = "An astronaut.";
+                }
+                else if(event.target.value === "individual"){
+                    this.who_are_you_description = "A strong and independent person.";
+                }
+                else if(event.target.value === "small_business"){
+                    this.who_are_you_description = "A business with less than 25 employees.";
+                }
+                else if(event.target.value === "large_business"){
+                    this.who_are_you_description = "A business with more than 25 employees and incorporated.";
+                }
+            },
+            getTagDescription(event){
+                // change tag description
+                if(event.target.innerText === "Management Page"){
+                    this.tag_description = "Remotely manage product availability, see sales data, process and see orders, get client information.";
+                }
+                else if(event.target.innerText === "Internal Software"){
+                    this.tag_description = "Webpages and server software for employees only, with an advanced range of possible features.";
+                }
+                else if(event.target.innerText === "Intake Page"){
+                    this.tag_description = "Advanced contact page for gathering more information, preventing long email exchanges.";
+                }
+                else{
+                    this.tag_description = "From the depth of black hole to Earth.";
+                }
+            },
+            selectTag(event){
+                // change tag color
+                if(event.target.classList.contains("selectedTag")){
+                    event.target.classList.remove("selectedTag");
+                }
+                else{
+                    event.target.classList.add("selectedTag");
+                }
+
+                // update user input
+                if(event.target.innerText === "Landing Page"){
+                    this.user_input.landing_page = !this.user_input.landing_page;
+                }
+                else if(event.target.innerText === "Online Store"){
+                    this.user_input.online_store = !this.user_input.online_store;
+                }
+                else if(event.target.innerText === "Management Page"){
+                    this.user_input.management_page = !this.user_input.management_page;
+                }
+                else if(event.target.innerText === "Internal Software"){
+                    this.user_input.internal_software = !this.user_input.internal_software;
+                }
+                else if(event.target.innerText === "User Profiles"){
+                    this.user_input.user_profiles = !this.user_input.user_profiles;
+                }
+                else if(event.target.innerText === "Intake Page"){
+                    this.user_input.intake_page = !this.user_input.management_page;
+                }
+            }
+        }
+    }
 </script>
 
 <style scoped>
@@ -106,37 +266,315 @@
 /* *************************Start Project Form************************* */
 /* ******************************************************************** */
 .form{
+    /* position */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
+    /* inner shape */
     display: flex;
-    gap: 0.72vw;
 
+    /* shape */
     width: 72vw;
     height: 40.5vw;
     border: solid var(--light-periwinkle-purple) 4px;
     border-radius: 2vw;
+
+    /* font */
+    font-family: Helvetica-Neue-LT-Pro-Medium;
 }
 
 .form_left{
+    /* shape */
     height: 100%;
     width: 33%;
-    border-right: solid white 1px;
+    border-right: solid var(--light-periwinkle-purple) 4px;
 
+    /* inner shape */
     display: flex;
     align-items: center;
 }
 
 .astronaut{
+    /* shape */
     clip-path: inset(0 0 10px 0);
+
+    /* interaction */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
 }
 
 .form_right{
+    /* shape */
     height: 100%;
-    width: 66%;
-    border-left: solid white 1px;
+    width: 67%;
+    
+    /* inner shape */
+    padding: 5vw;
+    grid-template-columns: [line1] 1fr [line2] 1fr [end];
+    column-gap: 5%;
+    display: grid;
 }
 
+.form_col1{
+    /* position */
+    grid-column: line1 / line2;
+
+    /* shape */
+    
+    max-height: 90vw;
+    overflow: hidden;
+
+    /* inner shape */
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 3%;
+}
+
+.who_are_you{
+    /* position */
+    grid-row: 1/ 2;
+
+    /* shape */
+    
+
+    /* inner shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.who_are_you_selection{
+    /* inner shape */
+    background-color: var(--onyx-black);
+    text-align: center;
+
+    /* font */
+    color: white;
+    font-size: 1.2vw;
+
+    /* shape */
+    width: 100%;
+    height: 80%;
+    border: solid var(--light-periwinkle-purple) 4px;
+    border-radius: 0.5vw;
+
+    /* interaction */
+    cursor: pointer;
+}
+
+.who_are_you_selection:focus {
+    /* shape */
+    outline: none !important;
+    border:4px solid white;
+    border-radius: 0.5vw;
+}
+
+.who_are_you_description{
+    /* position */
+    grid-row: 2/ 3;
+
+    /* shape */
+    height: 4vw;
+
+    /* font */
+    color: white;
+    font-size: 0.7vw;
+
+    /* inner shape */
+    padding: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: auto;
+}
+
+.form_input_container{
+    /* inner shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    
+}
+
+.form_input{
+    /* shape */
+    width: 100%;
+    height: 80%;
+    border-left: solid var(--light-periwinkle-purple) 2px;
+
+    /* inner shape */
+    background-color: var(--onyx-black);
+    padding: 0.5vw;
+
+    /* font */
+    color: white;
+    font-size: 0.7vw;
+}
+
+.form_input:focus{
+    outline: none;
+}
+
+.form_input::placeholder{
+    color: white;
+}
+
+.form_col2{
+    /* position */
+    grid-column: line2 / end;
+
+    /* shape */
+    
+    max-height: 90vw;
+    overflow: hidden;
+
+    /* inner shape */
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 3%;
+}
+
+.project_breadth{
+    /* font */
+    color: white;
+    font-size: 1.2vw;
+
+    /* inner shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* shape */
+    border: solid var(--light-periwinkle-purple) 4px;
+    border-radius: 0.5vw;
+    height: 80%;
+
+    /* position */
+    margin-top: 0.5vw;
+}
+
+.project_breadth_tags{
+    /* position */
+    grid-row: 2/4;
+    
+    /* shape */
+    border-left: solid var(--light-periwinkle-purple) 1px;
+    height: 95%;
+
+    /* inner shape */
+    padding-left: 0.5vw;
+    color: white;
+    overflow: auto;
+}
+
+.tag{
+    /* shape */
+    border: solid white 1px;
+    border-radius: 1vw;
+    width: max-content;
+    height: min-content;
+
+    /* inner shape */
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+
+    /* position */
+    margin-bottom: 0.4vw;
+    margin-right:0.5vw;
+    position: relative;
+    display: inline-block;
+
+    /* font */
+    font-size: 0.7vw;
+
+    /* interaction */
+    cursor: pointer;
+
+    /* animation */
+    transition: color 0.5s;
+}
+
+.selectedTag{
+    color: var(--dandelion-yellow);
+    transition: color 0.5s;
+}
+
+.tag_description{
+    /* shape */
+    border-top: solid var(--light-periwinkle-purple) 1px;
+    
+
+    /* inside shape */
+    padding-top: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* font */
+    color: white;
+    font-size: 0.7vw;
+}
+
+.project_description{
+    /* font */
+    color: white;
+    font-size: 1.2vw;
+
+    /* inner shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* shape */
+    border: solid var(--light-periwinkle-purple) 4px;
+    border-radius: 0.5vw;
+    height: 80%;
+
+    /* position */
+    margin-top: 0.5vw;
+}
+
+.project_description_textbox{
+    /* position */
+    grid-row: 5/-1;
+
+    /* position */
+    margin-top: 0.5vw;
+}
+
+.project_description_textbox textarea{
+    /* shape */
+    border-left: solid var(--light-periwinkle-purple) 1px;
+    width: 100%;
+    height: 95%;
+        
+    /* inner shape */
+    background-color: var(--onyx-black);
+    padding-left: 0.5vw;
+
+    /* font */
+    color: white;
+    font-size: 0.7vw;
+}
+
+.project_description_textbox textarea::placeholder{
+    /* font */
+    color: white;
+}
+
+.project_description_textbox textarea:focus{
+    /* shape */
+    outline: none;
+}
 </style>
