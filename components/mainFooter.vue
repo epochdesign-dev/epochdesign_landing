@@ -3,11 +3,11 @@
         <footer class="footer-box">
             <div class="footer-grid">
                 <div class="pages">
-                    <NuxtLink to="/">Home</NuxtLink>
-                    <NuxtLink to="/aboutus">About Us</NuxtLink>
-                    <NuxtLink to="/services">Services</NuxtLink>
-                    <NuxtLink to="/projects">Projects</NuxtLink>
-                    <NuxtLink to="/startYourProject">Start Your Project</NuxtLink>
+                    <a href="/">Home</a>
+                    <a href="/aboutus">About Us</a>
+                    <a href="/services">Services</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/startYourProject">Start Your Project</a>
                 </div>
                 <div class="services">
                     <NuxtLink to="/service/artist-profile">Artist Profile</NuxtLink>

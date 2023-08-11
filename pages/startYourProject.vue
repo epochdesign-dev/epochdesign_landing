@@ -4,7 +4,7 @@
             <div class="form">
                 <!-- astronaut section -->
                 <div class="form_left">
-                    <img class="astronaut" src="../assets/start_your_project/astronaut1.png" alt="">
+                    <img class="astronaut" :src="astronautSrc" alt="astronaut">
                 </div>
 
                 <!-- form -->
@@ -12,7 +12,7 @@
                     <!-- form col1: client info -->
                     <div class="form_col1">
                         <div class="who_are_you">
-                            <select @change="showDescription($event)" v-model="user_input.who_are_you" class="who_are_you_selection"> 
+                            <select @change="showDescription($event)" v-model="user_input.who_are_you" class="who_are_you_selection" @click="changeAstronaut(3)"> 
                                 <option value="default">Who Are You?</option> 
                                 <option value="individual">Individual</option> 
                                 <option value="small_business">Small Business</option> 
@@ -25,19 +25,19 @@
                         </div>
 
                         <div class="form_input_container">
-                            <input type="text" class="form_input" placeholder="Business Name" v-model="user_input.business_name">
+                            <input type="text" class="form_input" placeholder="Business Name" v-model="user_input.business_name" @click="changeAstronaut(4)">
                         </div>
 
                         <div class="form_input_container">
-                            <input type="text" class="form_input" placeholder="Full Name" v-model="user_input.full_name">
+                            <input type="text" class="form_input" placeholder="Full Name" v-model="user_input.full_name" @click="changeAstronaut(4)">
                         </div>
 
                         <div class="form_input_container">
-                            <input type="text" class="form_input" placeholder="Email" v-model="user_input.email">
+                            <input type="text" class="form_input" placeholder="Email" v-model="user_input.email" @click="changeAstronaut(4)">
                         </div>
 
                         <div class="form_input_container">
-                            <input type="text" class="form_input" placeholder="Phone Number" v-model="user_input.phone_num">
+                            <input type="text" class="form_input" placeholder="Phone Number" v-model="user_input.phone_num" @click="changeAstronaut(4)">
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@
                         <div class="project_breadth">
                             Project Breadth
                         </div>
-                        <div class="project_breadth_tags">
+                        <div class="project_breadth_tags" @click="changeAstronaut(2)">
                             <div class="tag" @mouseover="getTagDescription" @click="selectTag">
                                 Landing Page
                             </div>
@@ -72,10 +72,13 @@
                         <div class="project_description">
                             Project Description
                         </div>
-                        <div class="project_description_textbox">
+                        <div class="project_description_textbox" @click="changeAstronaut(1)">
                             <textarea name="project_description_input" id="project_description_input" 
                             placeholder="A website about my astronaut experience in the deep space!"
                             v-model="user_input.project_description"></textarea>
+                            <button class="submit_button">
+                                Submit
+                            </button>
                         </div>
                     </div>
 
@@ -89,6 +92,12 @@
 </template>
 
 <script>
+    import astronaut1 from "../assets/start_your_project/astronaut1.png";
+    import astronaut2 from "../assets/start_your_project/astronaut2.png";
+    import astronaut3 from "../assets/start_your_project/astronaut3.png";
+    import astronaut4 from "../assets/start_your_project/astronaut4.png";
+    import astronaut5 from "../assets/start_your_project/astronaut5.png";
+    
     export default {
         props: {
         },
@@ -118,6 +127,8 @@
                     intake_page: false,
                     project_description: "",
                 },
+                astronauts: [astronaut1, astronaut2, astronaut3, astronaut4, astronaut5],
+                astronautSrc: astronaut1,
             }
         },
         methods: {
@@ -178,6 +189,9 @@
                 else if(event.target.innerText === "Intake Page"){
                     this.user_input.intake_page = !this.user_input.management_page;
                 }
+            },
+            changeAstronaut(num){
+                this.astronautSrc = this.astronauts[num];
             }
         }
     }
@@ -306,6 +320,30 @@
     -moz-user-drag: none;
     -o-user-drag: none;
     user-select: none;
+
+    /* animation */
+    animation: appear forwards 2s, floating 3s infinite;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0.5vw);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(0.5vw);
+    }
 }
 
 .form_right{
@@ -472,6 +510,7 @@
 
     /* inner shape */
     padding-left: 0.5vw;
+    padding-top: 0.5vw;
     color: white;
     overflow: auto;
 }
@@ -510,15 +549,11 @@
 
 .tag_description{
     /* shape */
+    display: inline-block;
     border-top: solid var(--light-periwinkle-purple) 1px;
-    
 
     /* inside shape */
     padding-top: 0.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 
     /* font */
     color: white;
@@ -551,17 +586,20 @@
 
     /* position */
     margin-top: 0.5vw;
+
+    /* inner shape */
+    display: flex;
+    flex-direction:column;
 }
 
 .project_description_textbox textarea{
     /* shape */
     border-left: solid var(--light-periwinkle-purple) 1px;
     width: 100%;
-    height: 95%;
         
     /* inner shape */
     background-color: var(--onyx-black);
-    padding-left: 0.5vw;
+    padding: 0.5vw;
 
     /* font */
     color: white;
@@ -576,5 +614,22 @@
 .project_description_textbox textarea:focus{
     /* shape */
     outline: none;
+}
+
+.submit_button{
+    /* shape */
+    width: 100%;
+    flex: 1;
+    border-radius: 0.5vw;
+
+    /* position */
+    margin-top: 2vw;
+
+    /* inner shape */
+    background-color: var(--light-periwinkle-purple);
+
+    /* font */
+    color: var(--onyx-black);
+    font-size: 1.2vw;
 }
 </style>
