@@ -4,13 +4,13 @@
         <header>
             <!-- for computer -->
             <nav class="navigation">
-                <div class="heading"><NuxtLink to="/">epoch</NuxtLink></div>
+                <div class="heading"><a href="/">epoch</a></div>
                 <div class="central-links">
-                    <div class="link border-right"><NuxtLink to="/aboutus">About Us</NuxtLink></div>
+                    <div class="link border-right"><a href="/aboutus">About Us</a></div>
                     <div class="link border-right"><a href="/projects">Projects</a></div>
                     <div class="link"><a href="/#services">Services</a></div>
                 </div>
-                <div class="contact-button"><NuxtLink to="/startYourProject">Get Started</NuxtLink></div>
+                <div class="contact-button"><a href="/startYourProject">Get Started</a></div>
             </nav>
 
             <!-- For Mobile -->

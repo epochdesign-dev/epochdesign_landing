@@ -10,9 +10,9 @@
                     <a href="/startYourProject">Start Your Project</a>
                 </div>
                 <div class="services">
-                    <NuxtLink to="/service/artist-profile">Artist Profile</NuxtLink>
-                    <NuxtLink to="/service/small-business">Small Business</NuxtLink>
-                    <NuxtLink to="/service/moving-online">Moving Online</NuxtLink>
+                    <a href="/service/artist-profile">Artist Profile</a>
+                    <a href="/service/small-business">Small Business</a>
+                    <a href="/service/moving-online">Moving Online</a>
                 </div>
                 <div class="contact">
                     <div class="footer-title">Contact:</div>
