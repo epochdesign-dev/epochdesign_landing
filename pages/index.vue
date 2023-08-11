@@ -68,8 +68,7 @@
 
             <!--Footer-->
             <section>
-                <footer class="main_footer">
-                </footer>
+                <MainFooter class="main_footer"/>
             </section>
 
             <!--Mobile: Contact Button-->
@@ -659,26 +658,26 @@
 .main_footer{
     /* position */
     position: absolute;
-    top: 455vh;
+    top: 450vh;
+    left: 50%;
+    transform: translateX(-50%);
 
     /* shape */
     width: 100vw;
     height: 28.89vh;
-    border-top: solid 3px white;
 }
 
 @media screen and (max-width: 740px) {
     .main_footer{
         /* position */
         position: absolute;
-        top: 700vw;
+        top: 780vw;
         left: 50%;
         transform: translateX(-50%);
 
         /* shape */
         width: 95.9vw;
         height: 43.33vh;
-        border-top: solid 3px white;
     }
 }
 
