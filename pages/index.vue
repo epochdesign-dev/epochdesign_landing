@@ -45,25 +45,28 @@
                 <div class="services">
                     <ServiceCard title="Small Business" 
                     description="Elevate your business with our tailored website design service. We craft visually stunning, responsive websites that leave a lasting impact." 
-                    :tags="['Online Presence', 'Digital Marketing']"/> 
+                    :tags="['Online Presence', 'Digital Marketing']"
+                    link="/service/small-business"/> 
 
                     <ServiceCard title="Artist Profile" 
                     description="Transform your artistic vision into a compelling online showcase of your creativity." 
-                    :tags="['Artistic Expression', 'Creative Design']"/> 
+                    :tags="['Artistic Expression', 'Creative Design']"
+                    link="/service/artist-profile"/> 
 
                     <ServiceCard title="Moving Online" 
                     description="Embrace the digital revolution with our specialized service, guiding businesses smoothly into the online realm." 
-                    :tags="['Digital Shift', 'Landing Page', 'Cloud Database']"/> 
+                    :tags="['Digital Shift', 'Landing Page', 'Cloud Database']"
+                    link="/service/moving-online"/> 
                 </div>
             </section>
 
             <!--Get in Touch-->
             <section class="get_in_touch">
                 <div class="get_in_touch_text">Have An Idea?<br>Let's Build And Scale It!</div>
-                <div class="get_in_touch_button">
+                <a class="get_in_touch_button" href="/startYourProject">
                     <img class="get_in_touch_arrow" src="../assets/arrow-circle2.png" alt="arrow circle">
                     Get in Touch
-                </div>
+                </a>
             </section>
 
             <!--Footer-->
@@ -73,9 +76,9 @@
 
             <!--Mobile: Contact Button-->
             <section>
-                <div class="contact_button">
+                <a class="contact_button" href="/startYourProject">
                     contact
-                </div>
+                </a>
             </section>
         </div>
     </div>

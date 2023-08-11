@@ -10,15 +10,19 @@
         </section>
 
         <!-- learn more button -->
-        <section class="learn_more">
-            <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
-            <div class="learn_more_text">Learn More</div>
+        <section>
+            <a :href="link" class="learn_more">
+                <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
+                <div class="learn_more_text">Learn More</div>
+            </a>
+            <!-- <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
+            <div class="learn_more_text">Learn More</div> -->
         </section>
     </div>
 </template>
 
 <script setup>
-    const { title, description, tags } = defineProps(['title','description', 'tags']);
+    const { title, description, tags, link} = defineProps(['title','description', 'tags', 'link']);
 </script>
 
 <style scoped>

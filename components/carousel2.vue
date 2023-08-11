@@ -3,24 +3,24 @@
         <!-- Project Cards -->
         <div class="project_card" id="project4">
             <img class="project_pic" src="../assets/project_card.png" alt="project_card">
-            <div class="project_footer">
+            <a class="project_footer" href="/projects">
                 <p class="project_name">PROJECT NAME1</p>
                 <img class="arrow" src="../assets/arrow.png" alt="arrow">
-            </div>
+            </a>
         </div>
         <div class="project_card" id="project5">
             <img class="project_pic" src="../assets/project_card.png" alt="project_card">
-            <div class="project_footer">
+            <a class="project_footer" href="/projects">
                 <p class="project_name">PROJECT NAME2</p>
                 <img class="arrow" src="../assets/arrow.png" alt="arrow">
-            </div>
+            </a>
         </div>
         <div class="project_card" id="project6">
             <img class="project_pic" src="../assets/project_card.png" alt="project_card">
-            <div class="project_footer">
+            <a class="project_footer" href="/projects">
                 <p class="project_name">PROJECT NAME3</p>
                 <img class="arrow" src="../assets/arrow.png" alt="arrow">
-            </div>
+            </a>
         </div>
     </div>
 </template>
