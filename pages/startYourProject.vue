@@ -60,10 +60,13 @@
                                 Internal Software
                             </div>
                             <div class="tag" @mouseover="getTagDescription" @click="selectTag">
-                                User Profiles
+                                User Account
                             </div>
                             <div class="tag" @mouseover="getTagDescription" @click="selectTag">
                                 Intake Page
+                            </div>
+                            <div class="tag" @mouseover="getTagDescription" @click="selectTag">
+                                Portfolio
                             </div>
                             <div class="tag_description">
                                 {{ tag_description }}
@@ -92,11 +95,15 @@
 </template>
 
 <script>
+    // image assets
     import astronaut1 from "../assets/start_your_project/astronaut1.png";
     import astronaut2 from "../assets/start_your_project/astronaut2.png";
     import astronaut3 from "../assets/start_your_project/astronaut3.png";
     import astronaut4 from "../assets/start_your_project/astronaut4.png";
     import astronaut5 from "../assets/start_your_project/astronaut5.png";
+
+    // supabase
+    import { createClient } from '@supabase/supabase-js';
     
     export default {
         props: {
@@ -107,7 +114,13 @@
                 meta: [
                     {name: 'description', content: 'start your project'}
                 ]
-            })
+            });
+
+            const config = useRuntimeConfig();
+
+            // Create a single supabase client for interacting with your database
+            const supabase = createClient(config.public.url, config.public.key);
+            // console.log(supabase);
         },
         data() {
             return {
@@ -123,8 +136,9 @@
                     online_store: false,
                     management_page: false,
                     internal_software: false,
-                    user_profiles: false,
+                    user_account: false,
                     intake_page: false,
+                    portfolio: false,
                     project_description: "",
                 },
                 astronauts: [astronaut1, astronaut2, astronaut3, astronaut4, astronaut5],
@@ -183,11 +197,14 @@
                 else if(event.target.innerText === "Internal Software"){
                     this.user_input.internal_software = !this.user_input.internal_software;
                 }
-                else if(event.target.innerText === "User Profiles"){
-                    this.user_input.user_profiles = !this.user_input.user_profiles;
+                else if(event.target.innerText === "User Account"){
+                    this.user_input.user_account = !this.user_input.user_account;
                 }
                 else if(event.target.innerText === "Intake Page"){
-                    this.user_input.intake_page = !this.user_input.management_page;
+                    this.user_input.intake_page = !this.user_input.intake_page;
+                }
+                else if(event.target.innerText === "Portfolio"){
+                    this.user_input.portfolio = !this.user_input.portfolio;
                 }
             },
             changeAstronaut(num){

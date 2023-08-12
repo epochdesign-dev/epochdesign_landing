@@ -1,11 +1,11 @@
 <template>
     <div>
         <!--Carousel Positions-->
-        <div id="project1"><img class="position1" src="../assets/project_card.png" alt="project_card"></div>
-        <div id="project2"><img class="position2" src="../assets/project_card.png" alt="project_card"></div>
-        <div id="project3"><img class="position3" src="../assets/project_card.png" alt="project_card"></div>
-        <div id="project4"><img class="position4" src="../assets/project_card.png" alt="project_card"></div>
-        <div id="project5"><img class="position5" src="../assets/project_card.png" alt="project_card"></div>
+        <a id="project1" href="/project"><img class="position1" src="../assets/project_card.png" alt="project_card"></a>
+        <a id="project2" href="/project"><img class="position2" src="../assets/project_card.png" alt="project_card"></a>
+        <a id="project3" href="/project"><img class="position3" src="../assets/project_card.png" alt="project_card"></a>
+        <a id="project4" href="/project"><img class="position4" src="../assets/project_card.png" alt="project_card"></a>
+        <a id="project5" href="/project"><img class="position5" src="../assets/project_card.png" alt="project_card"></a>
 
         <!--Project Description-->
         <!--binding has some weird errors-->

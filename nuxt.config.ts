@@ -9,5 +9,11 @@ export default defineNuxtConfig({
         {name: 'description', content: 'The Epoch landing page'}
       ],
     },
-  }
+  },
+  runtimeConfig:{
+    public: {
+      url: process.env.SUPABASE_URL,
+      key: process.env.SUPABASE_KEY,
+    },
+  },
 })

@@ -6,7 +6,7 @@
             <section>
                 <div class="intro_title">epoch</div>
                 <p class="intro_text">At Epoch Design, we develop eye-catching brands, design beautiful websites, and deliver campaigns that stand out from the norm.</p>
-                <img class="intro_img position_center_absolute" src="../assets/donut.png" alt="donut">
+                <img class="intro_img" src="../assets/donut.png" alt="donut">
             </section>
 
             <!--Projects-->
@@ -85,7 +85,6 @@
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>
@@ -184,20 +183,26 @@
 /* ******************************************************************** */
 .intro_img{
     /* shape */
-    max-width: 100%;
-    max-height: 100%;
     object-fit: contain;
-    width: 78%;
-    height: 78.1%;
+    width: 70vw;
+
+    /* position */
+    position:absolute;
+    top: 6vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* interaction */
+    z-index: -1;
     
 }
 
 .intro_title{
     /* position */
-    position:absolute;
-    top: 32%;
-    left: 50%;
-    transform: translate(-50%, -32%);
+    display: block;
+    margin-top: 8vw;
+    margin-left: auto;
+    margin-right: auto;
 
     /* font */
     color: var(--dandelion-yellow); 
@@ -207,6 +212,9 @@
     /* interaction */
     user-select: none;
     z-index: 1;
+
+    /* shape */
+    width: max-content;
 }
 
 .intro_text{
@@ -220,37 +228,12 @@
     width: 50vw;
 
     /* position */
-    position:absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -85%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
     /* interaction */
     z-index: 1;
-}
-
-/* Sets specific styles for viewport ~16:9 */
-@media (min-aspect-ratio: 173/100) and (max-aspect-ratio: 183/100){
-    .intro_title{
-        /* position */
-        top: 34%;
-        transform: translate(-50%, -34%);
-
-        /* font */
-        font-size: 22vw;
-    }
-
-    .intro_text{
-        /* font */
-        font-size: 1.8vw;
-
-        /* position */
-        top: 84%;
-        transform: translate(-50%, -84%);
-
-        /* shape */
-        width: 55vw;
-    }
 }
 
 /* for mobile */
@@ -304,10 +287,10 @@
 /* ******************************************************************** */
 .projects_title{
     /* position */
-    position:absolute;
-    top: 100vh;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vw;
 
     /* font */
     color: white; 
@@ -320,16 +303,17 @@
     /* shape */
     padding-bottom: 0.4vw;
     border-bottom: solid 1px;
+    width: max-content;
 }
 
 .carousel1{
-    position: relative;
-    top: 112vh;
+    /* position: relative; */
+    margin-top: 2vw;
 }
 
 .carousel2{
-    position: relative;
-    top: 114vh;
+    /* position: relative; */
+    margin-top: 2vw;
 }
 
 /* for mobile */
@@ -360,10 +344,10 @@
 /* ******************************************************************** */
 .whoweare_title{
     /* position */
-    position:absolute;
-    top: 305vh;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-right: auto;
 
     /* font */
     color: white; 
@@ -376,6 +360,7 @@
     /* shape */
     padding-bottom: 0.4vw;
     border-bottom: solid 1px;
+    width: max-content;
 }
 
 .mobile_whoweare_title{
@@ -393,10 +378,10 @@
     width: 60vw;
 
     /* position */
-    position:absolute;
-    top: 323vh;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-right: auto;
 
     /* interaction */
     z-index: 1;
@@ -413,24 +398,24 @@
 
 .oval1_pos{
     /* position */
-    position:absolute;
-    top: 317vh;
+    position: absolute;
+    top: 155vw;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .oval2_pos{
     /* position */
-    position:absolute;
-    top: 323vh;
+    position: absolute;
+    top: 157.71vw;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .oval3_pos{
     /* position */
-    position:absolute;
-    top: 327vh;
+    position: absolute;
+    top: 160.42vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -516,10 +501,10 @@
 /* ******************************************************************** */
 .services_title{
     /* position */
-    position:absolute;
-    top: 357vh;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    margin-top: 14vw;
+    margin-left: auto;
+    margin-right: auto;
 
     /* font */
     color: white; 
@@ -532,23 +517,23 @@
     /* shape */
     padding-bottom: 0.4vw;
     border-bottom: solid 1px;
+    width: max-content;
 }
 
 .services{
     /* inner shape */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 10px;
+    grid-column-gap: 0.5208vw;
 
     /* shape */
-    height: 37.4vh;
+    min-height: 18.7vw;
     width: 89.84vw;
 
     /* position */
-    position: absolute;
-    top: 369vh;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 2.5vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (max-width: 740px) {
@@ -586,10 +571,9 @@
 /* ******************************************************************** */
 .get_in_touch{
     /* position */
-    position: absolute;
-    top: 420vh;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 10vw;
+    margin-left: auto;
+    margin-right: auto;
 
     /* shape */
     width: 81.7vw;
@@ -660,10 +644,10 @@
 /* ******************************************************************** */
 .main_footer{
     /* position */
-    position: absolute;
-    top: 450vh;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    margin-top: 10vw;
+    margin-left: auto;
+    margin-right: auto;
 
     /* shape */
     width: 100vw;

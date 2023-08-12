@@ -15,8 +15,6 @@
                 <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
                 <div class="learn_more_text">Learn More</div>
             </a>
-            <!-- <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
-            <div class="learn_more_text">Learn More</div> -->
         </section>
     </div>
 </template>
@@ -67,13 +65,14 @@
 
     /* inner shape */
     background-color: var(--dandelion-yellow);
+    padding-bottom: 1.875vw;
 
     /* text */
     color: var(--onyx-black);
 
     /* shape */
-    height: 37.4vh;
-    width: 28.7vw;
+    min-height: 18.7vw;
+    width: 29.58vw;
     border-radius: 1vw;
 }
 
@@ -84,7 +83,8 @@
     margin-right: 1.875vw;
 
     /* shape */
-    height: 25.65vh;
+    min-height: 12.5vw;
+    
 }
 
 .tags{
@@ -132,13 +132,12 @@
 
 .learn_more{
     /* position */
-    margin-bottom: 1.875vw;
     margin-left: auto;
     margin-right: 1.875vw;
 
     /* shape */
     width: 8.26vw;
-    height: 5.09vh;
+    height: 2.863vw;
 
     /* inner shape */
     text-align: right;
