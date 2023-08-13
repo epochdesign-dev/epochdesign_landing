@@ -27,14 +27,14 @@
 
 .oval{
     /* shape */
-    width: 68.59vw;
-    height: 10.78vw;
+    width: 45.73vw;
+    height: 7.19vw;
     border-radius: 50%;
     border: solid white 2px;
 
     /* position */
     position:absolute;
-    top: 10.5vw;
+    top: 8.5vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -42,14 +42,14 @@
 .title{
     /* position */
     position:absolute;
-    top: 11vw;
+    top: 9vw;
     left: 50%;
     transform: translateX(-50%);
 
     /* font */
     color: var(--dandelion-yellow); 
     font-family: Helvetica-Neue;
-    font-size: 6vw;
+    font-size: 4vw;
     font-weight: 400;
 
     /* interaction */
@@ -60,21 +60,21 @@
 .subtitle{
     /* position */
     position:absolute;
-    top: 24vw;
+    top: 17vw;
     left: 50%;
     transform: translateX(-50%);
 
     /* font */
     color: white;
     font-family: Helvetica-Neue;
-    font-size: 1.7vw;
+    font-size: 1.13vw;
 
     /* inner shape */
     text-align: center;
     white-space: pre-wrap;
 
     /* shape */
-    width: 59.48vw;
+    width: 40vw;
 }
 
 

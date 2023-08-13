@@ -138,7 +138,7 @@ export default {
 .position1{
     /* position */
     position: absolute;
-    top: 43.49vw;
+    top: 18.49vw;
     left: -6.09vw;
 
     /* shape */
@@ -161,7 +161,7 @@ export default {
 .position2{
     /* position */
     position: absolute;
-    top: 41.4vw;
+    top: 16.4vw;
     left: 6.09vw;
 
     /* shape */
@@ -184,7 +184,7 @@ export default {
 .position3{
     /* position */
     position: absolute;
-    top: 39.32vw;
+    top: 14.32vw;
     left: 50%;
     transform: translateX(-50%);
 
@@ -203,7 +203,7 @@ export default {
 .position4{
     /* position */
     position: absolute;
-    top: 41.4vw;
+    top: 16.4vw;
     right: 6.09vw;
 
     /* shape */
@@ -226,7 +226,7 @@ export default {
 .position5{
     /* position */
     position: absolute;
-    top: 43.49vw;
+    top: 18.49vw;
     right: -6.09vw;
 
     /* shape */
@@ -249,7 +249,7 @@ export default {
 .right_arrow{
     /* position */
     position: absolute;
-    top: 66.93vw;
+    top: 41.93vw;
     right: 19.9vw;
 
     /* interaction */
@@ -264,7 +264,7 @@ export default {
 .left_arrow{
     /* position */
     position: absolute;
-    top: 66.93vw;
+    top: 41.93vw;
     left: 19.9vw;
 
     /* interaction */
@@ -280,7 +280,7 @@ export default {
 .project_description{
     /* position */
     position: absolute;
-    top: 65.1vw;
+    top: 40.1vw;
     left: 50%;
     transform: translateX(-50%);
 

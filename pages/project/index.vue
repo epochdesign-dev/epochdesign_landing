@@ -237,7 +237,7 @@ onMounted(() => {
 
 .project_main_title{
   color: white;
-  font-family: Helvetica-Neue-LT-Pro-Medium;
+  font-family: Helvetica-Neue;
   font-size: 128px;
   font-style: normal;
   font-weight: 500;
@@ -246,7 +246,7 @@ onMounted(() => {
 
 .project_subtitle{
   color: white;
-  font-family: Helvetica-Neue-LT-Pro-Medium;
+  font-family: Helvetica-Neue;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;

@@ -2,9 +2,9 @@
     <div class="main">
         <div class="canvas">
             <!-- section 1: title -->
-            <section>
+            <!-- <section>
                 <SubpageTitle title="About Us" subtitle="A full-service design agency comprised of diverse minds who have a passion for creating digital experiences."/>
-            </section>
+            </section> -->
 
             <!-- section 2: member cards -->
             <section>
@@ -77,8 +77,7 @@
 
             <!--section 4: footer-->
             <section>
-                <footer class="footer">
-                </footer>
+                <MainFooter class="footer"/>
             </section>
         </div>
     </div>
@@ -127,7 +126,7 @@ export default {
         card4Description(){
             this.member_name = "Daniel Liu";
             this.member_position = "Full Stack Developer";
-            this.member_brief = "Lorem ipsum dolor sit amet consectetur. Et velit imperdiet consequat sed sem vitae ipsum eu augue. Dignissim metus est neque consequat non odio et. Lorem nulla nec mi et sapien adipiscing volutpat donec. Sit urna nunc eget ac pellentesque sit egestas.";
+            this.member_brief = "Daniel loves coffee and cool websites. In fact, he's probably drinking coffee and coding right now.";
         },
     }
 }
@@ -224,7 +223,7 @@ export default {
     /* position */
     position: absolute;
     left: 10vw;
-    top: 47vw;
+    top: 17vw;
 
     /* shape */
     transform: rotate(-30deg);
@@ -237,7 +236,7 @@ export default {
     /* position */
     position: absolute;
     left: 30vw;
-    top: 39vw;
+    top: 9vw;
 
     /* shape */
     transform: rotate(-10deg);
@@ -250,7 +249,7 @@ export default {
     /* position */
     position: absolute;
     left: 50vw;
-    top: 39vw;
+    top: 9vw;
 
     /* shape */
     transform: rotate(10deg);
@@ -262,7 +261,7 @@ export default {
     /* position */
     position: absolute;
     left: 70vw;
-    top: 47vw;
+    top: 17vw;
 
     /* shape */
     transform: rotateZ(30deg);
@@ -279,13 +278,15 @@ export default {
     gap: 0.416666vw;
 
     /* position */
-    position: absolute;
-    top: 84vw;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 50vw;
+    margin-left: 32vw;
+    
 
     /* shape */
     width: 37.55vw;
+    height: 22vw;
+
+    overflow-y: scroll;
 }
 
 .member_name{
@@ -344,25 +345,23 @@ export default {
 
 .oval1_pos{
     /* position */
-    top: 110.8vw;
+    top: 77.8vw;
 }
 
 .oval2_pos{
     /* position */
-    top: 113.51vw;
+    top: 80.51vw;
 }
 
 .oval3_pos{
     /* position */
-    top: 116.22vw;
+    top: 83.22vw;
 }
 
 .our_value_title{
     /* position */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 110.8vw;
+    margin-top: 5vw;
+    margin-left: 27vw;
 
     /* shape */
     width: 47.66vw;
@@ -393,10 +392,8 @@ export default {
     width: 81.04vw;
 
     /* position */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 130.54vw;
+    margin-top: 12vw;
+    margin-left: 9vw;
 }
 
 .value{
@@ -502,12 +499,6 @@ export default {
 /* ******************************************************************** */
 .footer{
     /* position */
-    position: absolute;
-    top: 198.72vw;
-
-    /* shape */
-    width: 100vw;
-    height: 16.25vw;
-    border-top: solid 3px white;
+    margin-top: 10vw;
 }
 </style>

@@ -2,17 +2,17 @@
     <div class="main">
         <div class="canvas">
             <!-- title -->
-            <SubpageTitle title="Projects" subtitle="Selected Works"/>
+            <!-- <SubpageTitle title="Projects" subtitle="Selected Works"/> -->
 
             <!-- projects carousel -->
             <Carousel3 />  
             
             <!--subtitle-->
-            <div class="sub-title">Our Process</div>
+            <!-- <div class="sub-title">Our Process</div> -->
 
-            <div class="sub-title-line">
+            <!-- <div class="sub-title-line">
                 <p class="process"> to be implemented...</p>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
