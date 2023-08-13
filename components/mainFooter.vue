@@ -97,6 +97,24 @@
 }
 
 @media screen and (max-width: 840px) {
+        .footer-box{
+            margin-top: 0px;
+            /* shape */
+            width: 100vw;
+            height: 28.89vh;
+            border-top: solid 3px transparent;
+
+            /*inner*/
+            padding: 0 5vw 0 5vw;
+
+            /* font */
+            color: white;
+            font-family: Helvetica-Neue;
+            font-size: 14px;
+            line-height: 30px;
+            white-space: nowrap;
+        }
+
     .main_footer{
         /* shape */
         width: 95.9vw;
@@ -119,7 +137,25 @@
     
     }
 
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 740px) {
+        .footer-box{
+            margin-top: 0px;
+            /* shape */
+            width: 100vw;
+            height: 28.89vh;
+            border-top: solid 3px transparent;
+
+            /*inner*/
+            padding: 0 5vw 0 5vw;
+
+            /* font */
+            color: white;
+            font-family: Helvetica-Neue;
+            font-size: 14px;
+            line-height: 30px;
+            white-space: nowrap;
+        }
+
         .footer-grid{
             padding-top: 25px;
             padding-bottom: 25px;

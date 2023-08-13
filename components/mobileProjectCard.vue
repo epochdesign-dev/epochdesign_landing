@@ -20,7 +20,7 @@
     z-index: 1;
 
     /* shape */
-    min-height: 35.8vh;
+    min-height: 64vw;
 }
 
 .project_pic{
@@ -35,7 +35,7 @@
     display: flex;
 
     /* shape */
-    height: 5.8vh;
+    height: 10vw;
     width: 100vw;
 }
 

@@ -248,15 +248,14 @@
 
         /* position */
         position: absolute;
-        top:8.02%;
+        top: 15vw;
         left: 50%;
         transform: translateX(-50%);
     }
 
     .intro_title{
         /* position */
-        position:absolute;
-        top: 25.4%;
+        margin-top: 35vw;
 
         /* font */
         font-size: 22.5vw;
@@ -273,10 +272,7 @@
         width: 93.47vw;
 
         /* position */
-        position:absolute;
-        top: 39.86%;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: 2vw;
     }
 }
 
@@ -320,7 +316,8 @@
 @media screen and (max-width: 740px) {
     .projects_title{
         /* position */
-        top: 108vw;
+        margin-top: 15vw;
+        margin-bottom: 5vw;
 
         /* font */
         font-size: 7vw;
@@ -331,9 +328,7 @@
     }
 
     .mobile_project_card{
-        position: relative;
-        top: 122vw;
-        margin-bottom: 5px;
+        margin-bottom: 0.26vw;
     }
 }
 
@@ -429,10 +424,9 @@
 
     .mobile_whoweare_title{
         /* position */
-        position:absolute;
-        top: 330vw;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10vw;
 
         /* font */
         color: white; 
@@ -445,6 +439,7 @@
 
         /* shape */
         padding-bottom: 0.4vw;
+        width: max-content;
     }
 
     .mobile_whoweare_underline{
@@ -457,16 +452,15 @@
         font-family: Helvetica-Neue;
         font-size: 4vw;
         color: white;
-
+        
         /* Inner Shape */
         text-align: center;
         width: 63vw;
 
         /* position */
-        position:absolute;
-        top: 348vw;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: 7vw;
+        margin-left: auto;
+        margin-right: auto;
 
         /* interaction */
         z-index: 1;
@@ -539,7 +533,7 @@
 @media screen and (max-width: 740px) {
     .services_title{
         /* position */
-        top: 395vw;
+        margin-top: 10vw;
 
         /* font */
         font-size: 7vw;
@@ -554,9 +548,8 @@
         width: 87.69vw;
 
         /* position */
-        position: relative;
-        top: 215vw;
-        left: auto;
+        display: block;
+        margin-top: 5vw;
         transform: none;
         margin-left: auto;
         margin-right: auto;
@@ -657,10 +650,7 @@
 @media screen and (max-width: 740px) {
     .main_footer{
         /* position */
-        position: absolute;
-        top: 780vw;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: 10vw;
 
         /* shape */
         width: 95.9vw;

@@ -82,9 +82,9 @@
                             <button class="submit_button" @click = "submitData" v-if="!submitted">
                                 Submit
                             </button>
-                            <div class="submit_button" v-if="submitted">
+                            <button class="submit_button" v-if="submitted">
                                 Done!
-                            </div>
+                            </button>
                         </div>
                     </div>
 
