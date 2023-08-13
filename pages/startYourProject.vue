@@ -15,8 +15,8 @@
                             <select @change="showDescription($event)" v-model="user_input.who_are_you" class="who_are_you_selection" @click="changeAstronaut(3)"> 
                                 <option value="default">Who Are You?</option> 
                                 <option value="individual">Individual</option> 
-                                <option value="small_business">Small Business</option> 
-                                <option value="large_business">Large Business</option> 
+                                <option value="small business">Small Business</option> 
+                                <option value="large business">Large Business</option> 
                             </select>
                         </div>
 
@@ -79,9 +79,12 @@
                             <textarea name="project_description_input" id="project_description_input" 
                             placeholder="A website about my astronaut experience in the deep space!"
                             v-model="user_input.project_description"></textarea>
-                            <button class="submit_button">
+                            <button class="submit_button" @click = "submitData" v-if="!submitted">
                                 Submit
                             </button>
+                            <div class="submit_button" v-if="submitted">
+                                Done!
+                            </div>
                         </div>
                     </div>
 
@@ -103,12 +106,15 @@
     import astronaut5 from "../assets/start_your_project/astronaut5.png";
 
     // supabase
-    import { createClient } from '@supabase/supabase-js';
+    // import { createClient } from '@supabase/supabase-js';
+
+    // uuid
+    import { v4 as uuidv4 } from 'uuid';
     
     export default {
         props: {
         },
-        setup(){
+        async setup(){
             useHead({
                 title: 'Epoch | Start Your Project',
                 meta: [
@@ -116,11 +122,30 @@
                 ]
             });
 
-            const config = useRuntimeConfig();
+            // Documentation of using supabase in nuxt
+            // Do not delete:
 
-            // Create a single supabase client for interacting with your database
-            const supabase = createClient(config.public.url, config.public.key);
-            // console.log(supabase);
+            // Using Supabase way 1:
+            // const { data, error } = await useFetch('/api/getSupabase'); 
+            // console.log(data);
+            // console.log(error);
+
+
+            // Using Supabase way 2:
+            // const config = useRuntimeConfig();
+            // const supabase = createClient(config.public.url, config.public.key);
+            // let { data: clients, error } = await supabase
+            //     .from('clients')
+            //     .select('*');
+            // console.log(clients);
+
+
+            // Using Supabase way 3
+            // const client = useSupabaseClient()
+            // const { data: clients } = await useAsyncData('images', async () => client.from('clients').select('*').order('created_at'),  { transform: result => result.data });
+
+            // console.log(clients);
+
         },
         data() {
             return {
@@ -143,9 +168,11 @@
                 },
                 astronauts: [astronaut1, astronaut2, astronaut3, astronaut4, astronaut5],
                 astronautSrc: astronaut1,
+                submitted: false,
             }
         },
         methods: {
+            // description for who are you
             showDescription(event){
                 if(event.target.value === "default"){
                     this.who_are_you_description = "An astronaut.";
@@ -153,13 +180,15 @@
                 else if(event.target.value === "individual"){
                     this.who_are_you_description = "A strong and independent person.";
                 }
-                else if(event.target.value === "small_business"){
+                else if(event.target.value === "small business"){
                     this.who_are_you_description = "A business with less than 25 employees.";
                 }
-                else if(event.target.value === "large_business"){
+                else if(event.target.value === "large business"){
                     this.who_are_you_description = "A business with more than 25 employees and incorporated.";
                 }
             },
+
+            // tag description
             getTagDescription(event){
                 // change tag description
                 if(event.target.innerText === "Management Page"){
@@ -175,6 +204,8 @@
                     this.tag_description = "From the depth of black hole to Earth.";
                 }
             },
+
+            // when a tag is selected
             selectTag(event){
                 // change tag color
                 if(event.target.classList.contains("selectedTag")){
@@ -207,8 +238,54 @@
                     this.user_input.portfolio = !this.user_input.portfolio;
                 }
             },
+
+            // astheatics; change the astronaut image
             changeAstronaut(num){
                 this.astronautSrc = this.astronauts[num];
+            },
+
+            // submit data when submit is clicked
+            async submitData(){
+                const supabase = useSupabaseClient();
+
+                let id = uuidv4();
+                
+                const { error: clientError } = await supabase
+                    .from('clients')
+                    .insert({id: id,
+                        type: this.user_input.who_are_you, 
+                        phone: this.user_input.phone_num, 
+                        email: this.user_input.email, 
+                        business_name: this.user_input.business_name, 
+                        name: this.user_input.full_name});
+
+                let project_title;
+                if(this.user_input.who_are_you === "individual"){
+                    project_title = this.user_input.full_name;
+                }
+                else{
+                    project_title = this.user_input.business_name;
+                }
+
+                let project_breadth = {
+                    landing_page: this.user_input.landing_page,
+                    online_store: this.user_input.online_store,
+                    management_page: this.user_input.management_page,
+                    internal_software: this.user_input.internal_software,
+                    user_account: this.user_input.user_account,
+                    intake_page: this.user_input.intake_page,
+                    portfolio: this.user_input.portfolio,
+                };
+
+                const { error:projectError } = await supabase
+                    .from('projects')
+                    .insert({ client: id, 
+                        status: 'startYourProject form submitted', 
+                        project_title: project_title, 
+                        project_breadth: project_breadth, 
+                        project_description: this.user_input.project_description});
+
+                this.submitted = true;
             }
         }
     }
@@ -249,7 +326,6 @@
     --onyx-black: #121212;
     --dandelion-yellow: #E8E92B;
     --light-periwinkle-purple: #C0C7FF;
-    /* #FFFFFF (white) */
 }
 
 /* Canvas */
