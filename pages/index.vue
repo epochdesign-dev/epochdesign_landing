@@ -683,7 +683,7 @@
         justify-content: center; /* horizontally center */
         
         /* font */
-        font-family: Helvetica-Neue;
+        font-family: Helvetica;
         font-size: 1vw;
 
         /* interaction */

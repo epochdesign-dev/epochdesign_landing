@@ -15,6 +15,10 @@
                 <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
                 <div class="learn_more_text">Learn More</div>
             </a>
+            <a href="" class="learn_more2">
+                <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
+                <div class="learn_more_text">Learn More</div>
+            </a>
         </section>
     </div>
 </template>
@@ -151,6 +155,10 @@
     cursor: pointer;
 }
 
+.learn_more2{
+    display: none;
+}
+
 .learn_more_text{
     /* position */
     margin-top: auto;
@@ -241,6 +249,29 @@
     }
 
     .learn_more{
+        /* position */
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: auto;
+
+        /* shape */
+        width: 36.84vw;
+        height: 5.56vh;
+
+        /* inner shape */
+        text-align: left;
+        display: flex;
+
+        /* font */
+        font-family: Inter-SemiBold;
+        font-size: 4vw;
+
+        /* interaction */
+        cursor: pointer;
+        display: none;
+    }
+
+    .learn_more2{
         /* position */
         margin-bottom: 0;
         margin-left: 0;

@@ -79,20 +79,17 @@
                             <textarea name="project_description_input" id="project_description_input" 
                             placeholder="A website about my astronaut experience in the deep space!"
                             v-model="user_input.project_description"></textarea>
-                            <button class="submit_button" @click = "submitData" v-if="!submitted">
-                                Submit
-                            </button>
-                            <button class="submit_button" v-if="submitted">
-                                Done!
-                            </button>
                         </div>
+                        <button class="submit_button" @click = "submitData" v-if="!submitted">
+                            Submit
+                        </button>
+                        <button class="submit_button" v-if="submitted">
+                            Done!
+                        </button>
                     </div>
 
                 </div>
             </div>
-            <!-- <SubpageTitle title="Contact" subtitle="If you'd like to learn more about<br>how we can help evolve your brand, get in touch."/> -->
-            
-            <!-- <ContactUsForm class="contact_form"/> -->
         </div>
     </div>
 </template>
@@ -383,29 +380,57 @@
     display: flex;
 
     /* shape */
-    width: 72vw;
+    width: 90vw;
     height: 40.5vw;
-    border: solid var(--light-periwinkle-purple) 4px;
+    /* border: solid var(--light-periwinkle-purple) 4px; */
     border-radius: 2vw;
 
     /* font */
     font-family: Helvetica-Neue-LT-Pro-Medium;
 }
 
+@media screen and (max-width: 740px){
+    .form{
+        /* position */
+        position: absolute;
+        top: 10vw;
+        left: 50%;
+        transform: translateX(-50%);
+
+        /* inner shape */
+        display: flex;
+
+        /* shape */
+        width: 90vw;
+        height: 40.5vw;
+        /* border: solid var(--light-periwinkle-purple) 4px; */
+        border-radius: 2vw;
+
+        /* font */
+        font-family: Helvetica-Neue-LT-Pro-Medium;
+    }
+}
+
 .form_left{
     /* shape */
     height: 100%;
     width: 33%;
-    border-right: solid var(--light-periwinkle-purple) 4px;
+    /* border-right: solid var(--light-periwinkle-purple) 4px; */
 
     /* inner shape */
     display: flex;
     align-items: center;
 }
 
+@media screen and (max-width: 1024px){
+    .form_left{
+        display: none;
+    }
+}
+
 .astronaut{
     /* shape */
-    clip-path: inset(0 0 10px 0);
+    clip-path: inset(0 0 20px 0);
 
     /* interaction */
     -webkit-user-drag: none;
@@ -446,17 +471,32 @@
     
     /* inner shape */
     padding: 5vw;
-    grid-template-columns: [line1] 1fr [line2] 1fr [end];
-    column-gap: 5%;
-    display: grid;
+    /* grid-template-columns: [line1] 1fr [line2] 1fr [end]; */
+    display: flex;
+    gap: 5%;
+    /* display: grid; */
+}
+
+@media screen and (max-width: 1024px){
+    .form_right{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 740px){
+    .form_right{
+        width: 100%;
+        flex-direction: column;
+        height: 200vw;
+    }
 }
 
 .form_col1{
     /* position */
-    grid-column: line1 / line2;
+    /* grid-column: line1 / line2; */
 
     /* shape */
-    
+    flex: 1;
     max-height: 90vw;
     overflow: hidden;
 
@@ -563,14 +603,31 @@
     grid-column: line2 / end;
 
     /* shape */
-    
+    flex: 1;
     max-height: 90vw;
     overflow: hidden;
 
     /* inner shape */
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: [line1] 4.5vw [line2] 1fr [line3] 4.5vw [line4] 1fr [line5] 4.5vw [end];;
     row-gap: 3%;
+}
+
+@media screen and (max-width: 740px){
+    .form_col2{
+        /* position */
+        grid-column: line2 / end;
+
+        /* shape */
+        flex: 1;
+        max-height: 90vw;
+        overflow: hidden;
+
+        /* inner shape */
+        display: grid;
+        grid-template-rows: [line1] 13vw [line2] 1fr [line3] 13vw [line4] 1fr [line5] 12vw [end];;
+        row-gap: 3%;
+    }
 }
 
 .project_breadth{
@@ -590,12 +647,12 @@
     height: 80%;
 
     /* position */
-    margin-top: 0.5vw;
+    margin-top: 0.4vw;
 }
 
 .project_breadth_tags{
     /* position */
-    grid-row: 2/4;
+    grid-row: line2/line3;
     
     /* shape */
     border-left: solid var(--light-periwinkle-purple) 1px;
@@ -635,6 +692,35 @@
     transition: color 0.5s;
 }
 
+@media screen and (max-width: 740px){
+    .tag{
+        /* shape */
+        border: solid white 1px;
+        border-radius: 5vw;
+        width: max-content;
+        height: min-content;
+
+        /* inner shape */
+        padding-left: 1vw;
+        padding-right: 1vw;
+
+        /* position */
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+        position: relative;
+        display: inline-block;
+
+        /* font */
+        font-size: 0.7vw;
+
+        /* interaction */
+        cursor: pointer;
+
+        /* animation */
+        transition: color 0.5s;
+    }
+}
+
 .selectedTag{
     color: var(--dandelion-yellow);
     transition: color 0.5s;
@@ -644,6 +730,7 @@
     /* shape */
     display: inline-block;
     border-top: solid var(--light-periwinkle-purple) 1px;
+    width: 100%;
 
     /* inside shape */
     padding-top: 0.5vw;
@@ -670,25 +757,26 @@
     height: 80%;
 
     /* position */
-    margin-top: 0.5vw;
+    grid-row: line3/line4;
 }
 
 .project_description_textbox{
-    /* position */
-    grid-row: 5/-1;
-
-    /* position */
-    margin-top: 0.5vw;
-
     /* inner shape */
     display: flex;
     flex-direction:column;
+    
+    /* position */
+    grid-row: line4/line5;
+
+    /* shape */
+    height: 90%;
 }
 
 .project_description_textbox textarea{
     /* shape */
     border-left: solid var(--light-periwinkle-purple) 1px;
     width: 100%;
+    height: 100%;
         
     /* inner shape */
     background-color: var(--onyx-black);
@@ -716,7 +804,7 @@
     border-radius: 0.5vw;
 
     /* position */
-    margin-top: 2vw;
+    margin-bottom: 0.5vw;
 
     /* inner shape */
     background-color: var(--light-periwinkle-purple);
