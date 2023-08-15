@@ -2,8 +2,8 @@
   <div class="main">
     <div class="canvas">
       <div class="title selected">
-        <SubpageTitle2 class="subpagetite" title="Small Business"
-          subtitle="Elevate your business with our tailored website design service. We craft visually stunning, responsive websites that leave a lasting impact.
+        <SubpageTitle2 class="subpagetite" title="Business Solutions"
+          subtitle="Online stock availability and product management, custom internal software tailor-made to your needs, online storefronts directly connected to your database, and more. See your entire online presence in one place.
           " />
       </div>
       <div class="demos">

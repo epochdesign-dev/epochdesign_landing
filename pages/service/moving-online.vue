@@ -3,7 +3,7 @@
     <div class="canvas">
       <div class="title selected">
         <SubpageTitle2 class="subpagetite" title="Moving Online"
-          subtitle="Embrace the digital revolution with our specialized service, guiding businesses smoothly into the online realm." />
+          subtitle="Bring your business to the national and even international level! Building your business’s online presence sees the greatest return for your investment from any marketing and sales method. This also allows companies to diversify their income between their physical and online store which could enable them to weather another economic disaster like COVID-19." />
       </div>
       <div class="demos">
         <ImgsDisplay class="demos-content"/>

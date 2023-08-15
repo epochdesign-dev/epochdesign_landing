@@ -101,14 +101,14 @@ export default {
         return { 
             member_name: "Finn Williams",
             member_position: "Team Lead",
-            member_brief: "Lorem ipsum dolor sit amet consectetur. Et velit imperdiet consequat sed sem vitae ipsum eu augue. Dignissim metus est neque consequat non odio et. Lorem nulla nec mi et sapien adipiscing volutpat donec. Sit urna nunc eget ac pellentesque sit egestas.",
+            member_brief: "Founder and CEO. Mutant data scientist and people person.",
         }
     },
     methods: {
         card1Description(){
             this.member_name = "Finn Williams";
             this.member_position = "Team Lead";
-            this.member_brief = "Lorem ipsum dolor sit amet consectetur. Et velit imperdiet consequat sed sem vitae ipsum eu augue. Dignissim metus est neque consequat non odio et. Lorem nulla nec mi et sapien adipiscing volutpat donec. Sit urna nunc eget ac pellentesque sit egestas.";
+            this.member_brief = "Founder and CEO. Mutant data scientist and people person.";
         },
 
         card2Description(){

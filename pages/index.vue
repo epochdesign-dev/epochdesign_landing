@@ -43,17 +43,17 @@
                 <h3 class="services_title" id="services">Services</h3>
 
                 <div class="services">
-                    <ServiceCard title="Small Business" 
+                    <ServiceCard title="Business Solutions" 
                     description="Elevate your business with our tailored website design service. We craft visually stunning, responsive websites that leave a lasting impact." 
                     :tags="['Online Presence', 'Digital Marketing']"
                     link="/service/small-business"/> 
 
-                    <ServiceCard title="Artist Profile" 
+                    <ServiceCard title="Web Portfolios" 
                     description="Transform your artistic vision into a compelling online showcase of your creativity." 
                     :tags="['Artistic Expression', 'Creative Design']"
                     link="/service/artist-profile"/> 
 
-                    <ServiceCard title="Moving Online" 
+                    <ServiceCard title="Online Stores" 
                     description="Embrace the digital revolution with our specialized service, guiding businesses smoothly into the online realm." 
                     :tags="['Digital Shift', 'Landing Page', 'Cloud Database']"
                     link="/service/moving-online"/> 

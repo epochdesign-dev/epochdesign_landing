@@ -3,7 +3,7 @@
       <div class="canvas">
         <div class="title selected">
           <SubpageTitle2 class="subpagetite" title="Artist Profile"
-            subtitle="Transform your artistic vision into a compelling online showcase of your creativity.
+            subtitle="Feature your projects, talents, or artistic creations on a webpage uniquely and beautifully designed to match your taste and what you do. Include a commission or store page to sell your work online!
             " />
         </div>
         <div class="demos">
