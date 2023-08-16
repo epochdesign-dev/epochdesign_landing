@@ -403,7 +403,6 @@
         /* shape */
         width: 90vw;
         height: 40.5vw;
-        /* border: solid var(--light-periwinkle-purple) 4px; */
         border-radius: 2vw;
 
         /* font */
@@ -487,7 +486,7 @@
     .form_right{
         width: 100%;
         flex-direction: column;
-        height: 200vw;
+        height: 350vw;
     }
 }
 
@@ -620,7 +619,7 @@
 
         /* shape */
         flex: 1;
-        max-height: 90vw;
+        max-height: 250vw;
         overflow: hidden;
 
         /* inner shape */
