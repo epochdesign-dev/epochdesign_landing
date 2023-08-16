@@ -526,7 +526,7 @@
 
     /* font */
     color: white;
-    font-size: 1.2vw;
+    font-size: clamp(1rem, 1.2vw, 4rem);
 
     /* shape */
     width: 100%;
@@ -554,7 +554,7 @@
 
     /* font */
     color: white;
-    font-size: 0.7vw;
+    font-size: clamp(1rem, 0.7vw, 3rem);
 
     /* inner shape */
     padding: 0.5vw;
@@ -587,7 +587,7 @@
 
     /* font */
     color: white;
-    font-size: 0.7vw;
+    font-size: clamp(1rem, 0.7vw, 3rem);
 }
 
 .form_input:focus{
@@ -633,7 +633,7 @@
 .project_breadth{
     /* font */
     color: white;
-    font-size: 1.2vw;
+    font-size: clamp(1rem, 1.2vw, 4rem);
 
     /* inner shape */
     display: flex;
@@ -683,7 +683,7 @@
     display: inline-block;
 
     /* font */
-    font-size: 0.7vw;
+    font-size: clamp(1rem, 0.7vw, 3rem);
 
     /* interaction */
     cursor: pointer;
@@ -711,7 +711,7 @@
         display: inline-block;
 
         /* font */
-        font-size: 0.7vw;
+        font-size: clamp(1rem, 0.7vw, 3rem);
 
         /* interaction */
         cursor: pointer;
@@ -737,13 +737,13 @@
 
     /* font */
     color: white;
-    font-size: 0.7vw;
+    font-size: clamp(1rem, 0.7vw, 3rem);
 }
 
 .project_description{
     /* font */
     color: white;
-    font-size: 1.2vw;
+    font-size: clamp(1rem, 1.2vw, 4rem);
 
     /* inner shape */
     display: flex;
@@ -784,7 +784,7 @@
 
     /* font */
     color: white;
-    font-size: 0.7vw;
+    font-size: clamp(1rem, 0.7vw, 3rem);
 }
 
 .project_description_textbox textarea::placeholder{
@@ -811,6 +811,6 @@
 
     /* font */
     color: var(--onyx-black);
-    font-size: 1.2vw;
+    font-size: clamp(1rem, 1.2vw, 3rem);
 }
 </style>

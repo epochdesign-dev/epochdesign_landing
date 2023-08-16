@@ -114,13 +114,13 @@ export default {
         card2Description(){
             this.member_name = "Jinny Byeon";
             this.member_position = "Designer";
-            this.member_brief = "Lorem ipsum dolor sit amet consectetur. Et velit imperdiet consequat sed sem vitae ipsum eu augue. Dignissim metus est neque consequat non odio et. Lorem nulla nec mi et sapien adipiscing volutpat donec. Sit urna nunc eget ac pellentesque sit egestas.";
+            this.member_brief = "Jinny is a product designer who loves to think creatively and come up with colourful ideas.";
         },
 
         card3Description(){
             this.member_name = "Robby Chen";
             this.member_position = "Web Developer";
-            this.member_brief = "Lorem ipsum dolor sit amet consectetur. Et velit imperdiet consequat sed sem vitae ipsum eu augue. Dignissim metus est neque consequat non odio et. Lorem nulla nec mi et sapien adipiscing volutpat donec. Sit urna nunc eget ac pellentesque sit egestas.";
+            this.member_brief = "An artist and a web developer, Robby likes to pour his creativity into web development.";
         },
 
         card4Description(){

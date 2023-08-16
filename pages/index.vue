@@ -77,7 +77,7 @@
             <!--Mobile: Contact Button-->
             <section>
                 <a class="contact_button" href="/startYourProject">
-                    contact
+                    start
                 </a>
             </section>
         </div>
@@ -683,8 +683,8 @@
         justify-content: center; /* horizontally center */
         
         /* font */
-        font-family: Helvetica;
-        font-size: 1vw;
+        font-family: Helvetica-Neue-LT-Pro-Medium;
+        font-size: clamp(1rem, 1.2vw, 3rem);
 
         /* interaction */
         z-index: 1;
