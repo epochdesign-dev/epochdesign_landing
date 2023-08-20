@@ -63,9 +63,9 @@
             <!--Get in Touch-->
             <section class="get_in_touch">
                 <div class="get_in_touch_text">Have An Idea?<br>Let's Build And Scale It!</div>
-                <a class="get_in_touch_button" href="/startYourProject">
+                <a class="get_in_touch_button" href="/start">
                     <img class="get_in_touch_arrow" src="../assets/arrow-circle2.png" alt="arrow circle">
-                    Get in Touch
+                    Start Now
                 </a>
             </section>
 
@@ -307,11 +307,6 @@
     margin-top: 2vw;
 }
 
-.carousel2{
-    /* position: relative; */
-    margin-top: 2vw;
-}
-
 /* for mobile */
 @media screen and (max-width: 740px) {
     .projects_title{
@@ -394,7 +389,7 @@
 .oval1_pos{
     /* position */
     position: absolute;
-    top: 155vw;
+    top: 135vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -402,7 +397,7 @@
 .oval2_pos{
     /* position */
     position: absolute;
-    top: 157.71vw;
+    top: 137.71vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -410,7 +405,7 @@
 .oval3_pos{
     /* position */
     position: absolute;
-    top: 160.42vw;
+    top: 140.42vw;
     left: 50%;
     transform: translateX(-50%);
 }

@@ -53,12 +53,12 @@
             <div class="why-title">Creativity</div>
             <div class="why-description">
               Each design we create combines our creativity and deep
-              understanding of your brand\'s user needs to deliver a meaningful
+              understanding of your brand's user needs to deliver a meaningful
               digital experience.
             </div>
             <div class="why-title">Impactful</div>
             <div class="why-description">
-              Your website’s the centrepiece of your visual identity. We make
+              Your website's the centrepiece of your visual identity. We make
               every click count through creative design and UX that converts.
             </div>
           </div>

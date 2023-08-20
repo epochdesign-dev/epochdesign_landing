@@ -90,10 +90,10 @@
           <!-- Get in Touch -->
           <section class="get_in_touch">
               <div class="get_in_touch_text">Have An Idea?<br>Let's Build And Scale It!</div>
-              <div class="get_in_touch_button">
+              <a class="get_in_touch_button" href="/start">
                   <img class="get_in_touch_arrow" src="../../assets/arrow-circle2.png" alt="arrow circle">
-                  Get in Touch
-              </div>
+                  Start Now
+              </a>
           </section>
 
             <!--footer-->

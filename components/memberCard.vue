@@ -8,7 +8,7 @@
             </div>
             <div class="card_description">
                 <div class="card_name" v-html="names[ind]"></div>
-                <div class="card_position">
+                <div class="card_position hidden lg:block">
                     {{positions[ind]}}
                 </div>
             </div>
@@ -483,8 +483,8 @@ export default {
 /* ******************************************************************** */
 .card{
     /* shape */
-    width: 20.83vw;
-    height: 33.85vw;
+    width: 15.4vw;
+    height: 25vw;
     border-radius: 20px;
     border: 2px solid white;
 
@@ -562,7 +562,7 @@ export default {
     color: white;
     text-align: center;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: 1.75em;
+    font-size: 1.5em;
     line-height: 1.1em;
 }
 
@@ -571,7 +571,7 @@ export default {
     color: white;
     text-align: center;
     font-family: Helvetica;
-    font-size: 1em;
+    font-size: 0.75em;
     font-weight: 400;
 }
 </style>

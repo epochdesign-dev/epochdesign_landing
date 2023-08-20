@@ -10,7 +10,7 @@
                     <div class="link border-right"><a href="/projects">Projects</a></div>
                     <div class="link"><a href="/#services">Services</a></div>
                 </div>
-                <div class="contact-button"><a href="/startYourProject">Get Started</a></div>
+                <div class="contact-button"><a href="/start">Get Started</a></div>
             </nav>
 
             <!-- For Mobile -->

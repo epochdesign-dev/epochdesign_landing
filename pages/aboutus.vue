@@ -32,7 +32,7 @@
                 <div class="oval oval1_pos"></div>
                 <div class="oval oval2_pos"></div>
                 <div class="oval oval3_pos"></div>
-                <div class="our_value_title">Our Value</div>
+                <div class="our_value_title">Our Values</div>
 
                 <!-- value descriptions -->
                 <div class="values">
@@ -222,8 +222,8 @@ export default {
 .card1{
     /* position */
     position: absolute;
-    left: 10vw;
-    top: 17vw;
+    left: 19vw;
+    top: 15vw;
 
     /* shape */
     transform: rotate(-30deg);
@@ -235,7 +235,7 @@ export default {
 .card2{
     /* position */
     position: absolute;
-    left: 30vw;
+    left: 34vw;
     top: 9vw;
 
     /* shape */
@@ -260,8 +260,8 @@ export default {
 .card4{
     /* position */
     position: absolute;
-    left: 70vw;
-    top: 17vw;
+    left: 65vw;
+    top: 15vw;
 
     /* shape */
     transform: rotateZ(30deg);
@@ -278,13 +278,13 @@ export default {
     gap: 0.416666vw;
 
     /* position */
-    margin-top: 50vw;
+    margin-top: 38vw;
     margin-left: 32vw;
     
 
     /* shape */
     width: 37.55vw;
-    height: 22vw;
+    height: 19.5vw;
 
     overflow-y: scroll;
 }
@@ -293,7 +293,7 @@ export default {
     /* font */
     color: white;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: 3em;
+    font-size: 2em;
     font-style: normal;
     font-weight: 500;
 
@@ -303,7 +303,7 @@ export default {
     /* font */
     color: white;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: 1.5em;
+    font-size: 1em;
     font-style: normal;
     font-weight: 500;
     line-height: 1.75em; /* 164.286% */
@@ -318,10 +318,10 @@ export default {
     color: white;
     text-align: center;
     font-family: Helvetica-Neue-LT-Pro;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-style: normal;
     font-weight: 500;
-    line-height: 2.675em; /* 255.556% */
+    line-height: 2em; /* 255.556% */
     letter-spacing: 0.09px;
 }
 
@@ -345,22 +345,22 @@ export default {
 
 .oval1_pos{
     /* position */
-    top: 77.8vw;
+    top: 57.8vw;
 }
 
 .oval2_pos{
     /* position */
-    top: 80.51vw;
+    top: 60.51vw;
 }
 
 .oval3_pos{
     /* position */
-    top: 83.22vw;
+    top: 63.22vw;
 }
 
 .our_value_title{
     /* position */
-    margin-top: 5vw;
+    margin-top: 0vw;
     margin-left: 27vw;
 
     /* shape */
