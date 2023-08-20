@@ -76,7 +76,7 @@
 
             <!--Mobile: Contact Button-->
             <section>
-                <a class="contact_button" href="/startYourProject">
+                <a class="contact_button" href="/start">
                     start
                 </a>
             </section>
