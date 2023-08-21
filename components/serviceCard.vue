@@ -12,7 +12,7 @@
 
         <!-- learn more button -->
         <section>
-            <a href="" class="learn_more2">
+            <a @click="learnMore" class="learn_more2">
                 <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
                 <div class="learn_more_text">Learn More</div>
             </a>
@@ -138,6 +138,21 @@
                     document.querySelector("#service3 .learn_more").style.opacity = "1";
                 }, 500)
                 this.changeInnerText(this.descriptions[2], 3);
+            },
+
+            // mobile learn more button effect
+            learnMore(){
+                    if (this.title === "Business Solutions") {
+                        this.changeInnerText(this.detailed_descriptions[0], 1);
+                        document.querySelector("#service1 .main_content").style.height = "85vw";
+                    }
+                    else if(this.title === "Web Portfolios"){
+                        this.changeInnerText(this.detailed_descriptions[1], 2);
+                    }
+                    else if(this.title === "Online Stores"){
+                        this.changeInnerText(this.detailed_descriptions[2], 3);
+                        document.querySelector("#service3 .main_content").style.height = "100vw";
+                    }
             },
 
         }
@@ -347,7 +362,7 @@
 @media screen and (max-width: 740px) {
     .main{
         /* shape */
-        height: 89.23vw;
+        min-height: 89.23vw;
         width: 87.69vw;
         border-radius: 5vw;
 
@@ -367,6 +382,7 @@
 
         /* shape */
         height: 71vw;
+        transition: height 1s;
     }
 
     .tags{
