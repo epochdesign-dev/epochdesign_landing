@@ -10,7 +10,7 @@
 
                     <div class="flex flex-col col-span-2 gap-8 h-full">
                         <!-- Project Breadth -->
-                        <div class="flex flex-col gap-4 border-2 border-indigo-500 rounded-xl p-8 h-min"
+                        <div class="max-md:mx-2 flex flex-col gap-4 border-2 border-indigo-500 rounded-xl p-8 h-min"
                             @click="changeAstronaut(0)">
                             <div class="pb-4">
                                 <h2 class="font-bold text-4xl uppercase text-indigo-500">
@@ -63,12 +63,18 @@
                             >
                                 <button class="btn rounded-full" @click="selectTag">Portfolio</button>
                             </div>
+                            <div
+                                class="tooltip tooltip-accent tooltip-bottom font-bold"
+                                data-tip="A page for booking all type of services."
+                            >
+                                <button class="btn rounded-full" @click="selectTag">Booking Page</button>
+                            </div>
                             </div>
                         </div>
                         <!-- Project Description -->
                         <div 
                             @click="changeAstronaut(4)"
-                            class="flex flex-col gap-4 border-2 border-violet-500 rounded-xl p-8 h-min flex-grow">
+                            class="max-md:mx-2 flex flex-col gap-4 border-2 border-violet-500 rounded-xl p-8 h-min flex-grow">
                             <div class="pb-4">
                             <h2 class=" font-bold text-4xl uppercase text-violet-500">
                                 Project Description
@@ -87,7 +93,7 @@
                     </div>
                     <div class="flex flex-col col-span-2 lg:col-span-1 gap-8">
                         <!-- About you -->
-                        <div class="flex flex-col gap-4 border-2 border-purple-500 rounded-xl p-8 flex-grow justify-center">
+                        <div class="max-md:mx-2 flex flex-col gap-4 border-2 border-purple-500 rounded-xl p-8 flex-grow justify-center">
                             <h2 class="font-bold text-4xl uppercase text-purple-500 pb-4">
                                 About You
                             </h2>
@@ -131,13 +137,13 @@
                         <!-- Submit -->
                         <button @click = "submitData" 
                             v-if="!submitted"
-                            class="mb-8 lg:mb-0 flex flex-col gap-4 bg-gradient-to-r from-purple-500 bg-pink-500 hover:from-pink-500 hover:to-red-500 hover:bg-gradient-to-r transition-colors duration-200 rounded-xl p-8">
+                            class="max-md:mx-2 mb-8 lg:mb-0 flex flex-col gap-4 bg-gradient-to-r from-purple-500 bg-pink-500 hover:from-pink-500 hover:to-red-500 hover:bg-gradient-to-r transition-colors duration-200 rounded-xl p-8">
                             <h2 class="font-bold text-4xl uppercase text-black text-center w-full">
                                 Submit
                             </h2>
                         </button>
                         <button v-if="submitted"
-                            class="mb-8 lg:mb-0 flex flex-col gap-4 bg-gradient-to-r from-purple-500 bg-pink-500 hover:from-pink-500 hover:to-red-500 hover:bg-gradient-to-r transition-colors duration-200 rounded-xl p-8">
+                            class="max-md:mx-2 mb-8 lg:mb-0 flex flex-col gap-4 bg-gradient-to-r from-purple-500 bg-pink-500 hover:from-pink-500 hover:to-red-500 hover:bg-gradient-to-r transition-colors duration-200 rounded-xl p-8">
                             <h2 class="font-bold text-4xl uppercase text-black text-center w-full">
                                 Done!
                             </h2>
@@ -216,6 +222,7 @@
                     user_account: false,
                     intake_page: false,
                     portfolio: false,
+                    booking_page: false,
                     project_description: "",
                 },
                 astronauts: [astronaut1, astronaut2, astronaut3, astronaut4, astronaut5],
@@ -289,6 +296,9 @@
                 else if(event.target.innerText === "PORTFOLIO"){
                     this.user_input.portfolio = !this.user_input.portfolio;
                 }
+                else if(event.target.innerText === "BOOKING PAGE"){
+                    this.user_input.booking_page = !this.user_input.booking_page;
+                }
             },
 
             // astheatics; change the astronaut image
@@ -327,6 +337,7 @@
                     user_account: this.user_input.user_account,
                     intake_page: this.user_input.intake_page,
                     portfolio: this.user_input.portfolio,
+                    booking_page: this.user_input.booking_page,
                 };
 
                 const { error:projectError } = await supabase
