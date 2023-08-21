@@ -24,10 +24,6 @@
     </div>
 </template>
 
-<!-- <script setup>
-    const { title, description, tags, link} = defineProps(['title','description', 'tags', 'link']);
-</script> -->
-
 <script>
 
     export default {
@@ -41,7 +37,16 @@
         },
         data() {
             return {
-                id: 0,
+                descriptions: [
+                    "Elevate your business with our tailored website design service. We craft visually stunning, responsive websites that leave a lasting impact.",
+                    "Transform your artistic vision into a compelling online showcase of your creativity.",
+                    "Embrace the digital revolution with our specialized service, guiding businesses smoothly into the online realm."
+                ],
+                detailed_descriptions: [
+                    "Online stock availability and product management, custom internal software tailor-made to your needs, online storefronts directly connected to your database, and more. See your entire online presence in one place.",
+                    "Feature your projects, talents, or artistic creations on a webpage uniquely and beautifully designed to match your taste and what you do. Include a commission or store page to sell your work online!",
+                    "Bring your business to the national and even international level! Building your business's online presence sees the greatest return for your investment from any marketing and sales method. This also allows companies to diversify their income between their physical and online store which could enable them to weather another economic disaster like COVID-19.",
+                ],
             }
         },
         methods: {
@@ -49,16 +54,19 @@
             expand(){
                 if (window.innerWidth > 740) {
                     if (this.title === "Business Solutions") {
+                        this.changeInnerText(this.detailed_descriptions[0], 1);
                         this.expandService(1);
                         this.minimizeService(2);
                         this.minimizeService(3);
                     }
                     else if(this.title === "Web Portfolios"){
+                        this.changeInnerText(this.detailed_descriptions[1], 2);
                         this.expandService(2);
                         this.minimizeService(1);
                         this.minimizeService(3);
                     }
                     else if(this.title === "Online Stores"){
+                        this.changeInnerText(this.detailed_descriptions[2], 3);
                         this.expandService(3);
                         this.minimizeService(1);
                         this.minimizeService(2);
@@ -74,6 +82,10 @@
             },
 
             // helper functions to the expansion animation
+            changeInnerText(text, serviceNum){
+                document.querySelector(`#service${serviceNum} .description`).innerHTML = text;
+            },
+
             expandService(serviceNum){
                 document.getElementById(`service${serviceNum}`).style.width = "500%";
             },
@@ -105,6 +117,7 @@
                     document.querySelector("#service1 .tags").style.opacity = "1";
                     document.querySelector("#service1 .learn_more").style.opacity = "1";
                 }, 500)
+                this.changeInnerText(this.descriptions[0], 1);
 
                 document.querySelector("#service2 .tags").style.display = "flex";
                 document.querySelector("#service2 .description").style.display = "block";
@@ -114,6 +127,7 @@
                     document.querySelector("#service2 .tags").style.opacity = "1";
                     document.querySelector("#service2 .learn_more").style.opacity = "1";
                 }, 500)
+                this.changeInnerText(this.descriptions[1], 2);
 
                 document.querySelector("#service3 .tags").style.display = "flex";
                 document.querySelector("#service3 .description").style.display = "block";
@@ -123,7 +137,9 @@
                     document.querySelector("#service3 .tags").style.opacity = "1";
                     document.querySelector("#service3 .learn_more").style.opacity = "1";
                 }, 500)
+                this.changeInnerText(this.descriptions[2], 3);
             },
+
         }
     }
 </script>
