@@ -64,47 +64,25 @@ export default {
             if(this.ind === 0 && this.card1_click_counter%2 === 0){
                 this.card1_click_counter += 1;
                 this.card1Rotate1();
-
-                // if(this.card2_click_counter > 0){
-                //     this.card2_click_counter = 0;
-                //     this.card2Rotate2();
-                // }
-                // else if(this.card3_click_counter > 0){
-                //     this.card3_click_counter = 0;
-                //     this.card3Rotate2();
-                // }
-                // else if(this.card4_click_counter > 0){
-                //     this.card4_click_counter = 0;
-                //     this.card4Rotate2();
-                // }
             }
             
             else if(this.ind === 0 && this.card1_click_counter%2 === 1){
-                this.card1_click_counter += 1;
-                this.card1Rotate2();
+                if(this.card1_click_counter == 0){
+                    this.card1_click_counter += 1;
+                    this.card1Rotate2();
+                }
             }
 
             else if(this.ind === 1 && this.card2_click_counter%2 === 0){
                 this.card2_click_counter += 1;
                 this.card2Rotate1();
-
-                // if(this.card1_click_counter > 0){
-                //     this.card1_click_counter = 0;
-                //     this.card1Rotate2();
-                // }
-                // else if(this.card3_click_counter > 0){
-                //     this.card3_click_counter = 0;
-                //     this.card3Rotate2();
-                // }
-                // else if(this.card4_click_counter > 0){
-                //     this.card4_click_counter = 0;
-                //     this.card4Rotate2();
-                // }
             }
             
             else if(this.ind === 1 && this.card2_click_counter%2 === 1){
-                this.card2_click_counter += 1;
-                this.card2Rotate2();
+                if(this.card2_click_counter == 0){
+                    this.card2_click_counter += 1;
+                    this.card2Rotate2();
+                }
             }
 
             else if(this.ind === 2 && this.card3_click_counter%2 === 0){
@@ -113,8 +91,10 @@ export default {
             }
             
             else if(this.ind === 2 && this.card3_click_counter%2 === 1){
-                this.card3_click_counter += 1;
-                this.card3Rotate2();
+                if(this.card3_click_counter == 0){
+                    this.card3_click_counter += 1;
+                    this.card3Rotate2();
+                }
             }
 
             else if(this.ind === 3 && this.card4_click_counter%2 === 0){
@@ -123,8 +103,10 @@ export default {
             }
 
             else if(this.ind === 3 && this.card4_click_counter%2 === 1){
-                this.card4_click_counter += 1;
-                this.card4Rotate2();
+                if(this.card4_click_counter == 0){
+                    this.card4_click_counter += 1;
+                    this.card4Rotate2();
+                }
             }
         },
 
