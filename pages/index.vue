@@ -46,23 +46,26 @@
                     <ServiceCard title="Business Solutions" 
                     description="Elevate your business with our tailored website design service. We craft visually stunning, responsive websites that leave a lasting impact." 
                     :tags="['Online Presence', 'Digital Marketing']"
-                    link="/service/small-business"/> 
+                    link="/service/small-business"
+                    id="service1"/> 
 
                     <ServiceCard title="Web Portfolios" 
                     description="Transform your artistic vision into a compelling online showcase of your creativity." 
                     :tags="['Artistic Expression', 'Creative Design']"
-                    link="/service/artist-profile"/> 
+                    link="/service/artist-profile"
+                    id="service2"/> 
 
                     <ServiceCard title="Online Stores" 
                     description="Embrace the digital revolution with our specialized service, guiding businesses smoothly into the online realm." 
                     :tags="['Digital Shift', 'Landing Page', 'Cloud Database']"
-                    link="/service/moving-online"/> 
+                    link="/service/moving-online"
+                    id="service3"/> 
                 </div>
             </section>
 
             <!--Get in Touch-->
             <section class="get_in_touch">
-                <div class="get_in_touch_text">Have An Idea?<br>Let's Build And Scale It!</div>
+                <div class="get_in_touch_text">Got An Idea?<br>Let's Build And Scale It!</div>
                 <a class="get_in_touch_button" href="/start">
                     <img class="get_in_touch_arrow" src="../assets/arrow-circle2.png" alt="arrow circle">
                     Start Now
@@ -511,9 +514,9 @@
 
 .services{
     /* inner shape */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 0.5208vw;
+    display: flex;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 0.5208vw; */
 
     /* shape */
     min-height: 18.7vw;
@@ -543,7 +546,6 @@
         width: 87.69vw;
 
         /* position */
-        display: block;
         margin-top: 5vw;
         transform: none;
         margin-left: auto;

@@ -1,21 +1,22 @@
 <template>
-    <div class="main">
+    <div class="main" @mouseover="expand" @mouseleave="deexpand">
         <!-- tags, title, and description -->
         <section class="main_content">
             <div class="tags">
                 <div class="tag" v-for="tag in tags">{{ tag }}</div>
             </div>
             <div class="title">{{ title }}</div>
+            <!-- <div class="title vertical_title">{{ title }}</div> -->
             <div class="description">{{ description }}</div>
         </section>
 
         <!-- learn more button -->
         <section>
-            <a :href="link" class="learn_more">
+            <a href="" class="learn_more2">
                 <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
                 <div class="learn_more_text">Learn More</div>
             </a>
-            <a href="" class="learn_more2">
+            <a :href="link" class="learn_more">
                 <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
                 <div class="learn_more_text">Learn More</div>
             </a>
@@ -23,9 +24,110 @@
     </div>
 </template>
 
-<script setup>
+<!-- <script setup>
     const { title, description, tags, link} = defineProps(['title','description', 'tags', 'link']);
+</script> -->
+
+<script>
+
+    export default {
+        props: {
+            title: String,
+            description: String,
+            tags: Array,
+            link: String,
+        },
+        setup(){
+        },
+        data() {
+            return {
+                id: 0,
+            }
+        },
+        methods: {
+            // expand animation
+            expand(){
+                if (window.innerWidth > 740) {
+                    if (this.title === "Business Solutions") {
+                        this.expandService(1);
+                        this.minimizeService(2);
+                        this.minimizeService(3);
+                    }
+                    else if(this.title === "Web Portfolios"){
+                        this.expandService(2);
+                        this.minimizeService(1);
+                        this.minimizeService(3);
+                    }
+                    else if(this.title === "Online Stores"){
+                        this.expandService(3);
+                        this.minimizeService(1);
+                        this.minimizeService(2);
+                    }
+                }
+            },
+
+            // remove all expansion style changes
+            deexpand(){
+                if (window.innerWidth > 740) {
+                    this.removeExpansion();
+                }
+            },
+
+            // helper functions to the expansion animation
+            expandService(serviceNum){
+                document.getElementById(`service${serviceNum}`).style.width = "500%";
+            },
+
+            minimizeService(serviceNum){
+                document.querySelector(`#service${serviceNum} .tags`).style.display = "none";
+                document.querySelector(`#service${serviceNum} .tags`).style.opacity = "0";
+                document.querySelector(`#service${serviceNum} .description`).style.display = "none";
+                document.querySelector(`#service${serviceNum} .description`).style.opacity = "0";
+                document.querySelector(`#service${serviceNum} .learn_more`).style.display = "none";
+                document.querySelector(`#service${serviceNum} .learn_more`).style.opacity = "0";
+                document.querySelector(`#service${serviceNum} .title`).style.transform = "rotate(90deg) translateX(5vw)";
+            },
+            
+            removeExpansion(){
+                document.getElementById("service1").style.width = "100%";
+                document.getElementById("service2").style.width = "100%";
+                document.getElementById("service3").style.width = "100%";
+
+                document.querySelector("#service1 .title").style.transform = "";
+                document.querySelector("#service2 .title").style.transform = "";
+                document.querySelector("#service3 .title").style.transform = "";
+
+                document.querySelector("#service1 .tags").style.display = "flex";
+                document.querySelector("#service1 .description").style.display = "block";
+                document.querySelector("#service1 .learn_more").style.display = "flex";
+                setTimeout(() => {
+                    document.querySelector("#service1 .description").style.opacity = "1";
+                    document.querySelector("#service1 .tags").style.opacity = "1";
+                    document.querySelector("#service1 .learn_more").style.opacity = "1";
+                }, 500)
+
+                document.querySelector("#service2 .tags").style.display = "flex";
+                document.querySelector("#service2 .description").style.display = "block";
+                document.querySelector("#service2 .learn_more").style.display = "flex";
+                setTimeout(() => {
+                    document.querySelector("#service2 .description").style.opacity = "1";
+                    document.querySelector("#service2 .tags").style.opacity = "1";
+                    document.querySelector("#service2 .learn_more").style.opacity = "1";
+                }, 500)
+
+                document.querySelector("#service3 .tags").style.display = "flex";
+                document.querySelector("#service3 .description").style.display = "block";
+                document.querySelector("#service3 .learn_more").style.display = "flex";
+                setTimeout(() => {
+                    document.querySelector("#service3 .description").style.opacity = "1";
+                    document.querySelector("#service3 .tags").style.opacity = "1";
+                    document.querySelector("#service3 .learn_more").style.opacity = "1";
+                }, 500)
+            },
+        }
+    }
 </script>
+
 
 <style scoped>
 /* ******************************************************************** */
@@ -60,6 +162,19 @@
 /* ******************************************************************** */
 /* ****************************Computer Screen************************* */
 /* ******************************************************************** */
+#service1{
+    margin-right: 1vw;
+}
+
+#service2{
+    margin-right: 1vw;
+}
+
+.expandWidth{
+    width: 200%;
+    transition: all 1s;
+}
+
 .main{
     /* Colour Variables */
     --onyx-black: #121212;
@@ -70,14 +185,19 @@
     /* inner shape */
     background-color: var(--dandelion-yellow);
     padding-bottom: 1.875vw;
+    display: flex;
+    flex-direction: column;
 
     /* text */
     color: var(--onyx-black);
 
     /* shape */
     min-height: 18.7vw;
-    width: 29.58vw;
+    width: 100%;
     border-radius: 1vw;
+    
+    /* animation */
+    transition: width 1s;
 }
 
 .main_content{
@@ -85,10 +205,23 @@
     margin-top: 1.875vw;
     margin-left: 1.875vw;
     margin-right: 1.875vw;
+    margin-bottom: auto;
 
     /* shape */
-    min-height: 12.5vw;
-    
+    height: 15vw;
+}
+
+@media screen and (max-width: 1024px) {
+    .main_content{
+        /* position */
+        margin-top: 1.875vw;
+        margin-left: 1.875vw;
+        margin-right: 1.875vw;
+        margin-bottom: auto;
+
+        /* shape */
+        height: 20vw;
+    }
 }
 
 .tags{
@@ -98,6 +231,10 @@
 
     /* position */
     margin-bottom: 1vw;
+
+    /* animation */
+    opacity: 1;
+    transition: all 1s;
 }
 
 .tag{
@@ -126,12 +263,22 @@
 
     /* position */
     margin-bottom: 1vw;
+    transition: transform 0.5s;
+}
+
+.vertical_title{
+    transform: rotate(90deg) translateX(5vw);
+    display: none;
 }
 
 .description{
     /* font */
     font-size: 1.05vw;
     font-family: Inter-Regular;
+
+    /* animation */
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 .learn_more{
@@ -153,6 +300,10 @@
 
     /* interaction */
     cursor: pointer;
+
+    /* animation */
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 .learn_more2{
@@ -188,8 +339,8 @@
         padding-top: 2.43vh;
         padding-left: 4.1vw;
         padding-right: 4.1vw;
-
         margin-bottom: 4vw;
+        display: block;
     }
 
     .main_content{
