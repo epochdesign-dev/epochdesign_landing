@@ -57,24 +57,26 @@ require("IntersectionObserver");
 }
 
 onMounted(() => {
-  const canvasElement = document.querySelector(".canvas");
-  const hiddenElements = document.querySelectorAll(".hidden");
-  console.log("hiddenElements: ", hiddenElements);
+  if(process.client){
+    const canvasElement = document.querySelector(".canvas");
+    const hiddenElements = document.querySelectorAll(".hidden");
+    console.log("hiddenElements: ", hiddenElements);
 
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
     });
-  });
 
-  hiddenElements.forEach((element) => {
-    observer.observe(element);
+    hiddenElements.forEach((element) => {
+      observer.observe(element);
   });
+  }
 }
 );
 </script>
