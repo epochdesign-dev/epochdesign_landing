@@ -52,7 +52,7 @@
 <script setup>
 import { onMounted } from "vue";
 
-if (typeof process !== "undefined" && process.browser) {
+if (process.browser) {
 require("IntersectionObserver");
 }
 
@@ -60,8 +60,6 @@ onMounted(() => {
   if(process.client){
     const canvasElement = document.querySelector(".canvas");
     const hiddenElements = document.querySelectorAll(".hidden");
-    console.log("hiddenElements: ", hiddenElements);
-
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -77,6 +75,7 @@ onMounted(() => {
       observer.observe(element);
   });
   }
+
 }
 );
 </script>
