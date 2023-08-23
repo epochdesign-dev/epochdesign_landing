@@ -52,12 +52,11 @@
 <script setup>
 import { onMounted } from "vue";
 
-if (process.browser) {
+if (typeof process !== "undefined" && process.browser) {
 require("IntersectionObserver");
 }
 
 onMounted(() => {
-    const canvasElement = document.querySelector(".canvas");
     const hiddenElements = document.querySelectorAll(".hidden");
 
     const observer = new IntersectionObserver((entries) => {
