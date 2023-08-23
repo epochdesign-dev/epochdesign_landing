@@ -57,7 +57,6 @@ require("IntersectionObserver");
 }
 
 onMounted(() => {
-  if(process.client){
     const canvasElement = document.querySelector(".canvas");
     const hiddenElements = document.querySelectorAll(".hidden");
 
@@ -75,8 +74,6 @@ onMounted(() => {
       observer.observe(element);
   });
   }
-
-}
 );
 </script>
 
