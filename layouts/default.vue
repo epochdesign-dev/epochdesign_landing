@@ -18,7 +18,7 @@
                 <a href="/">
                     <div class="mobile_heading">epoch</div>
                 </a>
-                <img class="mobile_button" src="../assets/plus-circle.png" alt="plus circle">
+                <!-- <img class="mobile_button" src="../assets/plus-circle.png" alt="plus circle"> -->
             </nav>
         </header>
 
