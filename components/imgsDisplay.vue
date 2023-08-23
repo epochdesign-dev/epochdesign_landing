@@ -52,9 +52,8 @@
 <script setup>
 import { onMounted } from "vue";
 
-if (typeof process !== "undefined" && process.browser) {
 require("IntersectionObserver");
-}
+
 
 onMounted(() => {
     const hiddenElements = document.querySelectorAll(".hidden");
