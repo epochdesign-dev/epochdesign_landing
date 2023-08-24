@@ -2,18 +2,34 @@
     <div>
         <footer class="footer-box">
             <div class="footer-grid">
+                <!-- computer & ipad -->
                 <div class="pages">
                     <a href="/">Home</a>
                     <a href="/aboutus">About Us</a>
-                    <a href="/services">Services</a>
+                    <a href="/#services">Services</a>
                     <a href="/projects">Projects</a>
-                    <a href="/startYourProject">Start Your Project</a>
+                    <a href="/start">Start Your Project</a>
                 </div>
                 <div class="services">
                     <a href="/service/artist-profile">Artist Profile</a>
                     <a href="/service/small-business">Small Business</a>
                     <a href="/service/moving-online">Moving Online</a>
                 </div>
+
+                <!-- mobile -->
+                <div class="pages2">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                    <a href="/#services">Services</a>
+                    <a href="">Projects</a>
+                    <a href="/start">Start Your Project</a>
+                </div>
+                <div class="services2">
+                    <a href="">Artist Profile</a>
+                    <a href="">Small Business</a>
+                    <a href="">Moving Online</a>
+                </div>
+
                 <div class="contact">
                     <div class="footer-title">Contact:</div>
                     contact@epochdesign.dev
@@ -27,8 +43,17 @@
     </div>
 </template>
 
-<script setup>
-
+<script>
+export default {
+    mounted(){},
+    data() {
+        return {}
+    },
+    computed: {
+    },
+    methods: {
+    }
+}
 </script>
 
 <style scoped>
@@ -78,6 +103,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+.pages2{
+    display: none;
+}
+
+.services2{
+    display: none;
 }
 
 .contact{
@@ -138,6 +171,30 @@
     }
 
     @media screen and (max-width: 740px) {
+        .pages{
+            display: none;
+        }
+
+        .services{
+            display: none;
+        }
+
+        .pages2{
+            grid-area: pages;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .services2{
+            grid-area: services;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
         .footer-box{
             margin-top: 0px;
             /* shape */
