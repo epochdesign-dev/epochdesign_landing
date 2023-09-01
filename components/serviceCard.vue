@@ -18,7 +18,7 @@
             </a>
             <a :href="link" class="learn_more">
                 <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
-                <div class="learn_more_text">Learn More</div>
+                <div class="learn_more_text">Get Started</div>
             </a>
         </section>
     </div>

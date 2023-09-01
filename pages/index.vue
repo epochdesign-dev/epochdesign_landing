@@ -55,7 +55,7 @@
             title="Business Solutions"
             description="Elevate your business with our tailored website design service. We craft visually stunning, responsive websites that leave a lasting impact."
             :tags="['Online Presence', 'Digital Marketing']"
-            link="/service/small-business"
+            link="/start"
             id="service1"
           />
 
@@ -63,7 +63,7 @@
             title="Web Portfolios"
             description="Transform your artistic vision into a compelling online showcase of your creativity."
             :tags="['Artistic Expression', 'Creative Design']"
-            link="/service/artist-profile"
+            link="/start"
             id="service2"
           />
 
@@ -71,7 +71,7 @@
             title="Online Stores"
             description="Embrace the digital revolution with our specialized service, guiding businesses smoothly into the online realm."
             :tags="['Digital Shift', 'Landing Page', 'Cloud Database']"
-            link="/service/moving-online"
+            link="/start"
             id="service3"
           />
         </div>
