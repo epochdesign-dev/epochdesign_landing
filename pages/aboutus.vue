@@ -384,6 +384,23 @@ export default {
   letter-spacing: 0.09px;
 }
 
+@media screen and (max-width:740px) {
+  .card1 {
+    top: 20vw;
+  }
+
+  .card2 {
+    top: 14vw;
+  }
+
+  .card3 {
+    top: 14vw;
+  }
+  .card4 {
+    top: 20vw;
+  }
+}
+
 /* ******************************************************************** */
 /* ****************************Our Value******************************* */
 /* ******************************************************************** */
@@ -547,6 +564,88 @@ export default {
 .value5_description {
   /* shape */
   width: 48.125vw;
+}
+
+/* for mobile */
+@media screen and (max-width: 740px) {
+  .member_description {
+    /* inner shape */
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.416666vw;
+
+    /* position */
+    margin-top: 50vw;
+    margin-left: 21vw;
+
+    /* shape */
+    width: 60vw;
+    height: 25vw;
+
+    overflow-y: scroll;
+  }
+
+  .member_name {
+    /* font */
+    color: white;
+    font-family: Helvetica-Neue-LT-Pro-Medium;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .member_pos {
+    /* font */
+    color: white;
+    font-family: Helvetica-Neue-LT-Pro-Medium;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3em; /* 164.286% */
+    letter-spacing: 0.14px;
+  }
+
+
+  .member_brief {
+    /* shape */
+    width: 100%;
+
+    /* font */
+    color: white;
+    text-align: center;
+    font-family: Helvetica-Neue-LT-Pro;
+    font-size: 0.8em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4em; /* 255.556% */
+    letter-spacing: 0.09px;
+  }
+
+  .oval1_pos {
+    /* position */
+    top: 75.5vw;
+  }
+
+  .oval2_pos {
+    /* position */
+    top: 78.5vw;
+  }
+
+  .oval3_pos {
+    /* position */
+    top: 81.5vw;
+}
+
+  .value_description {
+    /* font */
+    color: white;
+    font-family: Helvetica-Neue-LT-Pro-Medium;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4em;
+  }
 }
 
 /* ******************************************************************** */

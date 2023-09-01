@@ -35,6 +35,7 @@
         <div class="flex flex-col justify-center items-center">
           <p
             class="px-4 md:px-24 w-full md:w-[65%] leading-relaxed md:leading-relaxed text-center text-white text-lg md:text-5xl pt-4 md:pt-8"
+            style="font-size: Helvetica-Neue;"
           >
             A full-service design and development firm comprised of diverse
             minds who have a passion for creating digital experiences.

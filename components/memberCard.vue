@@ -582,4 +582,57 @@ export default {
     font-size: 0.75em;
     font-weight: 400;
 }
+
+@media screen and (max-width: 740px) {
+    .card{
+        /* shape */
+        width: 18.48vw;
+        height: 30vw;
+        border-radius: 20px;
+        border: none;
+
+        /* inner shape */
+        background: var(--background, --onyx-black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+
+        /* font */
+        font-size: 1.14583vw;
+    }
+
+    .card_inner{
+        /* shape */
+        width: 100%;
+        height: 95.38%;
+        border: 2px solid var(--text, white);
+        border-radius: 5px;
+
+        /* inner shape */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+    }
+
+    .card_name{
+        /* shape */
+        width: 100%;
+        height: 74.81%;
+
+        /* inner shape */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        /* font */
+        color: white;
+        text-align: center;
+        font-family: Helvetica-Neue-LT-Pro-Medium;
+        font-size: 1em;
+        line-height: 3em;
+    }
+}
+
 </style>
