@@ -11,16 +11,16 @@
 
             <!--Projects-->
             <section>
-                <h3 class="projects_title">Projects</h3>
+                <!-- <h3 class="projects_title">Projects</h3> -->
 
                 <!--Computer Only-->
-                <Carousel1 class="carousel1"/>
-                <Carousel2 class="carousel2"/>
+                <!-- <Carousel1 class="carousel1"/>
+                <Carousel2 class="carousel2"/> -->
 
                 <!--Mobile Only-->
+                <!-- <MobileProjectCard class="mobile_project_card"/>
                 <MobileProjectCard class="mobile_project_card"/>
-                <MobileProjectCard class="mobile_project_card"/>
-                <MobileProjectCard class="mobile_project_card"/>
+                <MobileProjectCard class="mobile_project_card"/> -->
             </section>
 
             <!--Who We Are-->
@@ -338,7 +338,8 @@
 .whoweare_title{
     /* position */
     display: block;
-    margin-top: 5vw;
+    /* margin-top: 5vw; */
+    margin-top: 10vw;
     margin-left: auto;
     margin-right: auto;
 
@@ -392,7 +393,8 @@
 .oval1_pos{
     /* position */
     position: absolute;
-    top: 135vw;
+    /* top: 135vw; */
+    top: 62vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -400,7 +402,8 @@
 .oval2_pos{
     /* position */
     position: absolute;
-    top: 137.71vw;
+    /* top: 137.71vw; */
+    top: 64.71vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -408,7 +411,8 @@
 .oval3_pos{
     /* position */
     position: absolute;
-    top: 140.42vw;
+    /* top: 140.42vw; */
+    top: 67.42vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -424,7 +428,8 @@
         /* position */
         margin-left: auto;
         margin-right: auto;
-        margin-top: 10vw;
+        /* margin-top: 10vw; */
+        margin-top: 15vw;
 
         /* font */
         color: white; 
@@ -472,17 +477,20 @@
 
     .oval1_pos{
         /* position */
-        top: 352vw;
+        /* top: 352vw; */
+        top: 130vw;
     }
 
     .oval2_pos{
         /* position */
-        top: 357vw;
+        /* top: 357vw; */
+        top: 135vw;
     }
 
     .oval3_pos{
         /* position */
-        top: 362vw;
+        /* top: 362vw; */
+        top: 140vw;
     }
 }
 
