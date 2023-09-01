@@ -7,7 +7,7 @@
                     <a href="/">Home</a>
                     <a href="/aboutus">About Us</a>
                     <a href="/#services">Services</a>
-                    <a href="/projects">Projects</a>
+                    <a href="/">Projects</a>
                     <a href="/start">Start Your Project</a>
                 </div>
                 <div class="services">
