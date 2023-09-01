@@ -17,7 +17,7 @@
       <SwiperSlide v-for="slide in 10" :key="slide">
       <SwiperCard class="card"
         projectName="Project Name"
-        projectLink="http://localhost:3000/"
+        projectLink="/project"
       />
       </SwiperSlide>
     </Swiper>
