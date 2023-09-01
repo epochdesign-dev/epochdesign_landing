@@ -236,7 +236,7 @@
 .intro_text {
   /* font */
   font-family: Helvetica-Neue;
-  font-size: 2vw;
+  font-size: 2.75vw;
   color: white;
 
   /* Inner Shape */
