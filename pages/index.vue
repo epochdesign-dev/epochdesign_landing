@@ -164,7 +164,12 @@ export default {
     }, 1500);
     setTimeout(() => {
       let epoch_title = document.getElementById("intro_title");
-      epoch_title.style.fontSize = "20vw";
+      if (window.innerWidth > 740) {
+        epoch_title.style.fontSize = "20vw";  
+      }
+      else{
+        epoch_title.style.fontSize = "22.5vw";
+      }
     }, 3300);
   },
   methods: {},
@@ -815,7 +820,8 @@ export default {
     margin-top: 35vw;
 
     /* font */
-    font-size: 22.5vw;
+    /* font-size: 22.5vw; */
+      font-size: 7vw;
   }
 
   .intro_text {
