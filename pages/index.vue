@@ -4,12 +4,12 @@
     <div class="canvas">
       <!--Introduction-->
       <section>
-        <div class="intro_title">epoch</div>
+        <div class="intro_title" id="intro_title">{{ epoch }}</div>
         <div class="intro_text">
           Flourish in the 
           <h2 class="inline-block glitch layers" 
           style="filter: drop-shadow(0 1px 3px);" 
-          data-text="digital">digital</h2> 
+          :data-text="epoch_subtitle">{{ epoch_subtitle }}</h2> 
           epoch
         </div>
         <img class="intro_img" src="../assets/donut.png" alt="donut" />
@@ -109,7 +109,67 @@
   </div>
 </template>
 
-<script setup></script>
+<script>
+export default {
+  data() {
+    return{
+      epoch: "Algorithm",
+      epoch_subtitle: "830~",
+      epochs: [
+        ["830~", "Algorithm"],
+        ["1670~", "Symbolic Logic"],
+        ["1822", "Difference Engine"],
+        ["1847", "Boolean Logic"],
+        ["1936", "Lambda Calculus"],
+        ["1937", "Information Theory"],
+        ["1950", "Error Correcting"],
+        ["1953", "Dynamic Programming"],
+        ["1967", "Unix"],
+        ["1970~", "AI"],
+        ["1976", "Cryptography"],
+        ["1989", "WWW"],
+        ["1990~", "Complexity"],
+        ["1991", "Linux Kernel"],
+        ["1997", "Deep Blue"],
+        ["2004", "Web 2.0"],
+        ["2008", "Deep Neural Networks"],
+        ["digital", "Epoch"]
+      ],
+    }
+  },
+  mounted(){
+    setTimeout(() => {
+      this.epoch = "Symbolic Logic";
+      this.epoch_subtitle = "1670~";
+    }, 500);
+    setTimeout(() => {
+      this.epoch = "Difference Machine";
+      this.epoch_subtitle = "1822";
+    }, 900);
+    setTimeout(() => {
+      this.epoch = "Boolean Logic";
+      this.epoch_subtitle = "1847";
+    }, 1200);
+    setTimeout(() => {
+      this.epoch = "Lambda Calculus";
+      this.epoch_subtitle = "1936";
+    }, 1400);
+    setTimeout(() => {
+      for (let index = 5; index < this.epochs.length; index++) {
+        setTimeout(() => {
+          this.epoch = this.epochs[index][1];
+          this.epoch_subtitle = this.epochs[index][0];
+        }, 100*index)
+      }
+    }, 1500);
+    setTimeout(() => {
+      let epoch_title = document.getElementById("intro_title");
+      epoch_title.style.fontSize = "20vw";
+    }, 3300);
+  },
+  methods: {},
+};
+</script>
 
 <style scoped>
 /* ******************************************************************** */
@@ -687,7 +747,6 @@
 
 .intro_title {
   /* position */
-  display: block;
   margin-top: 8vw;
   margin-left: auto;
   margin-right: auto;
@@ -695,7 +754,8 @@
   /* font */
   color: var(--dandelion-yellow);
   font-family: KronaOne;
-  font-size: 20vw;
+  /* font-size: 20vw; */
+  font-size: 6vw;
 
   /* interaction */
   user-select: none;
@@ -703,6 +763,15 @@
 
   /* shape */
   width: max-content;
+  height: 30vw;
+
+  /* inner shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* animation */
+  transition: font-size 0.5s;
 }
 
 .intro_text {
