@@ -570,7 +570,7 @@ export default {
     color: white;
     text-align: center;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: 1.5em;
+    font-size: max(1.5em, 10px);
     line-height: 1.1em;
 }
 
@@ -580,6 +580,7 @@ export default {
     text-align: center;
     font-family: Helvetica;
     font-size: 0.75em;
+    /* 1.14583vw */
     font-weight: 400;
 }
 
@@ -632,10 +633,6 @@ export default {
         font-family: Helvetica-Neue-LT-Pro-Medium;
         font-size: 1em;
         line-height: 3em;
-    }
-
-    .card_position{
-        font-size: 12px;
     }
 }
 

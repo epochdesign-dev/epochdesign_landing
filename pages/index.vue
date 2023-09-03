@@ -139,45 +139,30 @@ export default {
     }
   },
   mounted(){
-    // setTimeout(() => {
-    //   this.epoch = "Symbolic Logic";
-    //   this.epoch_subtitle = "1670~";
-    // }, 500);
-    // setTimeout(() => {
-    //   this.epoch = "Difference Machine";
-    //   this.epoch_subtitle = "1822";
-    // }, 900);
-    // setTimeout(() => {
-    //   this.epoch = "Boolean Logic";
-    //   this.epoch_subtitle = "1847";
-    // }, 1200);
-    // setTimeout(() => {
-    //   this.epoch = "Lambda Calculus";
-    //   this.epoch_subtitle = "1936";
-    // }, 1400);
-    // setTimeout(() => {
-    //   for (let index = 5; index < this.epochs.length; index++) {
-    //     setTimeout(() => {
-    //       this.epoch = this.epochs[index][1];
-    //       this.epoch_subtitle = this.epochs[index][0];
-    //     }, 100*index)
-    //   }
-    // }, 1500);
-    // setTimeout(() => {
-    //   let epoch_title = document.getElementById("intro_title");
-    //   if (window.innerWidth > 740) {
-    //     epoch_title.style.fontSize = "20vw";  
-    //   }
-    //   else{
-    //     epoch_title.style.fontSize = "22.5vw";
-    //   }
-    // }, 3300);
-    for (let index = 0; index < this.epochs.length; index++) {
-      setTimeout(() => {
-        this.epoch = this.epochs[index][1];
-        this.epoch_subtitle = this.epochs[index][0];
-      }, 100*(index + 1))
-    }
+    setTimeout(() => {
+      this.epoch = "Symbolic Logic";
+      this.epoch_subtitle = "1670~";
+    }, 500);
+    setTimeout(() => {
+      this.epoch = "Difference Machine";
+      this.epoch_subtitle = "1822";
+    }, 900);
+    setTimeout(() => {
+      this.epoch = "Boolean Logic";
+      this.epoch_subtitle = "1847";
+    }, 1200);
+    setTimeout(() => {
+      this.epoch = "Lambda Calculus";
+      this.epoch_subtitle = "1936";
+    }, 1400);
+    setTimeout(() => {
+      for (let index = 5; index < this.epochs.length; index++) {
+        setTimeout(() => {
+          this.epoch = this.epochs[index][1];
+          this.epoch_subtitle = this.epochs[index][0];
+        }, 100*index)
+      }
+    }, 1500);
     setTimeout(() => {
       let epoch_title = document.getElementById("intro_title");
       if (window.innerWidth > 740) {
@@ -186,7 +171,22 @@ export default {
       else{
         epoch_title.style.fontSize = "22.5vw";
       }
-    }, 1800);
+    }, 3300);
+    // for (let index = 0; index < this.epochs.length; index++) {
+    //   setTimeout(() => {
+    //     this.epoch = this.epochs[index][1];
+    //     this.epoch_subtitle = this.epochs[index][0];
+    //   }, 100*(index + 1))
+    // }
+    // setTimeout(() => {
+    //   let epoch_title = document.getElementById("intro_title");
+    //   if (window.innerWidth > 740) {
+    //     epoch_title.style.fontSize = "20vw";  
+    //   }
+    //   else{
+    //     epoch_title.style.fontSize = "22.5vw";
+    //   }
+    // }, 1800);
   },
   methods: {},
 };

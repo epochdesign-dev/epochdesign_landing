@@ -590,7 +590,7 @@ export default {
     /* font */
     color: white;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: 3em;
+    font-size: max(3em, 12px);
     font-style: normal;
     font-weight: 500;
   }
@@ -599,10 +599,10 @@ export default {
     /* font */
     color: white;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: 16px;
+    font-size: max(1em, 10px);
     font-style: normal;
     font-weight: 500;
-    line-height: 3em; /* 164.286% */
+    line-height: 1.1em; /* 164.286% */
     letter-spacing: 0.14px;
   }
 
@@ -615,10 +615,10 @@ export default {
     color: white;
     text-align: center;
     font-family: Helvetica-Neue-LT-Pro;
-    font-size: 13px;
+    font-size: max(0.8em, 8px);
     font-style: normal;
     font-weight: 500;
-    line-height: 4em; /* 255.556% */
+    line-height: 1.5em; /* 255.556% */
     letter-spacing: 0.09px;
   }
 
@@ -641,7 +641,7 @@ export default {
     /* font */
     color: white;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: 16px;
+    font-size: 1em;
     font-style: normal;
     font-weight: 500;
     line-height: 4em;
