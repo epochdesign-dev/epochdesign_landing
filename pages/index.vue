@@ -35,18 +35,19 @@
         <h3 class="whoweare_title">Who We Are</h3>
 
         <!-- mobile only -->
-        <h3 class="mobile_whoweare_title pt-28">Who we are</h3>
+        <h3 class="mobile_whoweare_title">W<div class="mobile_whoweare_underline">ho We A</div>re</h3>
 
         <!--mobile and computer-->
         <div class="flex flex-col justify-center items-center">
+          <!-- text-lg md:text-5xl -->
           <p
-            class="px-4 md:px-24 w-full md:w-[65%] leading-relaxed md:leading-relaxed text-center text-white text-lg md:text-5xl pt-4 md:pt-8"
-            style="font-size: Helvetica-Neue;"
+            class="whoweare_description px-4 md:px-24 w-full md:w-[65%] leading-relaxed md:leading-relaxed text-center text-white pt-4 md:pt-8"
           >
             A full-service design and development firm comprised of diverse
             minds who have a passion for creating digital experiences.
           </p>
-          <p class="text-white w-full text-center text-xl underline pt-8">
+          <p class="text-white w-full text-center underline pt-8"
+          style="3vw">
             <a href="aboutus">Read more</a>
           </p>
         </div>
@@ -138,30 +139,45 @@ export default {
     }
   },
   mounted(){
-    setTimeout(() => {
-      this.epoch = "Symbolic Logic";
-      this.epoch_subtitle = "1670~";
-    }, 500);
-    setTimeout(() => {
-      this.epoch = "Difference Machine";
-      this.epoch_subtitle = "1822";
-    }, 900);
-    setTimeout(() => {
-      this.epoch = "Boolean Logic";
-      this.epoch_subtitle = "1847";
-    }, 1200);
-    setTimeout(() => {
-      this.epoch = "Lambda Calculus";
-      this.epoch_subtitle = "1936";
-    }, 1400);
-    setTimeout(() => {
-      for (let index = 5; index < this.epochs.length; index++) {
-        setTimeout(() => {
-          this.epoch = this.epochs[index][1];
-          this.epoch_subtitle = this.epochs[index][0];
-        }, 100*index)
-      }
-    }, 1500);
+    // setTimeout(() => {
+    //   this.epoch = "Symbolic Logic";
+    //   this.epoch_subtitle = "1670~";
+    // }, 500);
+    // setTimeout(() => {
+    //   this.epoch = "Difference Machine";
+    //   this.epoch_subtitle = "1822";
+    // }, 900);
+    // setTimeout(() => {
+    //   this.epoch = "Boolean Logic";
+    //   this.epoch_subtitle = "1847";
+    // }, 1200);
+    // setTimeout(() => {
+    //   this.epoch = "Lambda Calculus";
+    //   this.epoch_subtitle = "1936";
+    // }, 1400);
+    // setTimeout(() => {
+    //   for (let index = 5; index < this.epochs.length; index++) {
+    //     setTimeout(() => {
+    //       this.epoch = this.epochs[index][1];
+    //       this.epoch_subtitle = this.epochs[index][0];
+    //     }, 100*index)
+    //   }
+    // }, 1500);
+    // setTimeout(() => {
+    //   let epoch_title = document.getElementById("intro_title");
+    //   if (window.innerWidth > 740) {
+    //     epoch_title.style.fontSize = "20vw";  
+    //   }
+    //   else{
+    //     epoch_title.style.fontSize = "22.5vw";
+    //   }
+    // }, 3300);
+    for (let index = 0; index < this.epochs.length; index++) {
+      setTimeout(() => {
+        this.epoch = this.epochs[index][1];
+        this.epoch_subtitle = this.epochs[index][0];
+      }, 100*(index + 1))
+    }
     setTimeout(() => {
       let epoch_title = document.getElementById("intro_title");
       if (window.innerWidth > 740) {
@@ -170,7 +186,7 @@ export default {
       else{
         epoch_title.style.fontSize = "22.5vw";
       }
-    }, 3300);
+    }, 1800);
   },
   methods: {},
 };
@@ -895,7 +911,7 @@ export default {
   /* position */
   display: block;
   /* margin-top: 5vw; */
-  margin-top: 10vw;
+  margin-top: 15vw;
   margin-left: auto;
   margin-right: auto;
 
@@ -915,6 +931,17 @@ export default {
 
 .mobile_whoweare_title {
   display: none;
+}
+
+.whoweare_description{
+  /* font */
+  font-family: Helvetica-Neue;
+  font-size: 2vw;
+  color: white;
+
+  /* Inner Shape */
+  text-align: center;
+  width: 60vw;
 }
 
 .whoweare_text {
@@ -985,7 +1012,7 @@ export default {
     margin-left: auto;
     margin-right: auto;
     /* margin-top: 10vw; */
-    margin-top: 15vw;
+    margin-top: 50vw;
 
     /* font */
     color: white;
@@ -1004,6 +1031,17 @@ export default {
   .mobile_whoweare_underline {
     border-bottom: solid 1px;
     display: inline-block;
+  }
+
+  .whoweare_description{
+    /* font */
+    font-family: Helvetica-Neue;
+    font-size: 4vw;
+    color: white;
+
+    /* Inner Shape */
+    text-align: center;
+    width: 75vw;
   }
 
   .whoweare_text {
