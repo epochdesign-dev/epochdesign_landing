@@ -570,7 +570,7 @@ export default {
     color: white;
     text-align: center;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: max(1.5em, 20px);
+    font-size: 1.5em;
     line-height: 1.1em;
 }
 
@@ -631,7 +631,7 @@ export default {
         color: white;
         text-align: center;
         font-family: Helvetica-Neue-LT-Pro-Medium;
-        font-size: 1em;
+        font-size: max(1em, 10px);
         line-height: 3em;
     }
 }
