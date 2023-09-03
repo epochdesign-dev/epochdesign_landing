@@ -6,10 +6,14 @@
       <section>
         <div class="intro_title" id="intro_title">{{ epoch }}</div>
         <div class="intro_text">
-          Flourish in the 
-          <h2 class="inline-block glitch layers" 
-          style="filter: drop-shadow(0 1px 3px);" 
-          :data-text="epoch_subtitle">{{ epoch_subtitle }}</h2> 
+          Flourish in the
+          <h2
+            class="inline-block glitch layers"
+            style="filter: drop-shadow(0 1px 3px)"
+            :data-text="epoch_subtitle"
+          >
+            {{ epoch_subtitle }}
+          </h2>
           epoch
         </div>
         <img class="intro_img" src="../assets/donut.png" alt="donut" />
@@ -35,7 +39,11 @@
         <h3 class="whoweare_title">Who We Are</h3>
 
         <!-- mobile only -->
-        <h3 class="mobile_whoweare_title">W<div class="mobile_whoweare_underline">ho We A</div>re</h3>
+        <h3 class="mobile_whoweare_title">
+          W
+          <div class="mobile_whoweare_underline">ho We A</div>
+          re
+        </h3>
 
         <!--mobile and computer-->
         <div class="flex flex-col justify-center items-center">
@@ -46,8 +54,7 @@
             A full-service design and development firm comprised of diverse
             minds who have a passion for creating digital experiences.
           </p>
-          <p class="text-white w-full text-center underline pt-8"
-          style="3vw">
+          <p class="text-white w-full text-center underline pt-8" style="3vw">
             <a href="aboutus">Read more</a>
           </p>
         </div>
@@ -113,7 +120,7 @@
 <script>
 export default {
   data() {
-    return{
+    return {
       epoch: "Algorithm",
       epoch_subtitle: "830~",
       epochs: [
@@ -134,11 +141,11 @@ export default {
         ["1997", "Deep Blue"],
         ["2004", "Web 2.0"],
         ["2008", "Deep Neural Networks"],
-        ["digital", "Epoch"]
+        ["digital", "epoch"],
       ],
-    }
+    };
   },
-  mounted(){
+  mounted() {
     // setTimeout(() => {
     //   this.epoch = "Symbolic Logic";
     //   this.epoch_subtitle = "1670~";
@@ -166,7 +173,7 @@ export default {
     // setTimeout(() => {
     //   let epoch_title = document.getElementById("intro_title");
     //   if (window.innerWidth > 740) {
-    //     epoch_title.style.fontSize = "20vw";  
+    //     epoch_title.style.fontSize = "20vw";
     //   }
     //   else{
     //     epoch_title.style.fontSize = "22.5vw";
@@ -176,7 +183,7 @@ export default {
       setTimeout(() => {
         this.epoch = this.epochs[index][1];
         this.epoch_subtitle = this.epochs[index][0];
-      }, 100*(index + 1))
+      }, 100 * (index + 1));
     }
     setTimeout(() => {
       this.epoch = "Linus Kernel";
@@ -195,13 +202,12 @@ export default {
       this.epoch_subtitle = "2008";
     }, 2300);
     setTimeout(() => {
-      this.epoch = "Epoch";
+      this.epoch = "epoch";
       this.epoch_subtitle = "digital";
       let epoch_title = document.getElementById("intro_title");
       if (window.innerWidth > 740) {
-        epoch_title.style.fontSize = "20vw";  
-      }
-      else{
+        epoch_title.style.fontSize = "20vw";
+      } else {
         epoch_title.style.fontSize = "22.5vw";
       }
     }, 2800);
@@ -855,7 +861,7 @@ export default {
 
     /* font */
     /* font-size: 22.5vw; */
-      font-size: 7vw;
+    font-size: 7vw;
   }
 
   .intro_text {
@@ -951,7 +957,7 @@ export default {
   display: none;
 }
 
-.whoweare_description{
+.whoweare_description {
   /* font */
   font-family: Helvetica-Neue;
   font-size: 2vw;
@@ -1051,7 +1057,7 @@ export default {
     display: inline-block;
   }
 
-  .whoweare_description{
+  .whoweare_description {
     /* font */
     font-family: Helvetica-Neue;
     font-size: 4vw;
