@@ -633,6 +633,10 @@ export default {
         font-size: 1em;
         line-height: 3em;
     }
+
+    .card_position{
+        font-size: 12px;
+    }
 }
 
 </style>

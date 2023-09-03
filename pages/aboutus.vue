@@ -599,7 +599,7 @@ export default {
     /* font */
     color: white;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: 1em;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 3em; /* 164.286% */
@@ -615,7 +615,7 @@ export default {
     color: white;
     text-align: center;
     font-family: Helvetica-Neue-LT-Pro;
-    font-size: 0.8em;
+    font-size: 13px;
     font-style: normal;
     font-weight: 500;
     line-height: 4em; /* 255.556% */
@@ -641,7 +641,7 @@ export default {
     /* font */
     color: white;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: 1em;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 4em;
