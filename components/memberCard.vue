@@ -569,7 +569,7 @@ export default {
     /* font */
     color: white;
     text-align: center;
-    font-family: Helvetica-Neue-LT-Pro-Medium;
+    font-family: Helvetica-Neue;
     font-size: max(1.5em, 10px);
     line-height: 1.1em;
 }
