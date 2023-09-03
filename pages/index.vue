@@ -181,19 +181,19 @@ export default {
     setTimeout(() => {
       this.epoch = "Linus Kernel";
       this.epoch_subtitle = "1991";
-    }, 1300);
+    }, 1400);
     setTimeout(() => {
       this.epoch = "Deep Blue";
       this.epoch_subtitle = "1997";
-    }, 1500);
+    }, 1600);
     setTimeout(() => {
       this.epoch = "Web 2.0";
       this.epoch_subtitle = "2004";
-    }, 1800);
+    }, 1900);
     setTimeout(() => {
       this.epoch = "Deep Neural Networks";
       this.epoch_subtitle = "2008";
-    }, 2200);
+    }, 2300);
     setTimeout(() => {
       this.epoch = "Epoch";
       this.epoch_subtitle = "digital";
@@ -204,7 +204,7 @@ export default {
       else{
         epoch_title.style.fontSize = "22.5vw";
       }
-    }, 2700);
+    }, 2800);
   },
   methods: {},
 };
