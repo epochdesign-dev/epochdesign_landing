@@ -632,7 +632,7 @@ export default {
         text-align: center;
         font-family: Helvetica-Neue-LT-Pro-Medium;
         font-size: max(1em, 10px);
-        line-height: 3em;
+        line-height: 1.1em;
     }
 }
 

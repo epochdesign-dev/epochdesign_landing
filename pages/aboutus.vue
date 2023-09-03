@@ -644,7 +644,7 @@ export default {
     font-size: max(1em, 10px);
     font-style: normal;
     font-weight: 500;
-    line-height: 4em;
+    line-height: 2em;
   }
 }
 
