@@ -587,8 +587,8 @@ export default {
 @media screen and (max-width: 740px) {
     .card{
         /* shape */
-        width: 18.48vw;
-        height: 30vw;
+        width: 24.58vw;
+        height: 40vw;
         border-radius: 20px;
         border: none;
 

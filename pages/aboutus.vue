@@ -2,12 +2,15 @@
   <div class="main">
     <div class="canvas">
       <!-- section 1: title -->
-      <!-- <section>
-        <SubpageTitle
+      <section>
+        <!-- <SubpageTitle
           title="About Us"
           subtitle="A full-service design agency comprised of diverse minds who have a passion for creating digital experiences."
-        />
-      </section> -->
+        /> -->
+        <h1 class="aboutus_title">
+          Meet the Team
+        </h1>
+      </section>
 
       <!-- section 2: member cards -->
       <section>
@@ -201,6 +204,12 @@ export default {
 /* ******************************************************************** */
 /* Fonts */
 @font-face {
+  font-family: "KronaOne";
+  src: local("KronaOne"),
+    url("../assets/KronaOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Helvetica-Neue";
   src: local("Helvetica-Neue"),
     url("../assets/Helvetica.ttf") format("truetype");
@@ -278,13 +287,46 @@ export default {
 }
 
 /* ******************************************************************** */
+/* ***************************About Us Title*************************** */
+/* ******************************************************************** */
+.aboutus_title{
+  /* font */
+  font-size: 5vw;
+  font-family: KronaOne;
+  color: white;
+
+  /* position */
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7vw;
+}
+
+@media screen and (max-width:740px) {
+  .aboutus_title{
+    /* font */
+    font-size: 8vw;
+    font-family: KronaOne;
+    color: white;
+
+    /* position */
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30vw;
+  }
+}
+
+
+
+/* ******************************************************************** */
 /* ****************************Member Cards**************************** */
 /* ******************************************************************** */
 .card1 {
   /* position */
   position: absolute;
   left: 19vw;
-  top: 15vw;
+  top: 25vw;
 
   /* shape */
   transform: rotate(-30deg);
@@ -297,7 +339,7 @@ export default {
   /* position */
   position: absolute;
   left: 34vw;
-  top: 9vw;
+  top: 19vw;
 
   /* shape */
   transform: rotate(-10deg);
@@ -310,7 +352,7 @@ export default {
   /* position */
   position: absolute;
   left: 50vw;
-  top: 9vw;
+  top: 19vw;
 
   /* shape */
   transform: rotate(10deg);
@@ -322,7 +364,7 @@ export default {
   /* position */
   position: absolute;
   left: 65vw;
-  top: 15vw;
+  top: 25vw;
 
   /* shape */
   transform: rotateZ(30deg);
@@ -339,7 +381,7 @@ export default {
   gap: 0.416666vw;
 
   /* position */
-  margin-top: 38vw;
+  margin-top: 35vw;
   margin-left: 32vw;
 
   /* shape */
@@ -386,18 +428,22 @@ export default {
 
 @media screen and (max-width:740px) {
   .card1 {
-    top: 20vw;
+    left: 10vw;
+    top: 70vw;
   }
 
   .card2 {
-    top: 14vw;
+    left: 28vw;
+    top: 64vw;
   }
 
   .card3 {
-    top: 14vw;
+    left: 47vw;
+    top: 64vw;
   }
   .card4 {
-    top: 20vw;
+    left: 65vw;
+    top: 70vw;
   }
 }
 
@@ -419,17 +465,17 @@ export default {
 
 .oval1_pos {
   /* position */
-  top: 57.8vw;
+  top: 69.8vw;
 }
 
 .oval2_pos {
   /* position */
-  top: 60.51vw;
+  top: 72.51vw;
 }
 
 .oval3_pos {
   /* position */
-  top: 63.22vw;
+  top: 75.22vw;
 }
 
 .our_value_title {
@@ -576,12 +622,12 @@ export default {
     gap: 0.416666vw;
 
     /* position */
-    margin-top: 50vw;
-    margin-left: 21vw;
+    margin-top: 80vw;
+    margin-left: 16vw;
 
     /* shape */
-    width: 60vw;
-    height: 25vw;
+    width: 70vw;
+    height: 50vw;
 
     overflow-y: scroll;
   }
@@ -590,7 +636,7 @@ export default {
     /* font */
     color: white;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: max(3em, 12px);
+    font-size: max(4em, 25px);
     font-style: normal;
     font-weight: 500;
   }
@@ -599,7 +645,7 @@ export default {
     /* font */
     color: white;
     font-family: Helvetica-Neue-LT-Pro-Medium;
-    font-size: max(1em, 10px);
+    font-size: max(2em, 18px);
     font-style: normal;
     font-weight: 500;
     line-height: 1.1em; /* 164.286% */
@@ -615,7 +661,7 @@ export default {
     color: white;
     text-align: center;
     font-family: Helvetica-Neue-LT-Pro;
-    font-size: max(0.8em, 8px);
+    font-size: max(1.6em, 14px);
     font-style: normal;
     font-weight: 500;
     line-height: 1.5em; /* 255.556% */
@@ -624,18 +670,41 @@ export default {
 
   .oval1_pos {
     /* position */
-    top: 75.5vw;
+    top: 192.5vw;
   }
 
   .oval2_pos {
     /* position */
-    top: 78.5vw;
+    top: 195.5vw;
   }
 
   .oval3_pos {
     /* position */
-    top: 81.5vw;
-}
+    top: 198.5vw;
+  }
+
+  .our_value_title {
+    /* position */
+    margin-top: 20vw;
+    margin-left: 22vw;
+
+    /* shape */
+    width: 57.66vw;
+    height: 10.78vw;
+
+    /* inner shape */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* font */
+    color: var(--dandelion-yellow);
+    text-align: center;
+    font-family: Helvetica-Neue-LT-Pro;
+    font-size: max(4em, 25px);
+    font-style: normal;
+    font-weight: 500;
+  }
 
   .value_description {
     /* font */
