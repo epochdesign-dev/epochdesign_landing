@@ -40,9 +40,8 @@
 
         <!-- mobile only -->
         <h3 class="mobile_whoweare_title">
-          W
-          <div class="mobile_whoweare_underline">ho We A</div>
-          re
+          Who We Are
+          <!-- <div class="mobile_whoweare_underline">ho We A</div> -->
         </h3>
 
         <!--mobile and computer-->
@@ -1050,6 +1049,7 @@ export default {
     /* shape */
     padding-bottom: 0.4vw;
     width: max-content;
+    border-bottom: solid 1px;
   }
 
   .mobile_whoweare_underline {
