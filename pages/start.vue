@@ -32,7 +32,7 @@
                   data-tip="The home of your site, the first thing people see."
                 >
                   <button
-                    class="rounded-full px-4 py-2 bg-base-100"
+                    class="rounded-lg px-2 md:px-4 py-2 bg-base-100"
                     @click="selectTag"
                   >
                     Landing Page
@@ -43,7 +43,7 @@
                   data-tip="Every backend/frontend program you need."
                 >
                   <button
-                    class="rounded-full px-4 py-2 bg-base-100"
+                    class="rounded-lg px-2 md:px-4 py-2 bg-base-100"
                     @click="selectTag"
                   >
                     Internal Software
@@ -54,7 +54,7 @@
                   data-tip="Fast and efficient online store in any style you want."
                 >
                   <button
-                    class="rounded-full px-4 py-2 bg-base-100"
+                    class="rounded-lg px-2 md:px-4 py-2 bg-base-100"
                     @click="selectTag"
                   >
                     Online Store
@@ -65,7 +65,7 @@
                   data-tip="An admin panel for all your management purposes."
                 >
                   <button
-                    class="rounded-full px-4 py-2 bg-base-100"
+                    class="rounded-lg px-2 md:px-4 py-2 bg-base-100"
                     @click="selectTag"
                   >
                     Management Page
@@ -76,7 +76,7 @@
                   data-tip="From user authentication/login to managing tiered users."
                 >
                   <button
-                    class="rounded-full px-4 py-2 bg-base-100"
+                    class="rounded-lg px-2 md:px-4 py-2 bg-base-100"
                     @click="selectTag"
                   >
                     User Accounts
@@ -87,7 +87,7 @@
                   data-tip="A form for collecting client information."
                 >
                   <button
-                    class="rounded-full px-4 py-2 bg-base-100"
+                    class="rounded-lg px-2 md:px-4 py-2 bg-base-100"
                     @click="selectTag"
                   >
                     Intake Page
@@ -98,7 +98,7 @@
                   data-tip="A stylised personal presentation."
                 >
                   <button
-                    class="rounded-full px-4 py-2 bg-base-100"
+                    class="rounded-lg px-2 md:px-4 py-2 bg-base-100"
                     @click="selectTag"
                   >
                     Portfolio
@@ -109,7 +109,7 @@
                   data-tip="A page for booking all type of services."
                 >
                   <button
-                    class="rounded-full px-4 py-2 bg-base-100"
+                    class="rounded-lg px-2 md:px-4 py-2 bg-base-100"
                     @click="selectTag"
                   >
                     Booking Page
@@ -120,7 +120,7 @@
                   data-tip="Release your product on IOS and Andriod."
                 >
                   <button
-                    class="rounded-full px-4 py-2 bg-base-100"
+                    class="rounded-lg px-2 md:px-4 py-2 bg-base-100"
                     @click="selectTag"
                   >
                     Mobile App
