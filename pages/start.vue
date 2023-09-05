@@ -2,7 +2,7 @@
   <div class="main">
     <div class="canvas">
       <div class="start_title">
-        Get Started
+        Start Your Project
       </div>
       <div class="grid h-screen w-full bg-[#121212]">
         <div
