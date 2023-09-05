@@ -7,7 +7,7 @@
         <h2 class="font-bold text-5xl md:text-8xl text-center">
           Project Submitted
         </h2>
-        <p class="text-center pt-16 text-3xl">
+        <p class="text-center pt-16 text-2xl md:text-3xl">
           Thank you for submitting your project inquiry.
           <br />
           <br />
