@@ -12,9 +12,10 @@
 
         <!-- learn more button -->
         <section>
-            <a @click="learnMore" class="learn_more2">
+            <a href="/start" class="learn_more2"> 
+                <!-- @click="learnMore" -->
                 <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
-                <div class="learn_more_text">Learn More</div>
+                <div class="learn_more_text">Get Started</div>
             </a>
             <a :href="link" class="learn_more">
                 <img class="learn_more_image" src="../assets/arrow-circle.png" alt="arrow circle">
@@ -402,7 +403,7 @@
 
         /* font */
         font-family: Inter-Medium;
-        font-size: 4vw;
+        font-size: 3vw;
 
         /* inner shape */
         padding-left: 5vw;
