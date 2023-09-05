@@ -410,6 +410,9 @@ export default {
       });
 
       this.submitted = true;
+      setTimeout(() => {
+        navigateTo("/start-submission");
+      }, 1000);
     },
   },
 };
