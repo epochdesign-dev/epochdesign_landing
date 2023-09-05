@@ -29,8 +29,24 @@
     </div>
 </template>
 
-<script setup>
-
+<script>
+export default {
+  setup() {
+    // page head
+    useHead({
+        script: [
+            {
+                src: "https://www.googletagmanager.com/gtag/js?id=AW-10946173240",
+                type: "text/javascript",
+                async: true,
+            },
+            { 
+                children: "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10946173240');" 
+            }
+        ],
+    });
+  },
+};
 </script>
 
 <style scoped>
