@@ -4,10 +4,10 @@
       <div
         class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl p-12 md:p-16 shadow-xl"
       >
-        <h2 class="font-bold uppercase text-5xl md:text-8xl text-center">
+        <h2 class="font-bold text-5xl md:text-8xl text-center">
           Project Submitted
         </h2>
-        <p class="text-center pt-16 font-bold text-2xl">
+        <p class="text-center pt-16 text-3xl">
           Thank you for submitting your project inquiry.
           <br />
           <br />
