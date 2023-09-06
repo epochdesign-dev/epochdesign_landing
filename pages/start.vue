@@ -2,6 +2,9 @@
   <div class="main">
     <div class="canvas">
       <div class="grid h-screen w-full bg-[#121212]">
+        <div class="start_title">
+          Start Your Project
+        </div>
         <div
           class="mt-[15vw] lg:mt-[3vw] mx-auto lg:w-[65rem] min-[1450px]:w-[90rem] flex-grow grid lg:grid-cols-3 min-[1450px]:grid-cols-4 place-content-center gap-8"
         >
@@ -493,6 +496,44 @@ export default {
     display: none;
   }
 }
+
+
+
+/* ******************************************************************** */
+/* **************************Astronaut Section************************* */
+/* ******************************************************************** */
+.start_title{
+  /* position */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vw;
+  /* margin-bottom: 3vw; */
+  width: max-content;
+
+  /* font */
+  font-family: KronaOne;
+  font-size: 5vw;
+  color: white;
+}
+
+/* for mobile */
+@media screen and (max-width: 740px) {
+  .start_title{
+    /* position */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25vw;
+    margin-bottom: 3vw;
+    width: max-content;
+
+    /* font */
+    font-family: KronaOne;
+    font-size: 8vw;
+    color: white;
+  }
+}
+
+
 
 /* ******************************************************************** */
 /* **************************Astronaut Section************************* */

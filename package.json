@@ -17,6 +17,7 @@
     "nuxt": "^3.6.2"
   },
   "dependencies": {
+    "@nuxtjs/gtm": "^2.4.0",
     "nuxt-swiper": "^1.2.0",
     "uuid": "^9.0.0"
   }

@@ -7,9 +7,7 @@
         <div class="heading"><a href="/">epoch</a></div>
         <div class="central-links">
           <div class="link border-right"><a href="/aboutus">About Us</a></div>
-          <div class="link border-right">
-            <a href="mailto:contact@epochdesign.dev">Contact Us</a>
-          </div>
+          <div class="link border-right"><a href="/">Projects</a></div>
           <div class="link"><a href="/#services">Services</a></div>
         </div>
         <div class="contact-button"><a href="/start">Get Started</a></div>
@@ -31,7 +29,26 @@
   </div>
 </template>
 
-<script setup></script>
+<script>
+export default {
+  setup() {
+    // page head
+    useHead({
+      script: [
+        {
+          src: "https://www.googletagmanager.com/gtag/js?id=AW-10946173240",
+          type: "text/javascript",
+          async: true,
+        },
+        {
+          children:
+            "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10946173240');",
+        },
+      ],
+    });
+  },
+};
+</script>
 
 <style scoped>
 /* ******************************************************************** */
