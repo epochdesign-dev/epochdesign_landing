@@ -8,10 +8,10 @@
         <div class="central-links">
           <div class="link border-right"><a href="/aboutus">About Us</a></div>
           <div class="link border-right">
-            <a href="mailto:contact@epochdesign.dev">Contact Us</a>
+            <a href="mailto:contact@epochdesign.dev" target="_blank">Contact Us</a>
           </div>
           <div class="link">
-            <a href="/#services" target="_blank">Services</a>
+            <a href="/#services">Services</a>
           </div>
         </div>
         <div class="contact-button"><a href="/start">Get Started</a></div>
