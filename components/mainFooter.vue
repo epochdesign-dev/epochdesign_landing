@@ -11,9 +11,9 @@
                     <a href="/start">Start Your Project</a>
                 </div>
                 <div class="services">
-                    <a href="/service/artist-profile">Artist Profile</a>
-                    <a href="/service/small-business">Small Business</a>
-                    <a href="/service/moving-online">Moving Online</a>
+                    <a href="https://www.tiktok.com/@epochdesign.dev">TikTok</a>
+                    <a href="https://www.youtube.com/@epochdesign.develop">YouTube</a>
+                    <a href="https://www.instagram.com/epochdesign.dev/">Instagram</a>
                 </div>
 
                 <!-- mobile -->
