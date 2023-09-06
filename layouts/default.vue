@@ -188,6 +188,10 @@ export default {
 /* ******************************************************************** */
 /* ****************************Mobile Screen*************************** */
 /* ******************************************************************** */
+.mobile_navigation {
+  display: none;
+}
+
 /* for mobile */
 @media screen and (max-width: 740px) {
   .navigation {
@@ -208,6 +212,7 @@ export default {
     /* Shape */
     width: 100%;
     height: 60px;
+    display: block;
   }
 
   .mobile_heading {
