@@ -2,9 +2,11 @@
   <div class="main">
     <div class="canvas">
       <div class="grid h-screen w-full bg-[#121212]">
+        <!-- mobile title -->
         <div class="start_title">
           Start Your Project
         </div>
+
         <div
           class="mt-[15vw] lg:mt-[3vw] mx-auto lg:w-[65rem] min-[1450px]:w-[90rem] flex-grow grid lg:grid-cols-3 min-[1450px]:grid-cols-4 place-content-center gap-8"
         >
@@ -13,6 +15,7 @@
             class="col-span-1 h-full items-center justify-center hidden min-[1450px]:flex"
           >
             <img class="astronaut" :src="astronautSrc" alt="astronaut" />
+            <h1 class="lg_start_title">Start Your Project</h1>
           </div>
 
           <div class="flex flex-col col-span-2 gap-8 h-full">
@@ -503,17 +506,7 @@ export default {
 /* **************************Astronaut Section************************* */
 /* ******************************************************************** */
 .start_title{
-  /* position */
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5vw;
-  /* margin-bottom: 3vw; */
-  width: max-content;
-
-  /* font */
-  font-family: KronaOne;
-  font-size: 5vw;
-  color: white;
+  display: none;
 }
 
 /* for mobile */
@@ -530,6 +523,9 @@ export default {
     font-family: KronaOne;
     font-size: 8vw;
     color: white;
+
+    /* shape */
+    display: block;
   }
 }
 
@@ -551,15 +547,21 @@ export default {
   user-select: none;
 
   /* animation */
-  animation: appear forwards 2s, floating 3s infinite;
+  animation: appear forwards 4s, floating 3s infinite;
 }
 
 @keyframes appear {
-  from {
+  0% {
     opacity: 0;
+    display: none;
   }
-  to {
+  50% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
     opacity: 1;
+    display: block;
   }
 }
 
@@ -575,8 +577,39 @@ export default {
   }
 }
 
+.lg_start_title{
+  /* inner shape */
+  width: min-content;
+  text-align: center;
+
+  /* font */
+  color: white;
+  font-family: KronaOne;
+  font-size: 4vw;
+
+  /* animation */
+  animation: disappear forwards 2s;
+
+  /* display: block; */
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  50% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
 /* ******************************************************************** */
-/* **************************Astronaut Section************************* */
+/* ***********************************Tags***************************** */
 /* ******************************************************************** */
 
 .selectedTag {
