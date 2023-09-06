@@ -585,7 +585,7 @@ export default {
   /* font */
   color: white;
   font-family: KronaOne;
-  font-size: 4vw;
+  font-size: min(4vw, 60px);
 
   /* animation */
   animation: disappear forwards 2s;
