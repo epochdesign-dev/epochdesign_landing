@@ -34,7 +34,7 @@
       </section>
 
       <!--Who We Are-->
-      <section>
+      <section class="">
         <!-- computer only -->
         <h3 class="whoweare_title">Who We Are</h3>
 
@@ -59,9 +59,62 @@
         </div>
       </section>
 
+      <!-- Questions about your project popup -->
+
+      <!-- Desktop -->
+      <div
+        class="fixed hidden md:flex right-0 pl-4 rounded-l-full bg-black text-black bottom-12 hover:pr-6 transition-all duration-300"
+        v-if="showBookingPopup"
+      >
+        <div class="w-full">
+          <div class="py-2">
+            <a
+              class="text-lg pl-3 pr-6 py-2 md:py-3 text-white flex flex-row items-center gap-6 text-center"
+              href="https://calendar.app.google/oh2k9cK9txq97biM6"
+              target="_blank"
+            >
+              <img
+                class="w-7 md:w-12"
+                src="../assets/arrow-circle2.png"
+                alt="arrow circle"
+              />
+              <div>
+                <p class="font-bold text-sm md:text-2xl">
+                  Questions about your project?
+                </p>
+                Book a free consultation with our CEO
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <div class="w-full pt-24 flex flex-row justify-center md:hidden">
+        <div class="rounded-2xl border">
+          <a
+            class="text-sm pl-6 pr-6 py-4 text-white flex flex-row items-center gap-6 text-center"
+            href="https://calendar.app.google/oh2k9cK9txq97biM6"
+            target="_blank"
+          >
+            <div>
+              <p class="font-bold text-sm md:text-2xl">
+                Questions about your project?
+              </p>
+              Book a free consultation with our CEO
+            </div>
+            <img
+              class="w-7"
+              src="../assets/arrow-circle2.png"
+              alt="arrow circle"
+            />
+          </a>
+        </div>
+      </div>
+
       <!--Services-->
       <section>
-        <h3 class="services_title pt-32 md:pt-0" id="services">Services</h3>
+        <h3 class="services_title pt-24 md:pt-0" id="services">Services</h3>
 
         <div class="services">
           <ServiceCard
@@ -116,7 +169,7 @@
   </div>
 </template>
 
-<!-- Google tag (gtag.js) --> 
+<!-- Google tag (gtag.js) -->
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10946173240"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10946173240'); </script> -->
 
 <script>
@@ -145,8 +198,10 @@ export default {
         ["2008", "Deep Neural Networks"],
         ["digital", "epoch"],
       ],
+      showBookingPopup: true,
     };
   },
+
   mounted() {
     // setTimeout(() => {
     //   this.epoch = "Symbolic Logic";
@@ -214,6 +269,7 @@ export default {
       }
     }, 2800);
   },
+
   methods: {},
 };
 </script>

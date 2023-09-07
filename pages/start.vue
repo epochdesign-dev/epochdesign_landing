@@ -2,9 +2,29 @@
   <div class="main">
     <div class="canvas">
       <div class="grid h-screen w-full bg-[#121212]">
-        <!-- mobile title -->
-        <div class="start_title">
-          Start Your Project
+        <!-- Mobile Consultation -->
+        <div
+          class="md:absolute md:bottom-12 md:left-12 pt-20 flex flex-row justify-center"
+        >
+          <div class="rounded-2xl border">
+            <a
+              class="text-sm pl-6 pr-6 py-4 text-white flex flex-row items-center gap-6 text-center"
+              href="https://calendar.app.google/oh2k9cK9txq97biM6"
+              target="_blank"
+            >
+              <div>
+                <p class="font-bold text-sm md:text-2xl">
+                  Questions about your project?
+                </p>
+                Book a free consultation with our CEO
+              </div>
+              <img
+                class="w-7"
+                src="../assets/arrow-circle2.png"
+                alt="arrow circle"
+              />
+            </a>
+          </div>
         </div>
 
         <div
@@ -500,18 +520,26 @@ export default {
   }
 }
 
-
-
 /* ******************************************************************** */
 /* **************************Astronaut Section************************* */
 /* ******************************************************************** */
-.start_title{
-  display: none;
+.start_title {
+  /* position */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vw;
+  /* margin-bottom: 3vw; */
+  width: max-content;
+
+  /* font */
+  font-family: KronaOne;
+  font-size: 5vw;
+  color: white;
 }
 
 /* for mobile */
 @media screen and (max-width: 740px) {
-  .start_title{
+  .start_title {
     /* position */
     margin-left: auto;
     margin-right: auto;
@@ -528,8 +556,6 @@ export default {
     display: block;
   }
 }
-
-
 
 /* ******************************************************************** */
 /* **************************Astronaut Section************************* */
@@ -577,7 +603,7 @@ export default {
   }
 }
 
-.lg_start_title{
+.lg_start_title {
   /* inner shape */
   width: min-content;
   text-align: center;
