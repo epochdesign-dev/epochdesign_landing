@@ -4,9 +4,9 @@
       <div class="grid h-screen w-full bg-[#121212]">
         <!-- Mobile Consultation -->
         <div
-          class="md:absolute md:bottom-12 md:left-12 pt-20 flex flex-row justify-center"
+          class="w-full md:fixed md:bottom-6 md:left-12 pt-20 flex flex-row justify-center"
         >
-          <div class="rounded-2xl border">
+          <div class="rounded-2xl border-none">
             <a
               class="text-sm pl-6 pr-6 py-4 text-white flex flex-row items-center gap-6 text-center"
               href="https://calendar.app.google/oh2k9cK9txq97biM6"
