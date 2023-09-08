@@ -4,7 +4,7 @@
       <div class="grid h-screen w-full bg-[#121212]">
         <!-- Mobile Consultation -->
         <div
-          class="w-full md:fixed md:bottom-6 md:left-12 pt-20 flex flex-row justify-center"
+          class="w-full md:hidden md:left-12 pt-20 flex flex-row justify-center"
         >
           <div class="rounded-2xl border-none">
             <a
@@ -28,7 +28,7 @@
         </div>
 
         <div
-          class="mt-[15vw] lg:mt-[3vw] mx-auto lg:w-[65rem] min-[1450px]:w-[90rem] flex-grow grid lg:grid-cols-3 min-[1450px]:grid-cols-4 place-content-center gap-8"
+          class="mt-[15vw] lg:mt-[8vw] mx-auto lg:w-[65rem] min-[1450px]:w-[90rem] flex-grow grid lg:grid-cols-3 min-[1450px]:grid-cols-4 place-content-center gap-8"
         >
           <!-- astronaut section -->
           <div
@@ -154,6 +154,7 @@
                 </div>
               </div>
             </div>
+
             <!-- Project Description -->
             <div
               @click="changeAstronaut(4)"
@@ -248,6 +249,31 @@
                 Submitted
               </h2>
             </button>
+          </div>
+        </div>
+
+        <!-- Consultation (desktop) -->
+        <div
+          class="w-full hidden md:flex md:left-12 pt-20 flex-row justify-center"
+        >
+          <div class="rounded-2xl border-none">
+            <a
+              class="text-sm pl-6 pr-6 py-4 text-violet-200 flex flex-row items-center gap-6 hover:gap-12 text-center transition-all duration-200"
+              href="https://calendar.app.google/oh2k9cK9txq97biM6"
+              target="_blank"
+            >
+              <div>
+                <p class="font-bold text-sm md:text-2xl">
+                  Questions about your project?
+                </p>
+                Book a free consultation with our CEO
+              </div>
+              <img
+                class="w-7"
+                src="../assets/arrow-circle2.png"
+                alt="arrow circle"
+              />
+            </a>
           </div>
         </div>
       </div>
