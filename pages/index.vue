@@ -66,23 +66,22 @@
       >
         <div class="w-full">
           <div class="py-2">
-            <a
+            <div
               class="text-lg pl-3 pr-6 py-2 md:py-3 text-white flex flex-row items-center gap-6 text-center"
-              href="https://calendar.app.google/oh2k9cK9txq97biM6"
-              target="_blank"
             >
               <img
                 class="w-7 md:w-12 transition-all duration-300"
                 src="../assets/arrow-circle2.png"
                 alt="arrow circle"
               />
-              <div>
+              <a href="https://calendar.app.google/oh2k9cK9txq97biM6"
+                target="_blank">
                 <p class="font-bold text-sm md:text-2xl">
                   Questions about your project?
                 </p>
                 Book a free consultation with our CEO
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
