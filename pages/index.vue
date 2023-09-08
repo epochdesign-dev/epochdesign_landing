@@ -59,11 +59,9 @@
         </div>
       </section>
 
-      <!-- Questions about your project popup -->
-
-      <!-- Desktop -->
+      <!-- Desktop: Consultation -->
       <div
-        class="fixed hidden md:flex right-0 pl-4 rounded-l-full bg-black text-black bottom-12 hover:pr-6 transition-all duration-300"
+        class="consultation fixed hidden md:flex right-0 pl-4 rounded-l-full bg-black text-black bottom-12 right-[-390px] hover:right-0 transition-all duration-300"
         v-if="showBookingPopup"
       >
         <div class="w-full">
@@ -74,7 +72,7 @@
               target="_blank"
             >
               <img
-                class="w-7 md:w-12"
+                class="w-7 md:w-12 transition-all duration-300"
                 src="../assets/arrow-circle2.png"
                 alt="arrow circle"
               />
@@ -89,7 +87,7 @@
         </div>
       </div>
 
-      <!-- Mobile -->
+      <!-- Mobile: Consultation -->
       <div class="w-full pt-24 flex flex-row justify-center md:hidden">
         <div class="rounded-2xl border">
           <a
@@ -168,9 +166,6 @@
     </div>
   </div>
 </template>
-
-<!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10946173240"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10946173240'); </script> -->
 
 <script>
 export default {
@@ -703,7 +698,6 @@ export default {
 }
 
 .movement {
-  /* Normally this position would be absolute & on the layers, set to relative here so we can see it on the div */
   position: relative;
   animation: movement 8s step-end infinite;
 }
@@ -1170,6 +1164,35 @@ export default {
     top: 140vw;
   }
 }
+
+
+
+/* ******************************************************************** */
+/* ****************************Consultation**************************** */
+/* ******************************************************************** */
+.consultation:hover img{
+  rotate: 0deg;
+}
+
+.consultation img{
+  rotate: -180deg;
+}
+
+.consultation{
+  opacity: 0;
+  animation: consultation_appear forwards 1s;
+  animation-delay: 4s;
+}
+
+@keyframes consultation_appear {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 
 /* ******************************************************************** */
 /* ****************************Services******************************** */
