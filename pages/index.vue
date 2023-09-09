@@ -96,8 +96,7 @@
         <div class="rounded-2xl border">
           <a
             class="text-sm pl-6 pr-6 py-4 text-white flex flex-row items-center gap-6 text-center"
-            href="https://calendar.app.google/oh2k9cK9txq97biM6"
-            target="_blank"
+            href="/schedule"
           >
             <div>
               <p class="font-bold text-sm md:text-2xl">
