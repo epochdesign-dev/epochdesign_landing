@@ -51,4 +51,8 @@ function gotoHome() {
   //send to homepage
   navigateTo("/");
 }
+useHead({
+    title: "Epoch | Project Submitted",
+    meta: [{ name: "description", content: "project proposal submitted"}],
+});
 </script>

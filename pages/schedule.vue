@@ -11,8 +11,10 @@
 </template>
 
 <script setup>
-
-
+    useHead({
+      title: "Epoch | Schedule an Appointment",
+      meta: [{ name: "description", content: "schedule an appointment with Finn Williams" }],
+    });
 </script>
 
 <style scoped>
