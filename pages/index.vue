@@ -74,13 +74,28 @@
                 src="../assets/arrow-circle2.png"
                 alt="arrow circle"
               />
-              <a href="https://calendar.app.google/oh2k9cK9txq97biM6"
+              <!-- <a class="hidden 2xl:block" 
+                href="https://calendar.app.google/oh2k9cK9txq97biM6"
                 target="_blank">
                 <p class="font-bold text-sm md:text-2xl">
                   Questions about your project?
                 </p>
                 Book a free consultation with our CEO
-              </a>
+              </a> -->
+              <div>
+                <p class="font-bold text-sm md:text-2xl">
+                  Questions
+                  <a class="inline"
+                    href="https://calendar.app.google/oh2k9cK9txq97biM6"
+                    target="_blank"> about your project?
+                  </a>
+                </p>
+                Book a free
+                  <a class="inline"
+                      href="https://calendar.app.google/oh2k9cK9txq97biM6"
+                      target="_blank"> consultation with our CEO
+                  </a>
+              </div>
             </div>
           </div>
         </div>
