@@ -9,8 +9,7 @@
           <div class="rounded-2xl border-none">
             <a
               class="text-sm pl-6 pr-6 py-4 text-violet-200 flex flex-row items-center gap-6 hover:gap-12 text-center transition-all duration-200"
-              href="https://calendar.app.google/oh2k9cK9txq97biM6"
-              target="_blank"
+              href="/schedule"
             >
               <div>
                 <p class="font-bold text-sm md:text-2xl">
@@ -259,8 +258,7 @@
           <div class="rounded-2xl border-none">
             <a
               class="text-sm pl-6 pr-6 py-4 text-violet-200 flex flex-row items-center gap-6 hover:gap-12 text-center transition-all duration-200"
-              href="https://calendar.app.google/oh2k9cK9txq97biM6"
-              target="_blank"
+              href="/schedule"
             >
               <div>
                 <p class="font-bold text-sm md:text-2xl">

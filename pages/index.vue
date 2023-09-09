@@ -78,9 +78,9 @@
                 @mouseover="openBooking"
                 @click="closeBooking"
               />
-              <a
-                href="https://calendar.app.google/oh2k9cK9txq97biM6"
-                target="_blank">
+              <!-- href="https://calendar.app.google/oh2k9cK9txq97biM6"
+                target="_blank" -->
+              <a href="/schedule">
                 <p class="font-bold text-sm md:text-2xl">
                   Questions about your project?
                 </p>
