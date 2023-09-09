@@ -1,7 +1,9 @@
 <template>
-  <div class="grid w-full h-screen place-content-center text-black"
-  style="background-color: #121212;">
-    <div class="px-4">
+  <div class="grid w-full h-screen place-content-center text-black fixed"
+  style="background-color: var(--onyx-black);
+  overflow-y: scroll;
+  overflow-x: hidden;">
+    <div class="px-4 mt-[60vw] lg:mt-0">
       <div
         class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl p-12 md:p-16 shadow-xl"
       >
