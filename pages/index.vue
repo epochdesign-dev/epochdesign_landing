@@ -61,8 +61,9 @@
 
       <!-- Desktop: Consultation -->
       <div
-        class="consultation fixed hidden md:flex right-0 pl-4 rounded-l-full bg-black text-black bottom-12 right-[-390px] hover:right-0 transition-all duration-300"
-        v-if="showBookingPopup"
+        class="consultation fixed hidden md:flex right-0 pl-4 rounded-l-full bg-black text-black bottom-12"
+        id="booking"
+        @mouseleave="closeBooking"
       >
         <div class="w-full">
           <div class="py-2">
@@ -71,18 +72,20 @@
             >
               <img
                 class="w-7 md:w-12 transition-all duration-300"
+                id="booking_arrow"
                 src="../assets/arrow-circle2.png"
                 alt="arrow circle"
+                @mouseover="openBooking"
               />
-              <!-- <a class="hidden 2xl:block" 
+              <a
                 href="https://calendar.app.google/oh2k9cK9txq97biM6"
                 target="_blank">
                 <p class="font-bold text-sm md:text-2xl">
                   Questions about your project?
                 </p>
                 Book a free consultation with our CEO
-              </a> -->
-              <div>
+              </a>
+              <!-- <div>
                 <p class="font-bold text-sm md:text-2xl">
                   Questions
                   <a class="inline"
@@ -95,7 +98,7 @@
                       href="https://calendar.app.google/oh2k9cK9txq97biM6"
                       target="_blank"> consultation with our CEO
                   </a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -207,7 +210,6 @@ export default {
         ["2008", "Deep Neural Networks"],
         ["digital", "epoch"],
       ],
-      showBookingPopup: true,
     };
   },
 
@@ -277,9 +279,29 @@ export default {
         epoch_title.style.fontSize = "22.5vw";
       }
     }, 2800);
+
+    setTimeout(() => {
+      let booking = document.getElementById("booking");
+      let booking_arrow = document.getElementById("booking_arrow");
+      booking.style.right = "-390px";
+      booking_arrow.style.rotate = "-180deg";
+    }, 5000);
   },
 
-  methods: {},
+  methods: {
+    openBooking(){
+      let booking = document.getElementById("booking");
+      let booking_arrow = document.getElementById("booking_arrow");
+      booking.style.right = "0px";
+      booking_arrow.style.rotate = "0deg";
+    },
+    closeBooking(){
+      let booking = document.getElementById("booking");
+      let booking_arrow = document.getElementById("booking_arrow");
+      booking.style.right = "-390px";
+      booking_arrow.style.rotate = "-180deg";
+    }
+  },
 };
 </script>
 
@@ -1184,15 +1206,22 @@ export default {
 /* ******************************************************************** */
 /* ****************************Consultation**************************** */
 /* ******************************************************************** */
-.consultation:hover img{
+/* .consultation:hover img{
+  rotate: 0deg;
+} */
+
+.consultation img{
   rotate: 0deg;
 }
 
-.consultation img{
-  rotate: -180deg;
-}
+/* .consultation:hover{
+  right: 0;
+} */
 
 .consultation{
+  right: 0;
+  transition: all 0.5s;
+
   opacity: 0;
   animation: consultation_appear forwards 1s;
   animation-delay: 4s;
@@ -1206,7 +1235,6 @@ export default {
     opacity: 1;
   }
 }
-
 
 /* ******************************************************************** */
 /* ****************************Services******************************** */
