@@ -76,6 +76,7 @@
                 src="../assets/arrow-circle2.png"
                 alt="arrow circle"
                 @mouseover="openBooking"
+                @click="closeBooking"
               />
               <a
                 href="https://calendar.app.google/oh2k9cK9txq97biM6"
@@ -85,20 +86,6 @@
                 </p>
                 Book a free consultation with our CEO
               </a>
-              <!-- <div>
-                <p class="font-bold text-sm md:text-2xl">
-                  Questions
-                  <a class="inline"
-                    href="https://calendar.app.google/oh2k9cK9txq97biM6"
-                    target="_blank"> about your project?
-                  </a>
-                </p>
-                Book a free
-                  <a class="inline"
-                      href="https://calendar.app.google/oh2k9cK9txq97biM6"
-                      target="_blank"> consultation with our CEO
-                  </a>
-              </div> -->
             </div>
           </div>
         </div>
