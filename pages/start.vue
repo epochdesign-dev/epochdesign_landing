@@ -1,11 +1,14 @@
 <template>
   <div class="main">
     <div class="canvas">
+      <div class="alert alert-warning w-[70vw] md:w-[50vw] lg:w-[30vw]" id="warning">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+        <span>{{warningText}}</span>
+      </div>
       <div class="grid h-screen w-full bg-[#121212]">
         <!-- Mobile Consultation -->
         <div
-          class="w-full md:hidden md:left-12 pt-20 flex flex-row justify-center"
-        >
+          class="w-full md:hidden md:left-12 pt-20 flex flex-row justify-center">
           <div class="rounded-2xl border-none">
             <a
               class="text-sm pl-6 pr-6 py-4 text-violet-200 flex flex-row items-center gap-6 hover:gap-12 text-center transition-all duration-200"
@@ -27,8 +30,7 @@
         </div>
 
         <div
-          class="mt-[15vw] lg:mt-[8vw] mx-auto lg:w-[65rem] min-[1450px]:w-[90rem] flex-grow grid lg:grid-cols-3 min-[1450px]:grid-cols-4 place-content-center gap-8"
-        >
+          class="mt-[15vw] lg:mt-[8vw] mx-auto lg:w-[65rem] min-[1450px]:w-[90rem] flex-grow grid lg:grid-cols-3 min-[1450px]:grid-cols-4 place-content-center gap-8">
           <!-- astronaut section -->
           <div
             class="col-span-1 h-full items-center justify-center hidden min-[1450px]:flex"
@@ -235,7 +237,7 @@
               <h2
                 class="font-bold text-4xl uppercase text-black text-center w-full"
               >
-                Submit
+                {{ submitText }}
               </h2>
             </button>
             <button
@@ -253,8 +255,7 @@
 
         <!-- Consultation (desktop) -->
         <div
-          class="w-full hidden md:flex md:left-12 pt-20 flex-row justify-center"
-        >
+          class="w-full hidden md:flex md:left-12 pt-20 flex-row justify-center">
           <div class="rounded-2xl border-none">
             <a
               class="text-sm pl-6 pr-6 py-4 text-violet-200 flex flex-row items-center gap-6 hover:gap-12 text-center transition-all duration-200"
@@ -347,6 +348,8 @@ export default {
       astronauts: [astronaut1, astronaut2, astronaut3, astronaut4, astronaut5],
       astronautSrc: astronaut1,
       submitted: false,
+      submitText: "Submit",
+      warningText: "Warning"
     };
   },
   methods: {
@@ -420,6 +423,31 @@ export default {
 
     // submit data when submit is clicked
     async submitData() {
+      if (this.user_input.who_are_you == 'default' ||
+          this.user_input.phone_num == '' ||
+          this.user_input.email == '' ||
+          this.user_input.business_name == '' ||
+          this.user_input.full_name == '') {
+        const warningSign = document.getElementById("warning");
+        warningSign.style.opacity = "1";
+        this.warningText = "Warning: Please fill in every about us field! Including the dropdown!"
+
+        setTimeout(() => {
+          warningSign.style.opacity = "0";
+        }, 5000);
+        return;
+      }
+      else if(this.user_input.project_description.length < 50){
+        const warningSign = document.getElementById("warning");
+        warningSign.style.opacity = "1";
+        this.warningText = "Warning: Please tell us more about your project!"
+
+        setTimeout(() => {
+          warningSign.style.opacity = "0";
+        }, 5000);
+        return;
+      }
+
       const supabase = useSupabaseClient();
 
       let id = uuidv4();
@@ -542,6 +570,25 @@ export default {
   ::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* ******************************************************************** */
+/* ************************************Pop up************************** */
+/* ******************************************************************** */
+
+#warning {
+  /* position */
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+
+  /* interaction */
+  z-index: 2;
+  opacity: 0;
+
+  /* animation */
+  transition: opacity 0.5s;
 }
 
 /* ******************************************************************** */
