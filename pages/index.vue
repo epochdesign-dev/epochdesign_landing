@@ -76,7 +76,7 @@
                 src="../assets/arrow-circle2.png"
                 alt="arrow circle"
                 @mouseover="openBooking"
-                @click="closeBooking"
+                @click="bookingClicked"
               />
               <!-- href="https://calendar.app.google/oh2k9cK9txq97biM6"
                 target="_blank" -->
@@ -286,6 +286,23 @@ export default {
       let booking_arrow = document.getElementById("booking_arrow");
       booking.style.right = "-390px";
       booking_arrow.style.rotate = "-180deg";
+    },
+    bookingClicked(){
+      let booking = document.getElementById("booking");
+      let booking_arrow = document.getElementById("booking_arrow");
+      if(booking.style.right == "-390px"){
+        booking.style.right = "0";
+      }
+      else{
+        booking.style.right = "-390px";
+      }
+
+      if(booking_arrow.style.rotate == "-180deg"){
+        booking_arrow.style.rotate = "0deg";
+      }
+      else{
+        booking_arrow.style.rotate = "-180deg";
+      }
     }
   },
 };
