@@ -115,7 +115,11 @@
 
       <!--Services-->
       <section>
-        <h3 class="services_title pt-24 md:pt-0" id="services">Services</h3>
+        <h3 class="services_title pt-24 md:pt-0" id="services">What We Do</h3>
+
+        <p class="whoweare_description px-4 md:px-24 w-full md:w-[65%] leading-relaxed md:leading-relaxed text-center text-white pt-4 md:pt-8">
+          We build stunning websites for your business, art, or ideas.
+        </p>
 
         <div class="services">
           <ServiceCard
@@ -1049,6 +1053,9 @@ export default {
 }
 
 .whoweare_description {
+  /* position */
+  margin: auto;
+
   /* font */
   font-family: Helvetica-Neue;
   font-size: 2vw;
