@@ -12,8 +12,11 @@
 
 <script setup>
     useHead({
-      title: "Epoch | Schedule an Appointment",
-      meta: [{ name: "description", content: "schedule an appointment with Finn Williams" }],
+      title: "Epoch Design & Development | Schedule an Appointment",
+      meta: [ 
+              {name: "description", content: "Epoch Design & Development - Flourish in The Digital Epoch. Schedule an appointment with Finn Williams" },
+              {name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+            ]
     });
 </script>
 

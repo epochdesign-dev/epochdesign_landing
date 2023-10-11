@@ -27,11 +27,12 @@
 
 <script setup>
     useHead({
-        title: 'Epoch | Services',
-        meta: [
-            {name: 'description', content: 'services'}
-        ]
-    })
+      title: "Epoch Design & Development | Services",
+      meta: [ 
+              {name: "description", content: "Epoch Design & Development - Flourish in The Digital Epoch. Find out about our services!" },
+              {name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+            ]
+    });
 </script>
 
 <style scoped>

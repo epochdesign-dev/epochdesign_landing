@@ -298,8 +298,11 @@ export default {
   props: {},
   async setup() {
     useHead({
-      title: "Epoch | Start Your Project",
-      meta: [{ name: "description", content: "start your project" }],
+      title: "Epoch Design & Development | Start Your Project",
+      meta: [ 
+              {name: "description", content: "Epoch Design & Development - Flourish in The Digital Epoch. Start your project here!" },
+              {name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+            ]
     });
 
     // Documentation of using supabase in nuxt

@@ -155,8 +155,11 @@ export default {
   setup() {
     // page head
     useHead({
-      title: "Epoch | About Us",
-      meta: [{ name: "description", content: "about us" }],
+      title: 'Epoch Design & Development | About Us',
+      meta: [
+        {name: 'description', content: 'Epoch Design & Development - Flourish in The Digital Epoch. Learn more about us!'},
+        {name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+      ]
     });
   },
   data() {

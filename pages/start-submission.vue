@@ -51,8 +51,11 @@ function gotoHome() {
   //send to homepage
   navigateTo("/");
 }
-useHead({
-    title: "Epoch | Project Submitted",
-    meta: [{ name: "description", content: "project proposal submitted"}],
-});
+    useHead({
+      title: "Epoch Design & Development | Project Submitted",
+      meta: [ 
+              {name: "description", content: "Epoch Design & Development - Flourish in The Digital Epoch. Your project is submitted!" },
+              {name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+            ]
+    });
 </script>
