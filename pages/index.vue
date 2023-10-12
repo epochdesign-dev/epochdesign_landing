@@ -184,6 +184,9 @@ export default {
       meta: [
         {name: 'description', content: 'Epoch Design & Development - Flourish in The Digital Epoch. Stunning Online Stores. Gorgeous Web Portfolios. Remarkable Landing Pages. Custom Web Solutions.'},
         {name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+      ],
+      link: [
+        {rel: 'icon', href: '/favicon.ico'}
       ]
     });
   },
