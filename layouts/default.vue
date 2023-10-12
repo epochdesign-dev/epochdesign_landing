@@ -7,8 +7,9 @@
         <div class="heading"><a href="/">epoch</a></div>
         <div class="central-links">
           <div class="link border-right"><a href="/aboutus">About Us</a></div>
-          <div class="link border-right">
-            <a href="mailto:contact@epochdesign.dev" target="_blank">Contact Us</a>
+          <div @click="highlightConsultOptions" class="link border-right">
+            <!-- <a href="mailto:contact@epochdesign.dev" target="_blank">Contact Us</a> -->
+            <a href="/#main_footer">Consult Us</a>
           </div>
           <div class="link">
             <a href="/#services">Services</a>
@@ -51,6 +52,22 @@ export default {
       ],
     });
   },
+  methods: {
+    highlightConsultOptions(){
+      let bookingArrow = document.getElementById("booking_arrow");
+      bookingArrow.classList.add("glow");
+      console.log(bookingArrow.classList);
+
+      let email = document.getElementById("email");
+      email.classList.add("glow2");
+      console.log(email.classList);
+
+      setTimeout(() => {
+        bookingArrow.classList.remove("glow");
+        email.classList.remove("glow2");
+      }, 5000);
+    }
+  }
 };
 </script>
 

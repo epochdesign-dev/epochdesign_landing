@@ -71,7 +71,8 @@
               class="text-lg pl-3 pr-6 py-2 md:py-3 text-white flex flex-row items-center gap-6 text-center"
             >
               <img
-                class="w-7 md:w-12 transition-all duration-300"
+                class="w-7 md:w-12"
+                style="transition: rotate 0.5s, right 0.5s;"
                 id="booking_arrow"
                 src="../assets/arrow-circle2.png"
                 alt="arrow circle"
@@ -163,7 +164,7 @@
 
       <!--Footer-->
       <section>
-        <MainFooter class="main_footer" />
+        <MainFooter class="main_footer" id="main_footer"/>
       </section>
 
       <!--Mobile: Contact Button-->
@@ -1247,11 +1248,49 @@ export default {
   animation-delay: 4s;
 }
 
+
 @keyframes consultation_appear {
   from{
     opacity: 0;
   }
   to{
+    opacity: 1;
+  }
+}
+
+.glow {
+  /* color: hsl(186 100% 69%); */
+  border: 0.2em solid hsl(186 100% 69%);
+  border-radius: 50%;
+  perspective: 2em;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px hsl(186 100% 69%),
+    0px 0px 0.5em 0px hsl(186 100% 69%);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px hsl(186 100% 69%),
+    0px 0px 0.5em 0px hsl(186 100% 69%);
+  box-shadow: inset 0px 0px 0.5em 0px hsl(186 100% 69%),
+    0px 0px 0.5em 0px hsl(186 100% 69%);
+  animation: border-flicker 2s linear infinite;
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
     opacity: 1;
   }
 }

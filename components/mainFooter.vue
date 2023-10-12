@@ -32,7 +32,7 @@
 
                 <div class="contact">
                     <div class="footer-title">Contact:</div>
-                    contact@epochdesign.dev
+                    <div style="transition: padding 1s;" id="email">contact@epochdesign.dev</div>
 
                 </div>
                 <div class="logo">
@@ -128,6 +128,45 @@ export default {
     justify-content: flex-start;
     align-items: flex-end;
 }
+
+.glow2 {
+  /* color: hsl(186 100% 69%); */
+  padding: 0.35em 1em;
+  border: 0.15em solid hsl(186 100% 69%);
+  border-radius: 0.45em;
+  perspective: 2em;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px hsl(186 100% 69%),
+    0px 0px 0.5em 0px hsl(186 100% 69%);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px hsl(186 100% 69%),
+    0px 0px 0.5em 0px hsl(186 100% 69%);
+  box-shadow: inset 0px 0px 0.5em 0px hsl(186 100% 69%),
+    0px 0px 0.5em 0px hsl(186 100% 69%);
+  animation: border-flicker 2s linear infinite;
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 @media screen and (max-width: 840px) {
         .footer-box{
