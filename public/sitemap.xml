@@ -3,28 +3,28 @@
     <!-- Landing Page -->
     <url>
         <loc>https://www.epochdesign.dev/</loc>
-        <lastmod>2023-09-27</lastmod>
+        <lastmod>2023-10-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <!-- About Us -->
     <url>
         <loc>https://www.epochdesign.dev/aboutus</loc>
-        <lastmod>2023-09-27</lastmod>
+        <lastmod>2023-10-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.25</priority>
     </url>
     <!-- Submit Project Proposal -->
     <url>
         <loc>https://www.epochdesign.dev/start</loc>
-        <lastmod>2023-09-27</lastmod>
+        <lastmod>2023-10-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <!-- Book Project Consultation -->
     <url>
         <loc>https://www.epochdesign.dev/schedule</loc>
-        <lastmod>2023-09-27</lastmod>
+        <lastmod>2023-10-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
