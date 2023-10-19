@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Landing Page -->
-    <url>
-        <loc>https://www.epochdesign.dev/</loc>
-        <lastmod>2023-10-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <!-- About Us -->
-    <url>
-        <loc>https://www.epochdesign.dev/aboutus</loc>
-        <lastmod>2023-10-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.25</priority>
-    </url>
-    <!-- Submit Project Proposal -->
-    <url>
-        <loc>https://www.epochdesign.dev/start</loc>
-        <lastmod>2023-10-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    <!-- Book Project Consultation -->
-    <url>
-        <loc>https://www.epochdesign.dev/schedule</loc>
-        <lastmod>2023-10-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://www.epochdesign.dev/</loc>
+  <lastmod>2023-10-19T18:45:23+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.epochdesign.dev/aboutus</loc>
+  <lastmod>2023-10-19T18:45:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.epochdesign.dev/start</loc>
+  <lastmod>2023-10-19T18:45:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.epochdesign.dev/schedule</loc>
+  <lastmod>2023-10-19T18:45:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
