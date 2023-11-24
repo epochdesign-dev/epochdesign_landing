@@ -41,13 +41,13 @@ export default {
     useHead({
       script: [
         {
-          src: "https://www.googletagmanager.com/gtag/js?id=AW-10946173240",
+          src: "https://www.googletagmanager.com/gtag/js?id=G-865TJJ73PD",
           type: "text/javascript",
           async: true,
         },
         {
           children:
-            "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10946173240');",
+            "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-865TJJ73PD');",
         },
       ],
     });
