@@ -33,29 +33,38 @@
                 <MobileProjectCard class="mobile_project_card"/> -->
       </section>
 
-      <!--Who We Are-->
-      <section class="">
-        <!-- computer only -->
-        <h3 class="whoweare_title">Who We Are</h3>
+      <!--Services-->
+      <section>
+        <h3 class="services_title pt-24 md:pt-0" id="services">What We Do</h3>
 
-        <!-- mobile only -->
-        <h3 class="mobile_whoweare_title">
-          Who We Are
-          <!-- <div class="mobile_whoweare_underline">ho We A</div> -->
-        </h3>
+        <p class="whoweare_description px-4 md:px-24 w-full md:w-[65%] leading-relaxed md:leading-relaxed text-center text-white pt-4 md:pt-8">
+          We build stunning websites for your business, art, or ideas.
+        </p>
 
-        <!--mobile and computer-->
-        <div class="flex flex-col justify-center items-center">
-          <!-- text-lg md:text-5xl -->
-          <p
-            class="whoweare_description px-4 md:px-24 w-full md:w-[65%] leading-relaxed md:leading-relaxed text-center text-white pt-4 md:pt-8"
-          >
-            A full-service design and development firm comprised of diverse
-            minds who have a passion for creating digital experiences.
-          </p>
-          <p class="text-white w-full text-center underline pt-8" style="3vw">
-            <a href="aboutus">Read more</a>
-          </p>
+        <div class="services">
+          <ServiceCard
+            title="Business Solutions"
+            description="Elevate your business with our tailored website design service. We craft visually stunning, responsive websites that leave a lasting impact."
+            :tags="['Online Presence', 'Digital Marketing']"
+            link="/start"
+            id="service1"
+          />
+
+          <ServiceCard
+            title="Web Portfolios"
+            description="Transform your artistic vision into a compelling online showcase of your creativity."
+            :tags="['Artistic Expression', 'Creative Design']"
+            link="/start"
+            id="service2"
+          />
+
+          <ServiceCard
+            title="Online Stores"
+            description="Embrace the digital revolution with our specialized service, guiding businesses smoothly into the online realm."
+            :tags="['Digital Shift', 'Landing Page', 'Cloud Database']"
+            link="/start"
+            id="service3"
+          />
         </div>
       </section>
 
@@ -114,38 +123,29 @@
         </div>
       </div>
 
-      <!--Services-->
+      <!--Who We Are-->
       <section>
-        <h3 class="services_title pt-24 md:pt-0" id="services">What We Do</h3>
+        <!-- computer only -->
+        <h3 class="whoweare_title">Who We Are</h3>
 
-        <p class="whoweare_description px-4 md:px-24 w-full md:w-[65%] leading-relaxed md:leading-relaxed text-center text-white pt-4 md:pt-8">
-          We build stunning websites for your business, art, or ideas.
-        </p>
+        <!-- mobile only -->
+        <h3 class="mobile_whoweare_title">
+          Who We Are
+          <!-- <div class="mobile_whoweare_underline">ho We A</div> -->
+        </h3>
 
-        <div class="services">
-          <ServiceCard
-            title="Business Solutions"
-            description="Elevate your business with our tailored website design service. We craft visually stunning, responsive websites that leave a lasting impact."
-            :tags="['Online Presence', 'Digital Marketing']"
-            link="/start"
-            id="service1"
-          />
-
-          <ServiceCard
-            title="Web Portfolios"
-            description="Transform your artistic vision into a compelling online showcase of your creativity."
-            :tags="['Artistic Expression', 'Creative Design']"
-            link="/start"
-            id="service2"
-          />
-
-          <ServiceCard
-            title="Online Stores"
-            description="Embrace the digital revolution with our specialized service, guiding businesses smoothly into the online realm."
-            :tags="['Digital Shift', 'Landing Page', 'Cloud Database']"
-            link="/start"
-            id="service3"
-          />
+        <!--mobile and computer-->
+        <div class="flex flex-col justify-center items-center">
+          <!-- text-lg md:text-5xl -->
+          <p
+            class="whoweare_description px-4 md:px-24 w-full md:w-[65%] leading-relaxed md:leading-relaxed text-center text-white pt-4 md:pt-8"
+          >
+            A full-service design and development firm comprised of diverse
+            minds who have a passion for creating digital experiences.
+          </p>
+          <p class="text-white w-full text-center underline pt-8" style="3vw">
+            <a href="aboutus">Read more</a>
+          </p>
         </div>
       </section>
 
@@ -1368,7 +1368,7 @@ export default {
 /* ******************************************************************** */
 .get_in_touch {
   /* position */
-  margin-top: 10vw;
+  margin-top: 15vw;
   margin-left: auto;
   margin-right: auto;
 
